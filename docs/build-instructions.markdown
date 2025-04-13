@@ -29,7 +29,7 @@ Q-Tune can be housed in a 125B or 1590B enclosure and uses standard through-hole
 
 [PCB: Resistors](#pcb-resistors)
 
-[PCB: Sockets & ICs](#pcb-sockets-ics)
+[PCB: Sockets & ICs](#pcb-sockets--ics)
 
 [PCB: Capacitors (Non-Polarized)](#pcb-capacitors-non-polarized)
 
@@ -43,7 +43,7 @@ Q-Tune can be housed in a 125B or 1590B enclosure and uses standard through-hole
 
 [Enclosure Layout](#enclosure-layout)
 
-[Final Testing & Assembly](#final-testing-assembly)
+[Final Testing & Assembly](#final-testing--assembly)
 
 [Schematic](#schematic)
 
@@ -158,7 +158,7 @@ An in-depth troubleshooting guide is available on the [Troubleshooting](/trouble
 TODO
 Maybe link to the "Issues" and/or "Discussions" part of this GitHub project?
 
-## Acknowledgements / Legal?
+## Acknowledgements / Legal
 
 TODO
 
