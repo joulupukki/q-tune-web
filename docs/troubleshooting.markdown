@@ -16,8 +16,8 @@ There are two different dual-coil latching relays (DPDT switches) in Q-Tune. Rel
 
 These relays run on the 9V power supply you provide via the 9V DC jack and consist of two main components:
 
-1. **NE555** Timer ([datasheet](https://www.ti.com/lit/ds/symlink/ne555.pdf?ts=1742524749415&ref_url=https%253A%252F%252Fwww.mouser.com%252F)){:target="_blank"}
-2. **TQ2-L2-5V** DPDT Relay ([datasheet](https://api.pim.na.industrial.panasonic.com/file_stream/main/fileversion/4514)){:target="_blank"}
+1. **NE555** Timer ([datasheet](https://www.ti.com/lit/ds/symlink/ne555.pdf?ts=1742524749415&ref_url=https%253A%252F%252Fwww.mouser.com%252F){:target="_blank"})
+2. **TQ2-L2-5V** DPDT Relay ([datasheet](https://api.pim.na.industrial.panasonic.com/file_stream/main/fileversion/4514){:target="_blank"})
 
 These relays operate at 5V and by the time the supply voltage goes through the NE555 timer and the diodes, capacitors, and resistors, that’s the voltage they will see. They operate when a short pulse is put across their coils.
 
