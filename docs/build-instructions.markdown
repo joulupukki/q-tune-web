@@ -149,11 +149,85 @@ If you find that any parts are missing or damaged, please fill out the [Missing 
 
 ## Tools Needed
 
-TOOD
+- **Soldering Iron.** Temperature-adjustable is recommended. The optimum soldering temperature is 700-725°F (371-385°C) for leaded solder or 750°F (400°C) for lead-free.
+- **Solder.** Preferably 63/37 or 60/40 leaded solder. Lead-free is more difficult to use, so if that's the only type you can get, its best to watch tutorials that are speciic to lead-free solder.
+- **Digital Multimeter (DMM).** Most cheap ones in the $10-30 range are fine for what we're doing. Make sure it has audible continuity testing (i.e., it beeps at the lowest resistance) and transistor hFE measurement.
+- **Wire Snippers.** Also called nippers or wire cutters. The Hakko CHP-170 is the best you can get inexpensively.
+- **Flat-Nose Pliers.** Many general-purpose uses, but particularly tightening the nuts of jacks. Quicker than changing out sockets on a ratchet, though feel free to use a ratchet if you prefer.
+- **Needle-Nose Pliers.** These are used for bending leads on components and other general uses. Use the smaller type with a tip that's approximately 0.05" (1.25mm) wide.
+- **Screwdriver (Phillips).** Used for the enclosure and PCB mounting screws.
+- **Painters Tape.** Used to hold components or wires in for soldering.
 
 ## Component Identification
 
-TODO
+If you've never built a pedal before, you'll need to know what all the components are.
+
+### Resistor
+
+TODO: Resistor Image
+
+### Silicon Diode
+
+TODO: Silicon Diode Image
+
+### Rectifier Diode
+
+TODO: Rectifier Diode Image
+
+### Schottky Diode
+
+TODO: Schottky Diode Image
+
+### Zener Diode
+
+TODO: Zener Diode Image
+
+## Film Capacitor
+
+TODO: Film Capacitor Image
+
+### Electrolytic Capacitor
+
+TODO: Electrolytic Capacitor Image
+
+### Multi-layer Ceramic Capacitor (MLCC)
+
+TODO: Image of a MLCC
+
+### IC or OP-AMP
+
+TODO: Image of IC/Op AMP
+
+### IC Socket
+
+TODO: Image of socket
+
+### Transistor or JFET
+
+TODO: Img of JFET
+
+### Snap-Apart Socket
+
+TODO: Img of Snap-Apart Socket
+*It's recommended to use a razor blade to separate these cleanly.*
+
+### Wire assembly
+
+TODO: wire assembly img
+
+### DC Jack
+
+### I/O Jack
+
+### Mounting Nut
+
+### Outer Washer
+
+### Lock Washer
+
+### Footswitch
+
+### PCB Mounts
 
 ## Hardware Identification
 
