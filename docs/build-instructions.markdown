@@ -221,7 +221,7 @@ TODO
 
 ### Switches
 | PART |
-| --- |
+| :--- |
 | Momentary Footswitch |
 
 ## Troubleshooting Information
