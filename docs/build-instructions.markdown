@@ -199,7 +199,30 @@ TODO
 
 ## Full Parts List
 
-TODO
+### Resistors
+| PART | VALUE |
+|-|-|
+| R1 | 1M |
+
+### Capacitors
+| PART | VALUE |
+|-|-|
+| C1 | 100nF film |
+
+### Diodes
+| PART | VALUE |
+|-|-|
+| D1 | 1N5158 |
+
+### ICs
+| PART | VALUE |
+|-|-|
+| IC1 | NE555 |
+
+### Switches
+| PART |
+|-|
+| Momentary Footswitch |
 
 ## Troubleshooting Information
 
