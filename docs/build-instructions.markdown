@@ -12,8 +12,50 @@ Q-Tune can be housed in a 125B or 1590B enclosure and uses standard through-hole
 
 ## Table of Contents
 [Project Overview](#project-overview)
+
 [Introduction](#introduction)
+
 [Packing List](#packing-list)
+
+[Tools Needed](#tools-needed)
+
+[Component Identification](#component-identification)
+
+[Hardware Identification](#hardware-identification)
+
+[PCB: Overview](#pcb-overview)
+
+[PCB: Diodes](#pcb-diodes)
+
+[PCB: Resistors](#pcb-resistors)
+
+[PCB: Sockets & ICs](#pcb-sockets-ics)
+
+[PCB: Capacitors (Non-Polarized)](#pcb-capacitors-non-polarized)
+
+[PCB: Wires](#pcb-wires)
+
+[PCB: Audio Jacks](#pcb-audio-jacks)
+
+[PCB: Capacitors (Polarized)](#pcb-capacitors-polarized)
+
+[Momentary Footswitch](#momentary-footswitch)
+
+[Enclosure Layout](#enclosure-layout)
+
+[Final Testing & Assembly](#final-testing-assembly)
+
+[Schematic](#schematic)
+
+[Full Parts List](#full-parts-list)
+
+[Troubleshooting Information](#troubleshooting-information)
+
+[Support](#support)
+
+[Acknowledgements / Legal](#acknowlegements-legal)
+
+[Document Revisions](#document-revisions)
 
 ## Introduction
 
@@ -59,11 +101,11 @@ TODO
 
 TODO
 
-## PCB: Resistors
+## PCB: Diodes
 
 TODO
 
-## PCB: Diodes
+## PCB: Resistors
 
 TODO
 
