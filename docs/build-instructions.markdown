@@ -10,6 +10,11 @@ The Q-Tune is a DIY guitar tuner pedal based on the ESP32 microcontroller and a 
 
 Q-Tune can be housed in a 125B or 1590B enclosure and uses standard through-hole components wherever possible, making it accessible to both beginner and experienced builders. The software is modular and allows for easy experimentation with tuning algorithms or user interface layouts via LVGL and the ESP-IDF framework.
 
+## Table of Contents
+[Project Overview](#project-overview)
+[Introduction](#introduction)
+[Packing List](#packing-list)
+
 ## Introduction
 
 This document will walk you through the full process of building your Q-Tune pedal—from identifying the parts, soldering the components, and wiring the jacks and footswitch, to final assembly and testing. Please take the time to read through this guide in its entirety before beginning your build.
