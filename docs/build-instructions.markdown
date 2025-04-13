@@ -53,7 +53,7 @@ Q-Tune can be housed in a 125B or 1590B enclosure and uses standard through-hole
 
 [Support](#support)
 
-[Acknowledgements / Legal](#acknowlegements-legal)
+[Acknowledgements / Legal](#acknowlegements--legal)
 
 [Document Revisions](#document-revisions)
 
