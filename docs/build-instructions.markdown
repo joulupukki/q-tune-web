@@ -79,25 +79,63 @@ It's recommended to read through all of the instructions **before you start**, p
 
 ## Packing List
 
-TODO: This section still needs work
+This is a list of all the parts that are included with the kit, grouped by value. For a list of all the parts based on their PCB part numbers, see the [Full Parts List](#full-parts-list).
 
-Your kit includes the following items:
+If you find that any parts are missing or damaged, please fill out the [Missing Parts](/missing-parts) form.
 
-- Q-Tune main PCB
-- Waveshare ESP32-S3 2.8" LCD with Touch
-- 125B or 1590B enclosure (pre-drilled and printed)
-- Momentary footswitch
-- Audio input and output jacks
-- DC power jack (9V, center-negative)
-- Resistors (various values)
-- Ceramic, electrolytic, and film capacitors
-- Diodes
-- IC sockets
-- Two TQ2-L2-5V relays
-- Two NE555 timers
-- TODO: MCP6002 and/or MCP6022 and/or MCP6024
-- Hookup wire
-- Mounting hardware
+### Film Capacitors
+| NAME | QTY |
+|-|-|
+| 100nF | 4 |
+
+### Electrolytic Capacitors
+| NAME | QTY |
+|-|-|
+| 100uF | 4 |
+
+### MLCC Capacitors (Multi-layer Ceramic Capacitors)
+| NAME | QTY |
+|-|-|
+| 100uF | 4 |
+
+### Diodes
+| NAME | QTY |
+|-|-|
+| 1N4148 | 8 |
+
+### Resistors
+| NAME | QTY |
+|-|-|
+| 100k | 4 |
+
+### Integrated Circuits (ICs)
+| NAME | QTY |
+|-|-|
+| MCP6002 | 1 |
+| NE555 | 2 |
+| TQ2-L2-5V | 2 |
+
+### Switches
+| NAME | QTY |
+|-|-|
+| Momentary Footswitch | 1 |
+
+### Switches
+| NAME | QTY |
+|-|-|
+| JST 12-wire with connector | 1 |
+| ?? - wire for footswitch | 2 |
+
+### Hardware / Other
+| NAME | QTY |
+|-|-|
+| ESP32-S3 with 2.8" LCD | 1 |
+| 125B or 1590B Painted Enclosure | 1 |
+| Momentary Footswitch | 1 |
+| Enclosure screws | 4 |
+| DC Jack | 1 |
+| Input/Output Jack | 2 |
+| PCB, main circuit board | 1 |
 
 ## Tools Needed
 
