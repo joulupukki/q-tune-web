@@ -87,6 +87,7 @@ If you find that any parts are missing or damaged, please fill out the [Missing 
 
 | NAME | QTY |
 | --- |    :----:   |
+| 47nF | 2 |
 | 100nF | 4 |
 
 ### Electrolytic Capacitors
