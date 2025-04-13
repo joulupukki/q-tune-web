@@ -95,4 +95,4 @@ TODO
 
 ## Document Revisions
 
-OLD: You can find the history of any changes by visiting the built in [history](https://github.com/joulupukki/q-tune/wiki/Build-Instructions/_history) page.
+OLD: You can find the history of any changes by visiting the built in [hisory](https://github.com/joulupukki/q-tune-web/commits/main/docs/build-instructions.markdown) page.
