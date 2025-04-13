@@ -182,7 +182,7 @@ TODO: Schottky Diode Image
 
 TODO: Zener Diode Image
 
-## Film Capacitor
+### Film Capacitor
 
 TODO: Film Capacitor Image
 
