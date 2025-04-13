@@ -1,3 +1,9 @@
+---
+layouts: page
+title: Build Instructions
+permalink: /build/
+---
+
 ## Project Overview
 
 TODO
