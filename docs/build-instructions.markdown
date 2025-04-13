@@ -59,9 +59,23 @@ Q-Tune can be housed in a 125B or 1590B enclosure and uses standard through-hole
 
 ## Introduction
 
-This document will walk you through the full process of building your Q-Tune pedal—from identifying the parts, soldering the components, and wiring the jacks and footswitch, to final assembly and testing. Please take the time to read through this guide in its entirety before beginning your build.
+If this is your first pedal, congratulations for jumping into the fun of building your own pedals! Thank you for choosing Q-Tune.
 
-We’ve worked hard to make the assembly process as straightforward as possible, but if you run into any issues, check out the [Troubleshooting](/troubleshooting) page or visit the [GitHub Issues](https://github.com/joulupukki/q-tune/issues){:target="_blank"} page for support.
+If you're a seasoned DIY-er, we hope you'll enjoy building your very own high-quality tuner pedal.
+
+Here are a few things to review before starting:
+
+- **You're going to have to get your hands dirty.** Nothing comes pre-assembled, and you'll need to learn the skills to put it all together. Not to worry, we'll help you through every step, but be open to learning a few things along the way.
+
+- **This will take time.** Plan on about two to three hours start to finish. It may even take you longer if it's your first time. Make sure not to rush. If you're feeling frustrated or overwhelemed, take a break and come back in a couple hours or even the next day.
+
+- **No direct technical support is offered.** There are several DIY forums and Facebook groups with thousands of members who enjoy troubleshooting and teaching. Some possible things to review can be found on the [Troubleshooting](/troubleshooting) page. Feel free to participate in the [project's discussions](https://github.com/joulupukki/q-tune/discussions){:target="_blank"} and even [file an issue](https://github.com/joulupukki/q-tune/issues){:target="_blank"} if you discover a bug with the software. But, please be sensitive to the fact that the maintainers of this project are participants just like you.
+
+- **There is no implied guarantee of a final product.** We've provided the ingredients and the recipe but you are responsible for putting everything together to make it work. We've tried to make the process as clear as possible, but it must be expressly stated that purchasing a kit is not a guarantee that you will end up with a working pedal.
+
+It's recommended to read through all of the instructions **before you start**, particularly if you've never built a pedal before. If you familiarize yourself with the entire process ahead of time and you know what the goal looks like, each step will make more sense.
+
+**IMPORTANT:** There are a few optional items on the PCB and if you just follow along with what's on the screen printing, you may do more than needed. Make sure you identify and choose the options you'd like ... or leave yourself the option to try out a couple alternatives by using sockets as needed.
 
 ## Packing List
 
