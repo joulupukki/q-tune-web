@@ -185,29 +185,29 @@ If you've never built a pedal before, you'll need to know what all the component
 | :---: |
 | ![silicon diode](/assets/build/images/component-silicon-diode.png){:height="140px" width="240px"} |
 
-### Rectifier Diode
-
-TODO: Rectifier Diode Image
+| Rectifier Diode |
+| :---: |
+| ![rectifier diode](/assets/build/images/component-rectifier-diode.png){:height="140px" width="240px"} |
 
 ### Schottky Diode
 
 TODO: Schottky Diode Image
 
-### Zener Diode
+| Zener Diode |
+| :---: |
+| ![zener diode](/assets/build/images/component-zener-diode.png){:height="140px" width="240px"} |
 
-TODO: Zener Diode Image
+| Film Capacitor |
+| :---: |
+| ![file capacitor](/assets/build/images/component-film-capacitor.png){:height="140px" width="240px"} |
 
-### Film Capacitor
+| Film Capacitor |
+| :---: |
+| ![electrolytic capacitor](/assets/build/images/component-electrolytic-capacitor.png){:height="140px" width="240px"} |
 
-TODO: Film Capacitor Image
-
-### Electrolytic Capacitor
-
-TODO: Electrolytic Capacitor Image
-
-### Multi-layer Ceramic Capacitor (MLCC)
-
-TODO: Image of a MLCC
+| Film Capacitor |
+| :---: |
+| ![multi-layer ceramic capacitor](/assets/build/images/component-multi-layer-ceramic-capacitor.png){:height="140px" width="240px"} |
 
 ### IC or OP-AMP
 
