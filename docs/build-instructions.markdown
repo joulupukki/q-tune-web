@@ -149,14 +149,29 @@ If you find that any parts are missing or damaged, please fill out the [Missing 
 
 ## Tools Needed
 
-- **Soldering Iron.** Temperature-adjustable is recommended. The optimum soldering temperature is 700-725°F (371-385°C) for leaded solder or 750°F (400°C) for lead-free.
-- **Solder.** Preferably 63/37 or 60/40 leaded solder. Lead-free is more difficult to use, so if that's the only type you can get, its best to watch tutorials that are speciic to lead-free solder.
-- **Digital Multimeter (DMM).** Most cheap ones in the $10-30 range are fine for what we're doing. Make sure it has audible continuity testing (i.e., it beeps at the lowest resistance) and transistor hFE measurement.
-- **Wire Snippers.** Also called nippers or wire cutters. The Hakko CHP-170 is the best you can get inexpensively.
-- **Flat-Nose Pliers.** Many general-purpose uses, but particularly tightening the nuts of jacks. Quicker than changing out sockets on a ratchet, though feel free to use a ratchet if you prefer.
-- **Needle-Nose Pliers.** These are used for bending leads on components and other general uses. Use the smaller type with a tip that's approximately 0.05" (1.25mm) wide.
-- **Screwdriver (Phillips).** Used for the enclosure and PCB mounting screws.
-- **Painters Tape.** Used to hold components or wires in for soldering.
+### Soldering Iron
+Temperature-adjustable is recommended. The optimum soldering temperature is 700-725°F (371-385°C) for leaded solder or 750°F (400°C) for lead-free.
+
+### Solder
+Preferably 63/37 or 60/40 leaded solder. Lead-free is more difficult to use, so if that's the only type you can get, its best to watch tutorials that are speciic to lead-free solder.
+
+### Digital Multimeter (DMM)
+Most cheap ones in the $10-30 range are fine for what we're doing. Make sure it has audible continuity testing (i.e., it beeps at the lowest resistance) and transistor hFE measurement.
+
+### Wire Snippers
+Also called nippers or wire cutters. The Hakko CHP-170 is the best you can get inexpensively.
+
+### Flat-Nose Pliers
+Many general-purpose uses, but particularly tightening the nuts of jacks. Quicker than changing out sockets on a ratchet, though feel free to use a ratchet if you prefer.
+
+### Needle-Nose Pliers
+These are used for bending leads on components and other general uses. Use the smaller type with a tip that's approximately 0.05" (1.25mm) wide.
+
+### Screwdriver (Phillips)
+Used for the enclosure and PCB mounting screws.
+
+### Painters Tape
+Used to hold components or wires in for soldering. 
 
 ## Component Identification
 
