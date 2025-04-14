@@ -177,14 +177,13 @@ Used to hold components or wires in for soldering.
 
 If you've never built a pedal before, you'll need to know what all the components are. *Note:* Components shown here are not drawn to scale.
 
-| Resistor | Silicon Diode |
-| :---: | :---: |
-| ![resistor](/assets/build/images/component-resistor.png){:height="140px" width="240px"} <br/>This project uses 1/4 watt resistors with 5-band color identification. | ![silicon diode](/assets/build/images/component-silicon-diode.png){:height="140px" width="240px"} |
+| Resistor |
+| :---: |
+| ![resistor](/assets/build/images/component-resistor.png){:height="140px" width="240px"} <br/>This project uses 1/4 watt resistors with 5-band color identification. |
 
-
-### Silicon Diode
-
-TODO: Silicon Diode Image
+| Silicon Diode |
+| :---: |
+| ![silicon diode](/assets/build/images/component-silicon-diode.png){:height="140px" width="240px"} |
 
 ### Rectifier Diode
 
