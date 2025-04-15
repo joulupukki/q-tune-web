@@ -237,7 +237,9 @@ TODO: wire assembly img
 | :---: |
 | ![DC Jack](/assets/build/images/component-dc-jack.png){:height="140px" width="240px"} |
 
-### I/O Jack
+| I/O Jack |
+| :---: |
+| ![I/O Jack](/assets/build/images/component-audio-jack.png){:height="140px" width="240px"} |
 
 ### Mounting Nut
 
