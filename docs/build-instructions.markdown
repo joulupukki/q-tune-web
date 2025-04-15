@@ -189,9 +189,9 @@ If you've never built a pedal before, you'll need to know what all the component
 | :---: |
 | ![rectifier diode](/assets/build/images/component-rectifier-diode.png){:height="140px" width="240px"} |
 
-### Schottky Diode
-
-TODO: Schottky Diode Image
+| Schottky Diode |
+| :---: |
+| ![schottky diode](/assets/build/images/component-schottky-diode.png){:height="140px" width="240px"} |
 
 | Zener Diode |
 | :---: |
