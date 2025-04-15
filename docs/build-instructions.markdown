@@ -199,15 +199,15 @@ If you've never built a pedal before, you'll need to know what all the component
 
 | Film Capacitor |
 | :---: |
-| ![file capacitor](/assets/build/images/component-film-capacitor.png){:height="140px" width="240px"} |
+| ![file capacitor](/assets/build/images/component-film-capacitor.png){:height="140px" width="240px"}<br/>*Not polarized. Color may vary by brand and type.* |
 
 | Electrolytic Capacitor |
 | :---: |
-| ![electrolytic capacitor](/assets/build/images/component-electrolytic-capacitor.png){:height="140px" width="240px"}<br/>*Polarized. The negative side is marked. Typically the longer lead leg is the positive side. |
+| ![electrolytic capacitor](/assets/build/images/component-electrolytic-capacitor.png){:height="140px" width="240px"}<br/>*Polarized. The negative side is marked. Typically the longer lead leg is the positive side.* |
 
-| Film Capacitor |
+| Multi-layer Ceramic Capacitor (MLCC) |
 | :---: |
-| ![multi-layer ceramic capacitor](/assets/build/images/component-multi-layer-ceramic-capacitor.png){:height="140px" width="240px"} |
+| ![multi-layer ceramic capacitor](/assets/build/images/component-multi-layer-ceramic-capacitor.png){:height="140px" width="240px"}<br/>*Not polarized.* |
 
 | IC or OP-AMP |
 | :---: |
@@ -231,7 +231,7 @@ If you've never built a pedal before, you'll need to know what all the component
 
 | JST Wire Assembly |
 | :---: |
-| ![JST Wire Assembly](/assets/build/images/component-jst-cable-assembly.png){:height="140px" width="240px"} |
+| ![JST Wire Assembly](/assets/build/images/component-jst-cable-assembly.png){:height="140px" width="240px"}<br/>*Not shown to scale. Be **very** careful inserting (or removing) this into the ESP32 development board.* |
 
 ## Hardware Identification
 
