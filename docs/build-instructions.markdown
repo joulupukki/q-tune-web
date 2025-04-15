@@ -245,7 +245,10 @@ TODO: wire assembly img
 
 ### Lock Washer
 
-### Footswitch
+
+| Footswitch |
+| :---: |
+| ![Footswitch](/assets/build/images/component-momentary-footswitch.png){:height="140px" width="240px"} |
 
 ### PCB Mounts
 
