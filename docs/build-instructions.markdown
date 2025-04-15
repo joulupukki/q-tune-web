@@ -229,9 +229,9 @@ If you've never built a pedal before, you'll need to know what all the component
 | :---: |
 | ![Snap-Apart Socket](/assets/build/images/component-snap-apart-socket.png){:height="140px" width="240px"}<br/>*It's recommended to use a razor blade to separate these cleanly.* |
 
-### Wire assembly
-
-TODO: wire assembly img
+| JST Wire Assembly |
+| :---: |
+| ![JST Wire Assembly](/assets/build/images/component-jst-cable-assembly.png){:height="140px" width="240px"}<br/>*It's recommended to use a razor blade to separate these cleanly.* |
 
 ## Hardware Identification
 
