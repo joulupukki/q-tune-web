@@ -233,6 +233,8 @@ If you've never built a pedal before, you'll need to know what all the component
 
 TODO: wire assembly img
 
+## Hardware Identification
+
 | DC Jack |
 | :---: |
 | ![DC Jack](/assets/build/images/component-dc-jack.png){:height="140px" width="240px"} |
@@ -254,9 +256,6 @@ TODO: wire assembly img
 
 ### PCB Mounts
 
-## Hardware Identification
-
-TODO
 
 ## PCB: Overview
 
