@@ -201,9 +201,9 @@ If you've never built a pedal before, you'll need to know what all the component
 | :---: |
 | ![file capacitor](/assets/build/images/component-film-capacitor.png){:height="140px" width="240px"} |
 
-| Film Capacitor |
+| Electrolytic Capacitor |
 | :---: |
-| ![electrolytic capacitor](/assets/build/images/component-electrolytic-capacitor.png){:height="140px" width="240px"} |
+| ![electrolytic capacitor](/assets/build/images/component-electrolytic-capacitor.png){:height="140px" width="240px"}<br/>*Polarized. The negative side is marked. Typically the longer lead leg is the positive side. |
 
 | Film Capacitor |
 | :---: |
