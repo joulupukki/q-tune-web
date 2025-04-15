@@ -209,28 +209,33 @@ TODO: Schottky Diode Image
 | :---: |
 | ![multi-layer ceramic capacitor](/assets/build/images/component-multi-layer-ceramic-capacitor.png){:height="140px" width="240px"} |
 
-### IC or OP-AMP
+| IC or OP-AMP |
+| :---: |
+| ![IC or OP-AMP](/assets/build/images/component-ic.png){:height="140px" width="240px"} |
 
-TODO: Image of IC/Op AMP
+| IC Socket |
+| :---: |
+| ![IC Socket](/assets/build/images/component-ic-socket.png){:height="140px" width="240px"} |
 
-### IC Socket
+| TO-92 Linear Voltage Regulator |
+| :---: |
+| ![TO-92 Linear Voltage Regulator](/assets/build/images/component-to-92.png){:height="140px" width="240px"} |
 
-TODO: Image of socket
+| TO-220 Linear Voltage Regulator |
+| :---: |
+| ![TO-220 Linear Voltage Regulator](/assets/build/images/component-to-220.png){:height="140px" width="240px"} |
 
-### Transistor or JFET
-
-TODO: Img of JFET
-
-### Snap-Apart Socket
-
-TODO: Img of Snap-Apart Socket
-*It's recommended to use a razor blade to separate these cleanly.*
+| Snap-Apart Socket |
+| :---: |
+| ![Snap-Apart Socket](/assets/build/images/component-snap-apart-socket.png){:height="140px" width="240px"}<br/>*It's recommended to use a razor blade to separate these cleanly.* |
 
 ### Wire assembly
 
 TODO: wire assembly img
 
-### DC Jack
+| DC Jack |
+| :---: |
+| ![DC Jack](/assets/build/images/component-dc-jack.png){:height="140px" width="240px"} |
 
 ### I/O Jack
 
