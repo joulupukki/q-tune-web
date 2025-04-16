@@ -355,10 +355,13 @@ Connect 9V DC power (center pin negative) to the DC Jack and turn power on to th
 
 With your ground probe connected to the GND of X1 (or any easily-accessible ground point), use the positive probe to check the following:
 
-X1-5V: 5V
-IC1, Pin 8: 5V
-IC2, Pin 8: 5V
-IC3 and IC4, Pin 8: 9V
+1. X1-5V: 5V
+
+2. IC1, Pin 8: 5V
+
+3. IC2, Pin 8: 5V
+
+4. IC3 and IC4, Pin 8: 9V
 
 **Disconnect the power from your PCB** for the next tests.
 
