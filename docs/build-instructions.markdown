@@ -243,7 +243,6 @@ If you've never built a pedal before, you'll need to know what all the component
 | :---: |
 | ![I/O Jack](/assets/build/images/component-audio-jack.png){:height="140px" width="240px"} |
 
-
 | PCB Mount |
 | :---: |
 | ![PCB Mount](/assets/build/images/component-pcb-mount.png){:height="140px" width="240px"} |
@@ -259,12 +258,20 @@ If you've never built a pedal before, you'll need to know what all the component
 | :---: |
 | ![Footswitch](/assets/build/images/component-momentary-footswitch.png){:height="140px" width="240px"} |
 
-### PCB Mounts
-
 
 ## PCB: Overview
 
-TODO
+Time to start building!
+
+![PCB Top](/assets/build/images/pcb-top-q-tune-v4.5.png)
+
+![PCB Bottom](/assets/build/images/pcb-bottom-q-tune-v4.5.png)
+
+The general principle for PCB population is that you work in stages from shortest components (i.e., lowest profile) to tallest so that when the PCB is upside-down, everything is making contact with the work surface and held in place.
+
+So, you will start by populating the small diodes (the lowest-profile components), followed by the resistors & schottky diodes, sockets, MLCCs, film capacitors, and finally the electrolytic capacitors.
+
+![Build Order](/assets/build/images/pcb-build-order.png)
 
 ## PCB: Diodes
 
@@ -308,7 +315,7 @@ TODO
 
 ## Schematic
 
-TODO
+![Schematic](/assets/build/images/schematic-q-tune-v4.5.png)
 
 ## Full Parts List
 
