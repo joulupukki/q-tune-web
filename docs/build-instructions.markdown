@@ -215,7 +215,7 @@ If you've never built a pedal before, you'll need to know what all the component
 
 | IC Socket |
 | :---: |
-| ![IC Socket](/assets/build/images/component-ic-socket.png){:height="140px" width="240px"} |
+| ![IC Socket](/assets/build/images/component-ic-socket-alt.png){:height="140px" width="240px"} |
 
 | TO-92 Linear Voltage Regulator |
 | :---: |
