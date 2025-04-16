@@ -243,6 +243,11 @@ If you've never built a pedal before, you'll need to know what all the component
 | :---: |
 | ![I/O Jack](/assets/build/images/component-audio-jack.png){:height="140px" width="240px"} |
 
+
+| PCB Mount |
+| :---: |
+| ![PCB Mount](/assets/build/images/component-pcb-mount.png){:height="140px" width="240px"} |
+
 ### Mounting Nut
 
 ### Outer Washer
