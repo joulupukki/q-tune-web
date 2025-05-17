@@ -8,7 +8,7 @@ permalink: /troubleshooting/
 
 While you may not be shocked like you might be working on a vacuum tube amp, for example, many of the components in the Q-Tune may be sensitive to electrostatic shocks. When you are probing with a digital multimeter (DMM) or an oscilloscope, be very careful not to short any two points of any component as you will risk damaging one or more components. The ESP32, for example, is extremely sensitive and it can be easily damaged if incorrect voltage is applied.
 
-This document is meant to list possible issues you might encounter and how to potentially go about tracking issue down and fix them. It may not contain everything and if you discover something that’s not included here, please create a [new issue](https://github.com/joulupukki/q-tune/issues/new){:target="_blank"} to let us know about it.
+This document is meant to list possible issues you might encounter and how to potentially go about tracking issue down and fix them. It may not contain everything and if you discover something that’s not included here, please create a [new issue](https://github.com/joulupukki/q-tune-web/issues/new){:target="_blank"} to let us know about it.
 
 ## One of my relays does not seem to be working
 
