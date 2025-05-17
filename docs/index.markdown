@@ -6,7 +6,6 @@ layouts: home
 title: "Q-Tune"
 description: " "
 ---
-# What is Q-Tune?
 
 **Q-Tune**™ Chromatic Instrument Tuner is a next-generation guitar tuner pedal designed for players who want pro-level precision with DIY-level satisfaction.
 
