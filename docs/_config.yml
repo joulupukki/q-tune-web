@@ -20,10 +20,9 @@
 
 title: Q-Tune
 description: >- # this means to ignore newlines until "baseurl:"
-  Q-Tune is a DIY guitar tuner pedal based on the ESP32 microcontroller and a
-  2.8" color LCD display. It is designed for builders who enjoy assembling their
-  own gear and want a fully open-source, customizable tuner with high accuracy
-  and a responsive UI.
+  Q-Tune Chromatic Instrument Tuner is the first of its kind in the DIY pedal
+  world - a high-precision tuner with a full 2.8" color LCD, offered as a
+  solder-it-yourself kit in a rugged stopbox enclosure.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.q-tune.com" # the base hostname & protocol for your site, e.g. http://example.com
 
