@@ -59,3 +59,8 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - run-jekyll.sh
+
+minima:
+  nav_pages:
+    - install.markdown
+    - about.markdown
