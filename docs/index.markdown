@@ -51,6 +51,8 @@ We're just about to launch the first pre-order of the full Q-Tune DIY kit. Make 
 
 - **📺 Big, Bright 2.8" LCD Display**<br/>Visible in the dark, crisp on stage, easy on the eyes.
 
+- **👆 Touch & Tune**<br/>Navigate settings effortlessly with a responsive touchscreen—no extra buttons, no hassle.
+
 - **🎚️ Buffered Bypass Option**<br/>Clean, transparent signal when engaged or bypassed. Especially handy at the beginning of your pedalboard chain or when driving a long cable to your amp. Or, use the tuner in true bypass, your choice!
 
 - **🖥️ Multiple Tuning Display Styles**<br/>Choose between several visual layouts – meter, strobe-inspired, big letter display, and more.<br/>_(All styles support full-range chromatic tuning.)_
