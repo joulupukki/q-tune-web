@@ -18,7 +18,7 @@ Q-Tune will be available as a DIY kit. You will be able to purchase a full kit t
 
 ## Do I need to know how to solder?
 
-Yes. The Q-Tune kit requires basic soldering skills. If you're new to soldering, we recommend practicing on a simple beginner kit first before attempting to assemble Q-Tune.
+Yes. The Q-Tune kit requires intermediate soldering skills. If you're new to soldering, we recommend practicing on a simple beginner kit first before attempting to assemble Q-Tune.
 
 ## What tools do I need to build Q-Tune?
 
@@ -30,7 +30,9 @@ At minimum, you'll need:
 
 - A small Phillips screwdriver
 
-- A multimeter (optional but extremely helpful)
+- A multimeter
+
+- A headworn magnifier (optional but extremely helpful)
 
 ## What’s included in the kit?
 
@@ -52,7 +54,7 @@ When new versions are available, you can upgrade your Q-Tune pedal with the [web
 
 ## What tuning algorithm does it use?
 
-Q-Tune uses a zero-crossing detection algorithm. It’s designed for fast and accurate pitch detection, optimized for guitar and bass.
+Q-Tune uses an advanced zero-crossing detection algorithm (it's actually more complicated than that). It’s designed for fast and accurate pitch detection, optimized for stringed instruments like guitar and bass.
 
 ## Can it tune instruments other than guitar?
 
