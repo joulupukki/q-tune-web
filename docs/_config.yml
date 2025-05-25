@@ -64,4 +64,5 @@ minima:
   nav_pages:
     - build-instructions.markdown
     - install.markdown
+    - specifications.markdown
     - about.markdown
