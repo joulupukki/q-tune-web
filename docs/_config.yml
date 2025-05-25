@@ -65,4 +65,5 @@ minima:
     - build-instructions.markdown
     - install.markdown
     - specifications.markdown
+    - faq.markdown
     - about.markdown
