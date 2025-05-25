@@ -10,7 +10,7 @@ permalink: /install/
   <link href="/assets/install/css/main.css" rel="stylesheet">
 </head>
 
-Plug the Q-Tune into your computer using a USB cable or, as needed, a USB to serial adapter, the version you wish to use and click on the connect button.
+Plug in the Q-Tune to your computer using a USB data cable and then click the **Connect to device** button.
 
   <div class="container" style="height: 100%;">
     <hr class="my-4">

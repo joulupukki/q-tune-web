@@ -4,8 +4,6 @@ title: Specs
 permalink: /specifications/
 ---
 
-## Specifications
-
 - Mono I/O (Standard 1/4" Jacks)
 - 9 VDC Center Negative ~200mA
 - True Bypass or Buffered Bypass
