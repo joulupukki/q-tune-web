@@ -28,16 +28,17 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.q-tune.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
-theme: minima
+# theme: minima
 # remote_theme: pages-themes/cayman@v0.2.0
 # remote_theme: pages-themes/slate@v0.2.0
 # remote_theme: pages-themes/minimal@v0.2.0
-# remote_theme: jekyll/minima@c6e74bb
+remote_theme: jekyll/minima@0b7ca6b
 github:
   is_project_page: false
 plugins:
   - jekyll-feed
-  # - jekyll-remote-theme
+  - jekyll-remote-theme
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -62,5 +63,6 @@ exclude:
 
 minima:
   nav_pages:
+    - build-instructions.markdown
     - install.markdown
     - about.markdown
