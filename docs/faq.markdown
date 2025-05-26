@@ -62,7 +62,7 @@ Yes, though it’s optimized for standard guitar and bass tuning ranges.
 
 ## Is there a warranty?
 
-Since Q-Tune is a DIY kit, we cannot offer a formal warranty. However, please join the [Q-Tune Builder's Discord](https://discord.gg/C5VnyGkc){:target="_blank"} and we or other builders may be able to help you troubleshoot.
+Since Q-Tune is a DIY kit, we cannot offer a formal warranty. However, please join the [Q-Tune Builder's Discord](https://discord.gg/evtjkEj9GX){:target="_blank"} and we or other builders may be able to help you troubleshoot.
 
 ## Is this project suitable for beginners?
 
@@ -74,6 +74,6 @@ We're always looking for improvements and new features. If there's something you
 
 ## How can I get support?
 
-Feel free to join the [Q-Tune Builder's Discord](https://discord.gg/C5VnyGkc){:target="_blank"} and ask questions.
+Feel free to join the [Q-Tune Builder's Discord](https://discord.gg/evtjkEj9GX){:target="_blank"} and ask questions.
 
 There are also many great pedal building forums that may help, including PedalPCB, All About Circuits, and GroupDIY.

@@ -85,6 +85,6 @@ We're just about to launch the first pre-order of the full Q-Tune DIY kit. Make 
 
 ## 💬 Join the Builder Crew
 
-Share your build, ask questions, and see what others are creating. Tag your builds with **#qtunepedal** on your social feeds! Follow along @qtunepedal or joing the [Q-Tune Builder's Discord](https://discord.gg/C5VnyGkc){:target="_blank"}.
+Share your build, ask questions, and see what others are creating. Tag your builds with **#qtunepedal** on your social feeds! Follow along @qtunepedal or joing the [Q-Tune Builder's Discord](https://discord.gg/evtjkEj9GX){:target="_blank"}.
 
 <hr/><br/>
