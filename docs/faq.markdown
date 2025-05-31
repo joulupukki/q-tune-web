@@ -72,12 +72,12 @@ Q-Tune is best suited for intermediate builders who have experience with solderi
 
 We're always looking for improvements and new features. If there's something you'd love to see, please let us know. As newer versions are avaiable, we will post them on the [web installer](/install) page.
 
-## The kit I ordered seems to be missing a part. What can I do?
+## Oops! Something Missing from Your Kit?
 
-Please fill out the [Missing Parts form](/missing-parts){:target="_blank"}.
+It's rare, but it happens. The [build documentation](/build) includes an inventory of parts. If you received the wrong parts, or if something was left out, please let us know as soon as possible and we'll make it right. Fill out the [Missing Parts Form](/missing-parts){:target="_blank"}.
 
 ## How can I get support?
 
-Feel free to join the [Q-Tune Builder's Discord](https://discord.gg/evtjkEj9GX){:target="_blank"} and ask questions.
+Feel free to join the [Q-Tune Builder's Discord](https://discord.gg/evtjkEj9GX){:target="_blank"} and ask questions. The Third Party area of the Pedal PCB Forums also has a dedicated [Q-Tune DIY Tuner](https://forum.pedalpcb.com/forums/qtune/){:target="_blank"} section.
 
-There are also many great pedal building forums that may help, including PedalPCB, All About Circuits, and GroupDIY.
+There are also many great pedal building forums that may help, including All About Circuits and GroupDIY.
