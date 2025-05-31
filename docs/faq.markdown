@@ -72,6 +72,10 @@ Q-Tune is best suited for intermediate builders who have experience with solderi
 
 We're always looking for improvements and new features. If there's something you'd love to see, please let us know. As newer versions are avaiable, we will post them on the [web installer](/install) page.
 
+## The kit I ordered seems to be missing a part. What can I do?
+
+Please fill out the [Missing Parts form](/missing-parts){:target="_blank"}.
+
 ## How can I get support?
 
 Feel free to join the [Q-Tune Builder's Discord](https://discord.gg/evtjkEj9GX){:target="_blank"} and ask questions.
