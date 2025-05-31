@@ -61,7 +61,7 @@ permalink: /install/
 
   <li><strong>DO NOT</strong> select the <strong>Erase device</strong> option unless you want to erase all of your user settings.</li>
 
-  <li>Click the <strong>Next</strong> button and then confirm by clicking the <strong>Install</strong> button.
+  <li>Click the <strong>Next</strong> button and then confirm by clicking the <strong>Install</strong> button.</li>
 
   <li>Wait for the installer to finish. Once it's done you can unplug the USB-C cable and put Q-Tune to use on your pedalboard!</li>
 </ol>
