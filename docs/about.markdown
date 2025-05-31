@@ -22,4 +22,4 @@ What started as a simple message turned into a full-blown collaboration. When Ry
 
 After nearly a year of prototyping, tinkering, and fine-tuning, **Q-Tune** was born—the world’s first **DIY guitar tuner pedal kit**. It’s built for makers, tinkerers, and tone chasers who want more than off-the-shelf gear.
 
-Q-Tune isn’t just a tuner. It’s a platform. And it’s yours to shape.
+Q-Tune isn’t just a tuner. It’s a hands-on build that delivers pro-level performance.
