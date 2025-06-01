@@ -9,7 +9,8 @@ description: " "
 
 ## A DIY Tuner Pedal Kit that Doesn't Compromise
 
-<hr/><br/>
+<!-- <hr/><br/> -->
+## 🎸 Pre-order starts on Monday, June 2, 2025!<br/>🛒 Only 20 pre-order kits available.
 
 <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
 
@@ -31,13 +32,10 @@ description: " "
 
 <br/>
 
-<div class="embed-container" style="width: 700px; margin: 0 auto;">
+<div class="embed-container">
   <iframe
-      src="https://www.youtube.com/embed/gKlhl48I9eU"
-      width="700"
-      height="480"
-      frameborder="0"
-      allowfullscreen="true">
+    src="https://www.youtube.com/embed/gKlhl48I9eU"
+    allowfullscreen>
   </iframe>
 </div>
 
