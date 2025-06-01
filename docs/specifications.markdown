@@ -4,8 +4,8 @@ title: Specs
 permalink: /specifications/
 ---
 
-- Mono I/O (Standard 1/4" Jacks)
-- 9 VDC Center Negative ~200mA
+- Mono I/O (Standard 1/4" Jacks - top mounted)
+- 9 VDC Center Negative ~200mA - top mounted
 - True Bypass or Buffered Bypass
 - Monitoring Mode (with Buffered Bypass)
 - Capacitive Touch 2.8" Color LCD
