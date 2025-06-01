@@ -12,7 +12,20 @@ description: " "
 <!-- <hr/><br/> -->
 ## 🎸 Pre-order starts on Monday, June 2, 2025!<br/>🛒 Only 20 pre-order kits available.
 
+<div class="embed-container">
+  <iframe
+    src="https://www.youtube.com/embed/gKlhl48I9eU"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<br/>
+
 <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+
+  <div style="flex: 0 0 400px;">
+    <img src="/assets/images/q-tune-hero.jpg" alt="Q-Tune" style="max-width: 100%; height: auto; border-radius: 8px;">
+  </div>
 
   <div style="flex: 1; min-width: 300px;">
     <p>Q-Tune™ Chromatic Instrument Tuner is the <strong>first of its kind</strong> in the <strong>DIY</strong> pedal world — a <strong>high-precision</strong> tuner with a full <strong>2.8&quot; LCD</strong>, offered as a <strong>solder-it-yourself kit</strong> in a rugged stompbox enclosure.</p>
@@ -22,24 +35,29 @@ description: " "
     <p>Build it yourself. Gig with confidence. Pro-level precision with DIY-level satisfaction.</p>
   </div>
 
-  <div style="flex: 0 0 400px;">
-    <a href="https://youtu.be/gKlhl48I9eU" target="_blank">
-      <img src="/assets/images/q-tune-hero.jpg" alt="Q-Tune" style="max-width: 100%; height: auto; border-radius: 8px;">
-    </a>
-  </div>
-
 </div>
 
 <br/>
 
-<div class="embed-container">
-  <iframe
-    src="https://www.youtube.com/embed/gKlhl48I9eU"
-    allowfullscreen>
-  </iframe>
+<div class="glider-contain">
+  <button class="glider-prev">«</button>
+  <div class="glider">
+    <div><img src="/assets/images/01-q-tune-product-shot.jpg"></div>
+    <div><img src="/assets/images/02-q-tune-product-shot.jpg"></div>
+    <div><img src="/assets/images/03-q-tune-product-shot.jpg"></div>
+    <div><img src="/assets/images/04-q-tune-product-shot.jpg"></div>
+    <div><img src="/assets/images/05-q-tune-product-shot.jpg"></div>
+    <div><img src="/assets/images/06-q-tune-product-shot.jpg"></div>
+    <div><img src="/assets/images/07-q-tune-product-shot.jpg"></div>
+    <div><img src="/assets/images/08-q-tune-product-shot.jpg"></div>
+    <div><img src="/assets/images/09-q-tune-product-shot.jpg"></div>
+    <div><img src="/assets/images/10-q-tune-product-shot.jpg"></div>
+  </div>
+  <button class="glider-next">»</button>
+  <div class="dots"></div>
 </div>
 
-<hr/><br/>
+<hr/>
 
 We're just about to launch the first pre-order of the full Q-Tune DIY kit. Make sure you don't miss out. Sign up for the newsletter to be among the first to know when it's available for purchase.
 
