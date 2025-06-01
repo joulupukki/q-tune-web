@@ -5,6 +5,8 @@ permalink: /eula/
 
 **Q-Tune End-User License Agreement**
 
+Updated 20 May 2025
+
 ENGLISH
 
 IMPORTANT:
@@ -60,5 +62,3 @@ IF YOU HAVE RECENTLY PURCHASED A DEVICE OR DEVICE KIT AND YOU DO NOT AGREE TO TH
 13. Support. Molinello Music is not obligated to provide any maintenance, tehcnical, or other support for the Software unless expressly stated in the product documentation.
 
 14. Data Collection. The Software does not collect or transmit any personally identifiable information. If this changes, a privacy policy will be provided.
-
-Last Modified: 5/20/2025
