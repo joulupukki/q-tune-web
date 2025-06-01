@@ -29,12 +29,16 @@ description: " "
 
 </div>
 
-<div style="text-align: center; margin-top: 2rem;">
-  <h2 style="font-size: 2rem; margin: 0;">
-    <a href="https://youtu.be/gKlhl48I9eU" target="_blank" style="text-decoration: none; color: #000;">
-      <strong>▶️ Watch the Demo</strong>
-    </a>
-  </h2>
+<br/>
+
+<div class="embed-container" style="width: 700px; margin: 0 auto;">
+  <iframe
+      src="https://www.youtube.com/embed/gKlhl48I9eU"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="true">
+  </iframe>
 </div>
 
 <hr/><br/>
@@ -58,6 +62,8 @@ We're just about to launch the first pre-order of the full Q-Tune DIY kit. Make 
 - **🖥️ Multiple Tuning Display Styles**<br/>Choose between several visual layouts – meter, strobe-inspired, big letter display, and more.<br/>_(All styles support full-range chromatic tuning.)_
 
 - **🎧 Monitoring Mode**<br/>Watch pitch in real-time while playing – ideal for intonation and practice (using buffered bypass).
+
+- **📐 Top-Mounted Jacks**<br/>Both audio and DC jacks are located on the top edge—saving precious pedalboard space and keeping your rig tidy.
 
 - **🔌 USB-C Firmware Upgrades**<br/>Future-proof your build - update firmware with new feaures or improvements via USB-C using the [web installer](/install).
 
