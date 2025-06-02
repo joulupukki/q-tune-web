@@ -6,15 +6,15 @@ permalink: /faq/
 
 ## What is Q-Tune?
 
-Q-Tune is the first DIY guitar tuner pedal kit designed for musicians, builders, and tinkerers who want a customizable and high-performance tuner they can build and modify themselves.
+Q-Tune is the first DIY guitar tuner pedal kit designed for musicians, builders, and tinkerers who want a high-performance tuner they can build and modify themselves.
 
 ## When will Q-Tune be available?
 
-It's coming *very soon*! Sign up on the Q-Tune home page for our newsletter and you'll be among the first to know when it's available.
+The Q-Tune Pre-Order is open starting Monday, June 2, 2025 and ends on Monday, June 9, 2025 or when they sell out, whichever comes first. Regular priced kits will be available in the future and announced on the website. Sign up for the newsletter to receive an email when the next kits are available if you miss out on the pre-order.
 
 ## Is Q-Tune available for purchase?
 
-Q-Tune will be available as a DIY kit. You will be able to purchase a full kit that includes the PCB and required components from the Q-Tune website. We will provide full assembly instructions.
+Q-Tune is a DIY kit. You can purchase a full kit that includes the PCB and required components from the Q-Tune website. Visit the [build page](/build) for assembly instructions.
 
 ## Do I need to know how to solder?
 
@@ -46,7 +46,7 @@ At minimum, you'll need:
 
 - A painted aluminum enclosure
 
-- Full assembly guide (downloadable on the [build](/build) page
+- Full assembly guide (downloadable on the [build page](/build)
 
 ## Can I update the software?
 

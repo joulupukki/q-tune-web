@@ -9,6 +9,70 @@ description: " "
 
 ## A DIY Tuner Pedal Kit that Doesn't Compromise
 
+<script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+
+  <div style="flex: 0 0 400px;">
+
+    <div class="pre-order-text">
+      The pre-order is now open and ends on Monday, June 9, or until they sell out, whichever comes first.
+    </div>
+    <div class="pre-order-text" style="font-weight: normal;">
+      🛒 Only 20 pre-order kits available.
+    </div>
+
+    <img src="/assets/images/q-tune-hero.jpg" alt="Q-Tune" style="max-width: 100%; height: auto; border-radius: 8px;">
+
+    <div style="text-align: center;">
+      This is special pre-order pricing. Regular price is $179 USD. The kits include all components needed to build a Q-Tune tuner pedal. Pre-order purchases are paid up-front. The kit may take up to 45 business days after purchase to receive.
+    </div>
+
+  </div>
+
+  <div style="flex: 1; min-width: 300px;">
+
+    <div class="buy-button-container">
+      <div style="font-size: 1.2em;"><strong>1590B</strong> Pre-Order Kit</div>
+      <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$149</div>
+      <div style="margin-bottom: 10px;">+ Shipping</div>
+      <stripe-buy-button
+        buy-button-id="buy_btn_1RUKLGH0FKPP5uTcd6C2sTnq"
+        publishable-key="pk_live_51RUJfeH0FKPP5uTcXp7jDFU1gbKc3msG94kNCfK6x3g012ZljU6DSNH4EIn0WJoV7gyhXUuPejjzDcQjGSrk3WnH00gznLkKEj"
+      >
+      </stripe-buy-button>
+    </div>
+
+    <div class="buy-button-container">
+      <div style="font-size: 1.2em;"><strong>125B</strong> Pre-Order Kit</div>
+      <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$149</div>
+      <div style="margin-bottom: 10px;">+ Shipping</div>
+      <stripe-buy-button
+        buy-button-id="buy_btn_1RUKTTH0FKPP5uTc2OUsNEqG"
+        publishable-key="pk_live_51RUJfeH0FKPP5uTcXp7jDFU1gbKc3msG94kNCfK6x3g012ZljU6DSNH4EIn0WJoV7gyhXUuPejjzDcQjGSrk3WnH00gznLkKEj"
+      >
+      </stripe-buy-button>
+    </div>
+
+
+    <div class="buy-button-container">
+      <div style="font-size: 1.2em;"><strong>NO Enclosure</strong> Pre-Order Kit</div>
+      <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$137</div>
+      <div style="margin-bottom: 10px;">+ Shipping</div>
+      <stripe-buy-button
+        buy-button-id="buy_btn_1RUKUrH0FKPP5uTckrXZ7vg9"
+        publishable-key="pk_live_51RUJfeH0FKPP5uTcXp7jDFU1gbKc3msG94kNCfK6x3g012ZljU6DSNH4EIn0WJoV7gyhXUuPejjzDcQjGSrk3WnH00gznLkKEj"
+      >
+      </stripe-buy-button>
+    </div>
+  </div>
+
+</div>
+
+<br/>
+
 <div class="embed-container">
   <iframe
     src="https://www.youtube.com/embed/gKlhl48I9eU"
@@ -18,13 +82,7 @@ description: " "
 
 <br/>
 
-## 🎸 Pre-order starts on Monday, June 2, 2025!<br/>🛒 Only 20 pre-order kits available.
-
 <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
-
-  <div style="flex: 0 0 400px;">
-    <img src="/assets/images/q-tune-hero.jpg" alt="Q-Tune" style="max-width: 100%; height: auto; border-radius: 8px;">
-  </div>
 
   <div style="flex: 1; min-width: 300px;">
     <p>Q-Tune™ Chromatic Instrument Tuner is the <strong>first of its kind</strong> in the <strong>DIY</strong> pedal world — a <strong>high-precision</strong> tuner with a full <strong>2.8&quot; LCD</strong>, offered as a <strong>solder-it-yourself kit</strong> in a rugged stompbox enclosure.</p>
@@ -35,8 +93,6 @@ description: " "
   </div>
 
 </div>
-
-<br/>
 
 <div class="glider-contain">
   <button class="glider-prev">«</button>
@@ -57,12 +113,6 @@ description: " "
 </div>
 
 <hr/>
-
-We're just about to launch the first pre-order of the full Q-Tune DIY kit. Make sure you don't miss out. Sign up for the newsletter to be among the first to know when it's available for purchase.
-
-<script async data-uid="78153b5199" src="https://q-tune.kit.com/78153b5199/index.js"></script>
-
-<hr/><br/>
 
 ## ✅ Why Q-tune Is Different
 
@@ -88,7 +138,7 @@ We're just about to launch the first pre-order of the full Q-Tune DIY kit. Make 
 
 - **🛠️ First of Its Kind**<br/>Q-Tune is the first DIY pedal kit to offer **a full-color display, studio-grade accuracy**, and a **rugged enclosure** – all as a legit built-it-yourself project.
 
-<hr/><br/>
+<hr/>
 
 ## 🔧 What You Get
 
@@ -102,7 +152,7 @@ We're just about to launch the first pre-order of the full Q-Tune DIY kit. Make 
 
 - Full assembly guide (PDF)
 
-<hr/><br/>
+<hr/>
 
 ## 💬 Join the Builder Crew
 
@@ -110,4 +160,8 @@ Share your build, ask questions, and see what others are creating. Tag your buil
 
 We'd love to have you join the [Q-Tune Builder's Discord](https://discord.gg/evtjkEj9GX){:target="_blank"}. The Third Party area of the Pedal PCB Forums also has a dedicated [Q-Tune DIY Tuner](https://forum.pedalpcb.com/forums/qtune/){:target="_blank"} section.
 
-<hr/><br/>
+<hr/>
+
+<div style="display: flex; justify-content: center;">
+<script async data-uid="78153b5199" src="https://q-tune.kit.com/78153b5199/index.js"></script>
+</div>
