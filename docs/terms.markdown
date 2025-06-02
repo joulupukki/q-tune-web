@@ -15,7 +15,7 @@ If you have purchased a pre-order kit and the kit has not shipped to you within 
 
 ### International Shipping Methods
 
-- Internation shipping is not currently available during the pre-order period. If/when that changes, we will update the information available here.
+- Internation shipping may not be available during the pre-order period. If/when that changes, we will update the information available here.
 
 ### Returns / Refunds
 
