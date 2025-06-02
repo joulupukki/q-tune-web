@@ -6,9 +6,9 @@ permalink: /build/
 
 ## Download the full PDF build instructions:
 
-- [31.3 MB Higher Resolution](/assets/build/Q-Tune-Build-Instructions.pdf){:target="_blank"}
+- [31.3 MB Higher Resolution](/assets/build/Q-Tune-Build-Instructions-1.0.1.pdf){:target="_blank"}
 
-- [15.1 MB Lower Resolution](/assets/build/Q-Tune-Build-Instructions-Lower-Res.pdf){:target="_blank"}
+- [15.1 MB Lower Resolution](/assets/build/Q-Tune-Build-Instructions-Lower-Res-1.0.1.pdf){:target="_blank"}
 
 ## How-To Videos
 
