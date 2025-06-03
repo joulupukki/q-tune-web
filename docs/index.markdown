@@ -106,25 +106,27 @@ document.querySelectorAll('.preorder-button').forEach(button => {
   justify-content: center; 
   align-items: center;
   padding: 1em;
+  box-sizing: border-box;
 ">
   <div style="
     background: white; 
-    padding: 2em; 
+    padding: 1.5em; 
     border-radius: 10px; 
     text-align: center;
-    width: 100%;
-    max-width: 360px;
+    width: 90vw;
+    max-width: 320px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
   ">
-    <p style="margin-bottom: 1.5em; font-size: 1.2em;">Select your shipping region:</p>
+    <p style="margin-bottom: 1.2em; font-size: 1.1em;">Select your shipping region:</p>
     
-    <div style="display: flex; flex-direction: column; gap: 1em;">
+    <div style="display: flex; flex-direction: column; gap: 0.8em;">
       <button id="btn-us" style="
-        font-size: 1.1em;
-        padding: 0.8em;
+        font-size: 1em;
+        padding: 0.75em;
         border-radius: 6px;
         border: none;
-        background-color:rgb(53, 53, 53);
+        background-color: rgb(53, 53, 53);
         color: white;
         font-weight: 600;
         cursor: pointer;
@@ -135,8 +137,8 @@ document.querySelectorAll('.preorder-button').forEach(button => {
       </button>
 
       <button id="btn-ca" style="
-        font-size: 1.1em;
-        padding: 0.8em;
+        font-size: 1em;
+        padding: 0.75em;
         border-radius: 6px;
         border: none;
         background-color: rgb(53, 53, 53);
@@ -150,8 +152,8 @@ document.querySelectorAll('.preorder-button').forEach(button => {
       </button>
 
       <button onclick="closeModal()" style="
-        font-size: 1em;
-        padding: 0.6em;
+        font-size: 0.95em;
+        padding: 0.65em;
         border-radius: 6px;
         background-color: #e0e0e0;
         border: none;
@@ -166,6 +168,7 @@ document.querySelectorAll('.preorder-button').forEach(button => {
     </div>
   </div>
 </div>
+
 
 <script>
   // Keep track of which button was clicked
