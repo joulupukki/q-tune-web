@@ -101,12 +101,13 @@ document.querySelectorAll('.preorder-button').forEach(button => {
   display: none; 
   position: fixed; 
   top: 0; left: 0; 
-  width: 100vw; height: 100vh;
+  inset: 0;
   background: rgba(0,0,0,0.5); 
   justify-content: center; 
   align-items: center;
   padding: 1em;
   box-sizing: border-box;
+  z-index: 9999;
 ">
   <div style="
     background: white; 
