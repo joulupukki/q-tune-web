@@ -34,39 +34,158 @@ description: " "
 
   <div style="flex: 1; min-width: 300px;">
 
-    <div class="buy-button-container">
-      <div style="font-size: 1.2em;"><strong>1590B</strong> Pre-Order Kit</div>
-      <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$149</div>
-      <div style="margin-bottom: 10px;">+ Shipping</div>
-      <stripe-buy-button
-        buy-button-id="buy_btn_1RUKLGH0FKPP5uTcd6C2sTnq"
-        publishable-key="pk_live_51RUJfeH0FKPP5uTcXp7jDFU1gbKc3msG94kNCfK6x3g012ZljU6DSNH4EIn0WJoV7gyhXUuPejjzDcQjGSrk3WnH00gznLkKEj"
-      >
-      </stripe-buy-button>
-    </div>
+<!-- 1590B Begin -->
+<div class="buy-button-container">
+  <div style="font-size: 1.2em;"><strong>1590B</strong> Pre-Order Kit</div>
+  <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$149</div>
+  <div style="margin-bottom: 10px;">+ Shipping</div>
 
-    <div class="buy-button-container">
-      <div style="font-size: 1.2em;"><strong>125B</strong> Pre-Order Kit</div>
-      <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$149</div>
-      <div style="margin-bottom: 10px;">+ Shipping</div>
-      <stripe-buy-button
-        buy-button-id="buy_btn_1RUKTTH0FKPP5uTc2OUsNEqG"
-        publishable-key="pk_live_51RUJfeH0FKPP5uTcXp7jDFU1gbKc3msG94kNCfK6x3g012ZljU6DSNH4EIn0WJoV7gyhXUuPejjzDcQjGSrk3WnH00gznLkKEj"
-      >
-      </stripe-buy-button>
-    </div>
+  <!-- Primary Button -->
+  <button class="preorder-button"
+    data-url-us="https://buy.stripe.com/8x2cN5eCV8Nzf6ndTe8og01"
+    data-url-ca="https://buy.stripe.com/dRm7sL7ate7Te2jg1m8og06"
+  >
+    Pre-Order 1590B
+  </button>
+</div>
+<!-- 1590B End -->
 
+<!-- 125B Begin -->
+<div class="buy-button-container">
+  <div style="font-size: 1.2em;"><strong>125B</strong> Pre-Order Kit</div>
+  <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$149</div>
+  <div style="margin-bottom: 10px;">+ Shipping</div>
 
-    <div class="buy-button-container">
-      <div style="font-size: 1.2em;"><strong>NO Enclosure</strong> Pre-Order Kit</div>
-      <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$137</div>
-      <div style="margin-bottom: 10px;">+ Shipping</div>
-      <stripe-buy-button
-        buy-button-id="buy_btn_1RUKUrH0FKPP5uTckrXZ7vg9"
-        publishable-key="pk_live_51RUJfeH0FKPP5uTcXp7jDFU1gbKc3msG94kNCfK6x3g012ZljU6DSNH4EIn0WJoV7gyhXUuPejjzDcQjGSrk3WnH00gznLkKEj"
-      >
-      </stripe-buy-button>
+  <!-- Primary Button -->
+  <button class="preorder-button"
+    data-url-us="https://buy.stripe.com/6oUeVd52l9RD6zReXi8og00"
+    data-url-ca="https://buy.stripe.com/7sY00jcuNe7T9M37uQ8og05"
+  >
+    Pre-Order 125B
+  </button>
+</div>
+<!-- 125B End -->
+
+<!-- NO Enclosure Begin -->
+<div class="buy-button-container">
+  <div style="font-size: 1.2em;"><strong>NO Enclosure</strong> Pre-Order Kit</div>
+  <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$137</div>
+  <div style="margin-bottom: 10px;">+ Shipping</div>
+
+  <!-- Primary Button -->
+  <button class="preorder-button"
+    data-url-us="https://buy.stripe.com/fZufZhamF3tf0bt5mI8og02"
+    data-url-ca="https://buy.stripe.com/00w9AT0M5fbX9M32aw8og07"
+  >
+    Pre-Order w/o Enclosure
+  </button>
+</div>
+<!-- NO Enclosure End -->
+
+<!-- Supporting Modal Code -->
+
+<script>
+document.querySelectorAll('.preorder-button').forEach(button => {
+  button.addEventListener('mouseenter', () => {
+    button.style.backgroundColor = '#0054b4';
+  });
+  button.addEventListener('mouseleave', () => {
+    button.style.backgroundColor = '#0074d4';
+  });
+});
+
+</script>
+
+<!-- Modal -->
+<div id="region-modal" style="
+  display: none; 
+  position: fixed; 
+  top: 0; left: 0; 
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.5); 
+  justify-content: center; 
+  align-items: center;
+">
+  <div style="
+    background: white; 
+    padding: 2em; 
+    border-radius: 10px; 
+    text-align: center;
+    max-width: 360px;
+  ">
+    <p style="margin-bottom: 1em;">Select your shipping region:</p>
+    <div style="display: flex; justify-content: center; gap: 1em;">
+      <button id="btn-us" style="font-size: 1.5em;">🇺🇸 United States</button>
+      <button id="btn-ca" style="font-size: 1.5em;">🇨🇦 Canada</button>
     </div>
+    <div style="margin-top: 1em;">
+      <button onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Keep track of which button was clicked
+  let currentButton = null;
+
+  // Get modal and region buttons
+  const modal = document.getElementById('region-modal');
+  const btnUS = document.getElementById('btn-us');
+  const btnCA = document.getElementById('btn-ca');
+
+  // Add hover effect to all preorder buttons and click handler
+  document.querySelectorAll('.preorder-button').forEach(button => {
+    button.addEventListener('mouseenter', () => {
+      button.style.backgroundColor = '#0054b4';
+    });
+    button.addEventListener('mouseleave', () => {
+      button.style.backgroundColor = '#0074d4';
+    });
+
+    button.addEventListener('click', () => {
+      currentButton = button;  // Save reference to clicked button
+      modal.style.display = 'flex';
+    });
+  });
+
+  // Close modal function
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+
+  // Open Stripe link based on region for the currently clicked button
+  function openStripeLink(region) {
+    if (!currentButton) {
+      alert('No button selected.');
+      closeModal();
+      return;
+    }
+
+    const urlKey = region === 'us' ? 'data-url-us' : 'data-url-ca';
+    const url = currentButton.getAttribute(urlKey);
+
+    closeModal();
+
+    if (url) {
+      window.open(url, '_blank');
+    } else {
+      alert('Invalid region selected or URL not available.');
+    }
+  }
+
+  // Attach openStripeLink to buttons in modal
+  btnUS.addEventListener('click', () => openStripeLink('us'));
+  btnCA.addEventListener('click', () => openStripeLink('ca'));
+
+  // Be able to close the modal with the ESC key
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  });  
+</script>
+
+    
   </div>
 
 </div>
