@@ -105,21 +105,64 @@ document.querySelectorAll('.preorder-button').forEach(button => {
   background: rgba(0,0,0,0.5); 
   justify-content: center; 
   align-items: center;
+  padding: 1em;
 ">
   <div style="
     background: white; 
     padding: 2em; 
     border-radius: 10px; 
     text-align: center;
+    width: 100%;
     max-width: 360px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   ">
-    <p style="margin-bottom: 1em;">Select your shipping region:</p>
-    <div style="display: flex; justify-content: center; gap: 1em;">
-      <button id="btn-us" style="font-size: 1.5em;">🇺🇸 United States</button>
-      <button id="btn-ca" style="font-size: 1.5em;">🇨🇦 Canada</button>
-    </div>
-    <div style="margin-top: 1em;">
-      <button onclick="closeModal()">Cancel</button>
+    <p style="margin-bottom: 1.5em; font-size: 1.2em;">Select your shipping region:</p>
+    
+    <div style="display: flex; flex-direction: column; gap: 1em;">
+      <button id="btn-us" style="
+        font-size: 1.1em;
+        padding: 0.8em;
+        border-radius: 6px;
+        border: none;
+        background-color:rgb(53, 53, 53);
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+      ">
+        🇺🇸 United States
+      </button>
+
+      <button id="btn-ca" style="
+        font-size: 1.1em;
+        padding: 0.8em;
+        border-radius: 6px;
+        border: none;
+        background-color: rgb(53, 53, 53);
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+      ">
+        🇨🇦 Canada
+      </button>
+
+      <button onclick="closeModal()" style="
+        font-size: 1em;
+        padding: 0.6em;
+        border-radius: 6px;
+        background-color: #e0e0e0;
+        border: none;
+        cursor: pointer;
+        color: #333;
+        font-weight: 500;
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+      ">
+        Cancel
+      </button>
     </div>
   </div>
 </div>
