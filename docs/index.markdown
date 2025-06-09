@@ -17,17 +17,10 @@ description: " "
 
   <div style="flex: 0 0 400px;">
 
-    <div class="pre-order-text">
-      The pre-order is now open and ends on Monday, June 9, or until they sell out, whichever comes first.
-    </div>
-    <div class="pre-order-text" style="font-weight: normal;">
-      🛒 Only 20 pre-order kits available.
-    </div>
-
     <img src="/assets/images/q-tune-hero.jpg" alt="Q-Tune" style="max-width: 100%; height: auto; border-radius: 8px;">
 
     <div style="text-align: center;">
-      This is special pre-order pricing. Regular price is $179 USD. The kits include all components needed to build a Q-Tune tuner pedal. Pre-order purchases are paid up-front. The kit may take up to 45 business days after purchase to receive.
+      The kits include all components needed to build a Q-Tune tuner pedal. Pre-order purchases are paid up-front. The kit may take up to 45 business days after purchase to receive.
     </div>
 
   </div>

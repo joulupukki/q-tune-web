@@ -10,7 +10,7 @@ Q-Tune is the first DIY guitar tuner pedal kit designed for musicians, builders,
 
 ## When will Q-Tune be available?
 
-The Q-Tune Pre-Order is open starting Monday, June 2, 2025 and ends on Monday, June 9, 2025 or when they sell out, whichever comes first. Regular priced kits will be available in the future and announced on the website. Sign up for the newsletter to receive an email when the next kits are available if you miss out on the pre-order.
+Q-Tune is available now as a pre-order and will be shipped within 45 business days of ordering. Sign up for the newsletter to receive an email when kits in-stock and ready for shipping if you'd rather wait for that.
 
 ## Is Q-Tune available for purchase?
 
