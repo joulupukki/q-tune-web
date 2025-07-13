@@ -9,6 +9,76 @@ description: " "
 
 ## A DIY Tuner Pedal Kit that Doesn't Compromise
 
+<style>
+  .enclosure-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* optional spacing above/below */
+  }
+
+  .enclosure-button {
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 6px;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    transition: box-shadow 0.2s ease;
+  }
+
+  .enclosure-button img {
+    height: 150px;  /* adjust this to your liking */
+    width: auto;
+  }
+
+  .enclosure-button:hover {
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    text-align: center;
+  }
+
+  .modal-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .modal-close {
+    margin-top: 1rem;
+    background-color: #444;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .modal-close:hover {
+    background-color: #222;
+  }
+</style>
+
 <script async
   src="https://js.stripe.com/v3/buy-button.js">
 </script>
@@ -21,6 +91,23 @@ description: " "
 
     <div style="text-align: center;">
       The kits include all components needed to build a Q-Tune tuner pedal. Pre-order purchases are paid up-front. The kit may take up to 45 business days after purchase to receive.
+    </div>
+
+    <!-- Trigger Button -->
+    <div class="enclosure-button-wrapper">
+      <div id="enclosureButton" class="enclosure-button">
+        <img src="/assets/images/1590b-vs-125b-button.jpg" alt="Compare 1590B and 125B Enclosure Sizes" />
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="enclosureModal" class="modal-overlay">
+      <div class="modal-content">
+        <img src="/assets/images/q-tune-1590b-vs-125b.jpg" alt="1590B vs 125B" />
+        <p><strong>1590B:</strong> More compact. Fits easily on tight pedalboards.</p>
+        <p><strong>125B:</strong> Larger. Could fit in better with your existing pedals.</p>
+        <button id="modalCloseBtn" class="modal-close">Close</button>
+      </div>
     </div>
 
   </div>
@@ -72,6 +159,23 @@ description: " "
   >
     Pre-Order w/o Enclosure
   </button>
+
+  <p>
+  <br/><strong>Tayda Drill Templates:</strong><br/>
+
+  <a href="https://drill.taydakits.com/box-designs/new?public_key=bWxYL0R0T0dBRHBmZkZOSGR3Yk40UT09Cg==" target="_blank">1590B</a>,
+
+  <a href="https://drill.taydakits.com/box-designs/new?public_key=SmRhZzVaSm8vSlFtK3M5anBxRktQdz09Cg==" target="_blank">125B</a>
+
+  </p>
+  <p>
+  <strong>Tayda UV PDF Templates:</strong><br/>
+  <a href="/assets/uv-templates/Q-Tune-1590B-v4.8curves.pdf" target="_blank">1590B</a>,
+
+  <a href="/assets/uv-templates/Q-Tune-125B-v4.8curves.pdf" target="_blank">125B</a>
+
+  </p>
+  
 </div>
 <!-- NO Enclosure End -->
 
@@ -84,6 +188,28 @@ document.querySelectorAll('.preorder-button').forEach(button => {
   });
   button.addEventListener('mouseleave', () => {
     button.style.backgroundColor = '#0074d4';
+  });
+});
+
+// Wrap in DOMContentLoaded to ensure elements exist
+document.addEventListener("DOMContentLoaded", function () {
+  const openBtn = document.getElementById('enclosureButton');
+  const modal = document.getElementById('enclosureModal');
+  const closeBtn = document.getElementById('modalCloseBtn');
+
+  openBtn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  // Optional: close on outside click
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
   });
 });
 
