@@ -99,6 +99,7 @@ description: " "
         <img src="/assets/images/1590b-vs-125b-button.jpg" alt="Compare 1590B and 125B Enclosure Sizes" />
       </div>
     </div>
+    <div style="display: flex; justify-content: center; margin: 20px 0;"><strong>No soldering required inside either enclosure.</strong></div>
 
     <!-- Modal -->
     <div id="enclosureModal" class="modal-overlay">
