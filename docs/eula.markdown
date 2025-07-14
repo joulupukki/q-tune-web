@@ -1,5 +1,6 @@
 ---
 layouts: page
+description: "Read the Q-Tune End-User License Agreement outlining your rights and obligations when using the Q-Tune device and software provided by Molinello Music."
 permalink: /eula/
 ---
 

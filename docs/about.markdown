@@ -1,6 +1,7 @@
 ---
 layouts: page
 title: About
+description: "Learn the story behind Q-Tune—the first DIY guitar tuner pedal kit born from a collaboration between Boyd Timothy and Ryan Schultz. Designed for makers and tone chasers who want to build pro-level gear themselves."
 permalink: /about/
 ---
 

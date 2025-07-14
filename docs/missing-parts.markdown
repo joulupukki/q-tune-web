@@ -1,5 +1,6 @@
 ---
 layout: none
+description: "Redirect page for reporting missing or incorrect parts in your Q-Tune DIY kit. Use the linked form to notify us so we can make it right."
 permalink: /missing-parts/
 ---
 

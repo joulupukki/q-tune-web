@@ -1,5 +1,6 @@
 ---
 layouts: page
+description: "Q-Tune shipping, return, and refund policies including pre-order shipping timelines, international shipping updates, customs duties, package returns, and California Prop 65 health and safety warning."
 permalink: /terms/
 ---
 
@@ -15,7 +16,7 @@ If you have purchased a pre-order kit and the kit has not shipped to you within 
 
 ### International Shipping Methods
 
-- Internation shipping may not be available during the pre-order period. If/when that changes, we will update the information available here.
+- Internation shipping may not be available during the pre-order period. If/when that changes, we will update the information available here. If you live outside of the U.S. / Canada and are interested in purchasing a Q-Tune kit, please reach out on the Pedal PCB forums to Boyd or Ryan.
 
 ### Returns / Refunds
 

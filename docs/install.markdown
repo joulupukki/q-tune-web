@@ -1,6 +1,7 @@
 ---
 layouts: page
 title: Install
+description: "Step-by-step instructions to install and update Q-Tune firmware using a Chrome browser and USB-C data cable. Connect your device, run the installer, and update your DIY guitar tuner pedal to the latest version with all the new features and improvements."
 permalink: /install/
 ---
 

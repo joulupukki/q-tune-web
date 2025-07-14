@@ -1,6 +1,7 @@
 ---
 layouts: page
 permalink: /acknowledgements/
+description: "Acknowledging the third-party libraries, frameworks, and licenses that power Q-Tune, including Espressif’s ESP-IDF, LVGL, Q DSP Library, and Roboto Mono font."
 ---
 
 **Third Party Acknowledgements**

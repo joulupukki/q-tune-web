@@ -1,6 +1,7 @@
 ---
 layouts: page
 title: Privacy Policy
+description: "This Privacy Policy explains how Molinello Music collects, uses, and protects personal information on the www.q-tune.com website and related services. It covers data collection, use, sharing, user rights, security measures, compliance with laws including GDPR, and how to contact us about privacy concerns."
 permalink: /privacy/
 ---
 

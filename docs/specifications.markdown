@@ -1,6 +1,7 @@
 ---
 layouts: page
 title: Specs
+description: "Detailed specifications of the Q-Tune DIY guitar tuner pedal kit, including hardware features like mono 1/4 inch jacks, ESP32-S3 microcontroller, capacitive touch LCD, true bypass options, adjustable brightness, multiple tuning styles, and USB-C firmware updates."
 permalink: /specifications/
 ---
 

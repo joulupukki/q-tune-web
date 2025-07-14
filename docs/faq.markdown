@@ -1,6 +1,7 @@
 ---
 layouts: page
 title: FAQ
+description: "Frequently asked questions about Q-Tune, the DIY guitar tuner pedal kit. Learn about availability, assembly, required skills, supported instruments, software updates, and support options."
 permalink: /faq/
 ---
 

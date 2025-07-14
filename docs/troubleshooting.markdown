@@ -1,6 +1,7 @@
 ---
 layouts: page
 title: Troubleshooting
+description: "Q-Tune DIY guitar tuner pedal troubleshooting guide including relay issues, component testing, voltage checks, and tips for diagnosing and fixing common problems with your kit."
 permalink: /troubleshooting/
 ---
 

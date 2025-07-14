@@ -1,6 +1,7 @@
 ---
 layouts: page
 title: Build Instructions
+description: "Access detailed PDF build instructions and how-to videos for assembling your Q-Tune guitar tuner pedal kit with step-by-step guidance."
 permalink: /build/
 ---
 

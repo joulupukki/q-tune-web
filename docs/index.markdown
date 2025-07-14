@@ -4,7 +4,7 @@
 
 layouts: home
 title: "Q-Tune"
-description: " "
+description: "Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 2.8-inch LCD, ultra-accurate pitch detection, buffered or true bypass, and USB-C firmware upgrades. Build a professional-grade tuner pedal with easy soldering and custom enclosure options."
 ---
 
 ## A DIY Tuner Pedal Kit that Doesn't Compromise
@@ -87,7 +87,7 @@ description: " "
 
   <div style="flex: 0 0 400px;">
 
-    <img src="/assets/images/q-tune-hero.jpg" alt="Q-Tune" style="max-width: 100%; height: auto; border-radius: 8px;">
+    <img src="/assets/images/q-tune-hero.jpg" alt="Q-Tune DIY guitar tuner pedal kit" style="max-width: 100%; height: auto; border-radius: 8px;">
 
     <div style="text-align: center;">
       The kits include all components needed to build a Q-Tune tuner pedal. Pre-order purchases are paid up-front. The kit may take up to 45 business days after purchase to receive.
