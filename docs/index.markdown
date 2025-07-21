@@ -117,7 +117,7 @@ description: "Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 
 
 <!-- 1590B Begin -->
 <div class="buy-button-container">
-  <div style="font-size: 1.2em;"><strong>1590B</strong> Pre-Order Kit</div>
+  <div style="font-size: 1.2em;"><strong>1590B</strong> Kit</div>
   <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$149</div>
   <div style="margin-bottom: 10px;">+ Shipping</div>
 
@@ -126,8 +126,9 @@ description: "Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 
     data-url-us="https://buy.stripe.com/8x2cN5eCV8Nzf6ndTe8og01"
     data-url-ca="https://buy.stripe.com/dRm7sL7ate7Te2jg1m8og06"
   >
-    Pre-Order 1590B
+    Buy 1590B
   </button>
+  <div style="margin-bottom: 10px;">Low Stock</div>
 </div>
 <!-- 1590B End -->
 
@@ -144,12 +145,13 @@ description: "Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 
   >
     Pre-Order 125B
   </button>
+  <div style="margin-bottom: 10px;">More arriving early Aug 2025.</div>
 </div>
 <!-- 125B End -->
 
 <!-- NO Enclosure Begin -->
 <div class="buy-button-container">
-  <div style="font-size: 1.2em;"><strong>NO Enclosure</strong> Pre-Order Kit</div>
+  <div style="font-size: 1.2em;"><strong>NO Enclosure</strong> Kit</div>
   <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$137</div>
   <div style="margin-bottom: 10px;">+ Shipping</div>
 
@@ -158,7 +160,7 @@ description: "Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 
     data-url-us="https://buy.stripe.com/fZufZhamF3tf0bt5mI8og02"
     data-url-ca="https://buy.stripe.com/00w9AT0M5fbX9M32aw8og07"
   >
-    Pre-Order w/o Enclosure
+    Buy w/o Enclosure
   </button>
 
   <p>
