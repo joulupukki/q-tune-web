@@ -125,7 +125,6 @@ description: "Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 
   <!-- Primary Button -->
   <button class="preorder-button"
     data-url-us="https://buy.stripe.com/8x2cN5eCV8Nzf6ndTe8og01"
-    data-url-ca="https://buy.stripe.com/dRm7sL7ate7Te2jg1m8og06"
   >
     Buy 1590B
   </button>
@@ -142,7 +141,6 @@ description: "Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 
   <!-- Primary Button -->
   <button class="preorder-button"
     data-url-us="https://buy.stripe.com/6oUeVd52l9RD6zReXi8og00"
-    data-url-ca="https://buy.stripe.com/7sY00jcuNe7T9M37uQ8og05"
   >
     Pre-Order 125B
   </button>
@@ -160,7 +158,6 @@ description: "Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 
   <!-- Primary Button -->
   <button class="preorder-button"
     data-url-us="https://buy.stripe.com/fZufZhamF3tf0bt5mI8og02"
-    data-url-ca="https://buy.stripe.com/00w9AT0M5fbX9M32aw8og07"
   >
     Buy w/o Enclosure
   </button>
@@ -259,21 +256,6 @@ document.addEventListener("DOMContentLoaded", function () {
         -webkit-tap-highlight-color: transparent;
       ">
         🇺🇸 United States
-      </button>
-
-      <button id="btn-ca" style="
-        font-size: 1em;
-        padding: 0.75em;
-        border-radius: 6px;
-        border: none;
-        background-color: rgb(53, 53, 53);
-        color: white;
-        font-weight: 600;
-        cursor: pointer;
-        -webkit-appearance: none;
-        -webkit-tap-highlight-color: transparent;
-      ">
-        🇨🇦 Canada
       </button>
 
       <button onclick="closeModal()" style="
