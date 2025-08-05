@@ -90,7 +90,7 @@ description: "Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 
     <img src="/assets/images/q-tune-hero.jpg" alt="Q-Tune DIY guitar tuner pedal kit" style="max-width: 100%; height: auto; border-radius: 8px;">
 
     <div style="text-align: center;">
-      The kits include all components needed to build a Q-Tune tuner pedal. Pre-order purchases are paid up-front. The kit may take up to 45 business days after purchase to receive.
+      The kits include all components needed to build a Q-Tune tuner pedal. Purchases are paid up-front. The kit may take up to 30 business days after purchase to receive.
     </div>
 
     <!-- Trigger Button -->
@@ -117,7 +117,7 @@ description: "Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 
 
 <!-- 1590B Begin -->
 <div class="buy-button-container">
-  <div style="font-size: 1.2em;"><strong>1590B</strong> Pre-Order Kit</div>
+  <div style="font-size: 1.2em;"><strong>1590B</strong> Kit</div>
   <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$149</div>
   <div style="margin-bottom: 10px;">+ Shipping</div>
 
@@ -125,15 +125,15 @@ description: "Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 
   <button class="preorder-button"
     data-url-us="https://buy.stripe.com/8x2cN5eCV8Nzf6ndTe8og01"
   >
-    Pre-Order 1590B
+    Buy 1590B
   </button>
-  <div style="margin-bottom: 10px;">More arriving early Aug 2025.</div>
+  <div style="margin-bottom: 10px;">Available to ship Aug 15.</div>
 </div>
 <!-- 1590B End -->
 
 <!-- 125B Begin -->
 <div class="buy-button-container">
-  <div style="font-size: 1.2em;"><strong>125B</strong> Pre-Order Kit</div>
+  <div style="font-size: 1.2em;"><strong>125B</strong> Kit</div>
   <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$149</div>
   <div style="margin-bottom: 10px;">+ Shipping</div>
 
@@ -141,9 +141,9 @@ description: "Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 
   <button class="preorder-button"
     data-url-us="https://buy.stripe.com/6oUeVd52l9RD6zReXi8og00"
   >
-    Pre-Order 125B
+    Buy 125B
   </button>
-  <div style="margin-bottom: 10px;">More arriving early Aug 2025.</div>
+  <div style="margin-bottom: 10px;">Available to ship Aug 15.</div>
 </div>
 <!-- 125B End -->
 
