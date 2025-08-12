@@ -429,7 +429,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 ## 💬 Join the Builder Crew
 
-Share your build, ask questions, and see what others are creating. Tag your builds with **#qtunepedal** on your social feeds! Follow along at [@qtunepedals](https://www.instagram.com/qtunepedal){:target="_blank"}.
+Share your build, ask questions, and see what others are creating. Tag your builds with **#qtunepedal** on your social feeds! Follow along at [@qtunepedal](https://www.instagram.com/qtunepedal){:target="_blank"}.
 
 We'd love to have you join the [Q-Tune Builder's Discord](https://discord.gg/evtjkEj9GX){:target="_blank"}. The Third Party area of the Pedal PCB Forums also has a dedicated [Q-Tune DIY Tuner](https://forum.pedalpcb.com/forums/qtune/){:target="_blank"} section.
 
