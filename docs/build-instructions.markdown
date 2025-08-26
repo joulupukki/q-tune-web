@@ -5,7 +5,7 @@ description: "Access detailed PDF build instructions and how-to videos for assem
 permalink: /build/
 ---
 
-## Download the full PDF build instructions:
+## Download the full PDF build instructions (version 1.0.6):
 
 - [54.7 MB Higher Resolution](/assets/build/Q-Tune-Build-Instructions-1.0.6.pdf){:target="_blank"}
 
