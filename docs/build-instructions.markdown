@@ -11,6 +11,8 @@ permalink: /build/
 
 - [17.6 MB Lower Resolution](/assets/build/Q-Tune-Build-Instructions-Lower-Res-1.0.6.pdf){:target="_blank"}
 
+Previous versions can be accessed from [GitHub](https://github.com/joulupukki/q-tune-web/tree/main/docs/assets/build){:target="_blank"}.
+
 ## How-To Videos
 
 <div class="embed-container">
