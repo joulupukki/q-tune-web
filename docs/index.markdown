@@ -90,7 +90,7 @@ description: "Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 
     <img src="/assets/images/q-tune-hero.jpg" alt="Q-Tune DIY guitar tuner pedal kit" style="max-width: 100%; height: auto; border-radius: 8px;">
 
     <div style="text-align: center;">
-      The kits include all components needed to build a Q-Tune tuner pedal. Purchases are paid up-front. The kit may take up to 30 business days after purchase to receive.
+      The kits include all components needed to build a Q-Tune tuner pedal. Purchases are paid up-front.
     </div>
 
     <!-- Trigger Button -->
