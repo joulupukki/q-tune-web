@@ -119,12 +119,12 @@ description: "Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 
 <div class="buy-button-container">
   <div style="font-size: 1.2em;"><strong>1590B</strong> Kit</div>
   <div style="margin-bottom: 10px; font-weight: bold;">IN STOCK &amp;<br/>READY TO SHIP</div>
-  <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$149</div>
-  <div style="margin-bottom: 10px;">+ Shipping</div>
+  <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$129</div>
+  <div style="margin-bottom: 10px;">+ FREE Shipping</div>
 
   <!-- Primary Button -->
   <button class="preorder-button"
-    data-url-us="https://buy.stripe.com/8x2cN5eCV8Nzf6ndTe8og01"
+    data-url-us="https://buy.stripe.com/bJe14namFd3Pgar8yU8og0f"
   >
     Buy 1590B
   </button>
@@ -135,12 +135,12 @@ description: "Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 
 <div class="buy-button-container">
   <div style="font-size: 1.2em;"><strong>125B</strong> Kit</div>
   <div style="margin-bottom: 10px; font-weight: bold;">IN STOCK &amp;<br/>READY TO SHIP</div>
-  <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$149</div>
-  <div style="margin-bottom: 10px;">+ Shipping</div>
+  <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$129</div>
+  <div style="margin-bottom: 10px;">+ FREE Shipping</div>
 
   <!-- Primary Button -->
   <button class="preorder-button"
-    data-url-us="https://buy.stripe.com/6oUeVd52l9RD6zReXi8og00"
+    data-url-us="https://buy.stripe.com/fZu28rbqJ4xjcYfdTe8og0e"
   >
     Buy 125B
   </button>
@@ -151,12 +151,12 @@ description: "Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 
 <div class="buy-button-container">
   <div style="font-size: 1.2em;"><strong>NO Enclosure</strong> Kit</div>
   <div style="margin-bottom: 10px; font-weight: bold;">IN STOCK &amp;<br/>READY TO SHIP</div>
-  <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$137</div>
-  <div style="margin-bottom: 10px;">+ Shipping</div>
+  <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$109</div>
+  <div style="margin-bottom: 10px;">+ FREE Shipping</div>
 
   <!-- Primary Button -->
   <button class="preorder-button"
-    data-url-us="https://buy.stripe.com/fZufZhamF3tf0bt5mI8og02"
+    data-url-us="https://buy.stripe.com/4gM4gzamFaVH4rJeXi8og0d"
   >
     Buy w/o Enclosure
   </button>
