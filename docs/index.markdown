@@ -151,7 +151,7 @@ description: "Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 
 <div class="buy-button-container">
   <div style="font-size: 1.2em;"><strong>NO Enclosure</strong> Kit</div>
   <div style="margin-bottom: 10px; font-weight: bold;">IN STOCK &amp;<br/>READY TO SHIP</div>
-  <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$109</div>
+  <div style="font-size: 2em; font-weight: bold; margin: 0.2em 0;">$117</div>
   <div style="margin-bottom: 10px;">+ FREE Shipping</div>
 
   <!-- Primary Button -->
