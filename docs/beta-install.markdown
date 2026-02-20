@@ -52,6 +52,16 @@ sitemap: false
  <li>USB-C Data Cable</li>
 </ul>
 
+<h3>Select Version:</h3>
+
+{% assign beta_bins = site.static_files | where_exp: "file", "file.path contains '/assets/install/beta/q-tune-'" | sort: "name" | reverse %}
+
+<div>
+<select id="version-select" style="font-size: 1rem; padding: 6px 10px; border-radius: 6px; border: 1px solid #ccc; margin-bottom: 1rem;">
+{% for file in beta_bins %}{% assign version = file.name | remove: "q-tune-" | remove: ".bin" %}<option value="{{ version }}">{{ version }}</option>{% endfor %}
+</select>
+</div>
+
 <h3>Instructions:</h3>
 <ol>
   <li>Plug in Q-Tune to your computer using a USB-C data cable and then click the <strong>Connect to device</strong> button.</li>
@@ -74,7 +84,7 @@ sitemap: false
   <div class="container" style="height: 100%; display: flex; justify-content: center; margin: 20px 0;">
     <hr class="my-4">
     <div class="mb-3">
-      <esp-web-install-button id="button_web_install" manifest="/assets/install/beta/beta-manifest.json">
+      <esp-web-install-button id="button_web_install" manifest="">
         <button type="button" class="btn btn-primary" slot="activate">Connect to device</button>
         <span slot="not-allowed">
           <div class="alert alert-dismissible alert-danger">
@@ -94,3 +104,15 @@ sitemap: false
       </esp-web-install-button>
     </div>
   </div>
+
+<script>
+  const select = document.getElementById('version-select');
+  const installButton = document.getElementById('button_web_install');
+
+  function updateManifest() {
+    installButton.setAttribute('manifest', '/assets/install/beta/manifest-' + select.value + '.json');
+  }
+
+  select.addEventListener('change', updateManifest);
+  updateManifest();
+</script>

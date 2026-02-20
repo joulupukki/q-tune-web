@@ -49,9 +49,10 @@ The `docs/assets/install/` directory is the firmware distribution system:
 2. Update `docs/assets/install/artifacts/manifest.json` to point to the new binary and update the `version` field.
 
 **To release a beta firmware version:**
-1. Add the beta `q-tune-<version>.bin`, `bootloader.bin`, and `partition-table.bin` to `docs/assets/install/beta/`
-2. Update `docs/assets/install/beta/beta-manifest.json` to point to the new binary and update the `version` field.
-3. Share `/beta-install/` directly — it is excluded from the nav, sitemap, and `robots.txt`.
+1. Add `q-tune-<version>.bin` to `docs/assets/install/beta/` (also add `bootloader.bin` and `partition-table.bin` if they changed).
+2. Create `docs/assets/install/beta/manifest-<version>.json` (copy an existing one and update `version` and the `q-tune-*.bin` path).
+3. Redeploy — the version dropdown on `/beta-install/` auto-discovers all `q-tune-*.bin` files in the `beta/` directory at Jekyll build time.
+4. Share `/beta-install/` directly — it is excluded from the nav, sitemap, and `robots.txt`.
 
 ### Buy Buttons
 
