@@ -48,6 +48,11 @@ The `docs/assets/install/` directory is the firmware distribution system:
 1. Add the new `q-tune-<version>.bin` to `docs/assets/install/artifacts/`
 2. Update `docs/assets/install/artifacts/manifest.json` to point to the new binary and update the `version` field.
 
+**To release a beta firmware version:**
+1. Add the beta `q-tune-<version>.bin`, `bootloader.bin`, and `partition-table.bin` to `docs/assets/install/beta/`
+2. Update `docs/assets/install/beta/beta-manifest.json` to point to the new binary and update the `version` field.
+3. Share `/beta-install/` directly — it is excluded from the nav, sitemap, and `robots.txt`.
+
 ### Buy Buttons
 
 Purchase links use Stripe's hosted checkout. Each buy button in `index.markdown` has a `data-url-us` attribute containing a Stripe URL. A region-selection modal (JS inline in `index.markdown`) intercepts clicks and redirects to the appropriate Stripe link.
