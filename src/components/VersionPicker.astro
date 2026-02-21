@@ -1,0 +1,56 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+
+interface Props {
+  directory: string;
+  manifestPrefix: string;
+  minVersion?: string;
+}
+
+const { directory, manifestPrefix, minVersion } = Astro.props;
+
+function compareVersions(a: string, b: string): number {
+  const pa = a.split('.').map(Number);
+  const pb = b.split('.').map(Number);
+  for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+    const diff = (pa[i] || 0) - (pb[i] || 0);
+    if (diff !== 0) return diff;
+  }
+  return 0;
+}
+
+const dir = path.join(process.cwd(), directory);
+const files = fs.readdirSync(dir);
+const allVersions = files
+  .filter((f: string) => f.startsWith('q-tune-') && f.endsWith('.bin'))
+  .map((f: string) => f.replace('q-tune-', '').replace('.bin', ''));
+const versions = (minVersion ? allVersions.filter((v: string) => compareVersions(v, minVersion) >= 0) : allVersions)
+  .sort((a: string, b: string) => compareVersions(b, a));
+---
+
+<div class="mb-6">
+  <label for="version-select" class="block text-sm font-medium text-text-muted mb-2">Select Version:</label>
+  <select
+    id="version-select"
+    class="bg-cream-surface border border-cream-border text-text-heading rounded-lg px-4 py-2.5 text-base font-mono focus:outline-none focus:border-amber-glow focus:ring-1 focus:ring-amber-glow transition-colors"
+  >
+    {versions.map((v: string) => (
+      <option value={v}>{v}</option>
+    ))}
+  </select>
+</div>
+
+<script define:vars={{ manifestPrefix }}>
+  const select = document.getElementById('version-select');
+  const installButton = document.getElementById('button_web_install');
+
+  function updateManifest() {
+    if (installButton && select) {
+      installButton.setAttribute('manifest', manifestPrefix + select.value + '.json');
+    }
+  }
+
+  select?.addEventListener('change', updateManifest);
+  updateManifest();
+</script>

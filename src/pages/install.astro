@@ -1,6 +1,7 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import FirmwareInstaller from '../components/FirmwareInstaller.astro';
+import VersionPicker from '../components/VersionPicker.astro';
 ---
 
 <PageLayout
@@ -12,6 +13,14 @@ import FirmwareInstaller from '../components/FirmwareInstaller.astro';
     <li>Chrome Web Browser</li>
     <li>USB-C Data Cable</li>
   </ul>
+
+  <div class="not-prose">
+    <VersionPicker
+      directory="public/assets/install/artifacts"
+      manifestPrefix="/assets/install/artifacts/manifest-"
+      minVersion="2.6.8"
+    />
+  </div>
 
   <h3>Instructions:</h3>
   <ol>
@@ -26,7 +35,7 @@ import FirmwareInstaller from '../components/FirmwareInstaller.astro';
 
   <hr />
 
-  <FirmwareInstaller manifest="/assets/install/artifacts/manifest.json" />
+  <FirmwareInstaller manifest="" />
 </PageLayout>
 
 <script is:inline defer src="/assets/install/js/main.js"></script>
