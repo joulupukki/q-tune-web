@@ -1,0 +1,32 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import FaqItem from '../components/FaqItem.astro';
+import { faqData } from '../data/faq';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+---
+
+<PageLayout
+  title="FAQ"
+  description="Frequently asked questions about Q-Tune, the DIY guitar tuner pedal kit. Learn about availability, assembly, required skills, supported instruments, software updates, and support options."
+  structuredData={faqSchema}
+>
+  <div class="space-y-3 not-prose">
+    {faqData.map((item, i) => (
+      <FaqItem question={item.question} open={i === 0}>
+        <Fragment set:html={item.answer} />
+      </FaqItem>
+    ))}
+  </div>
+</PageLayout>

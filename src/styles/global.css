@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream-bg text-text-body font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-text-heading;
+  }
+
+  a {
+    @apply text-amber-glow hover:text-amber-dark transition-colors duration-200;
+  }
+
+  ::selection {
+    @apply bg-amber-glow/20 text-text-heading;
+  }
+}
+
+@layer components {
+  .prose {
+    @apply text-text-body;
+  }
+
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4 {
+    @apply text-text-heading font-heading;
+  }
+
+  .prose a {
+    @apply text-amber-glow hover:text-amber-dark;
+  }
+
+  .prose strong {
+    @apply text-text-heading;
+  }
+
+  .prose hr {
+    @apply border-cream-border;
+  }
+
+  .prose ul > li::marker {
+    @apply text-amber-glow;
+  }
+
+  .prose ol > li::marker {
+    @apply text-amber-glow;
+  }
+
+  .prose blockquote {
+    @apply border-l-amber-glow text-text-muted;
+  }
+
+  .prose code {
+    @apply text-amber-dark bg-cream-muted px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+}

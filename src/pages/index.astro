@@ -1,0 +1,139 @@
+---
+import HomeLayout from '../layouts/HomeLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import BuySection from '../components/BuySection.astro';
+import EnclosureModal from '../components/EnclosureModal.astro';
+import YouTubeEmbed from '../components/YouTubeEmbed.astro';
+import ProductCarousel from '../components/ProductCarousel.astro';
+import FeatureList from '../components/FeatureList.astro';
+import CommunitySection from '../components/CommunitySection.astro';
+import NewsletterEmbed from '../components/NewsletterEmbed.astro';
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Q-Tune DIY Guitar Tuner Pedal Kit',
+  description: 'The first DIY guitar tuner pedal kit featuring a bright 2.8-inch LCD, ultra-accurate pitch detection, buffered or true bypass, and USB-C firmware upgrades.',
+  image: 'https://www.q-tune.com/assets/images/q-tune-hero.jpg',
+  brand: {
+    '@type': 'Brand',
+    name: 'Q-Tune',
+  },
+  offers: [
+    {
+      '@type': 'Offer',
+      name: '1590B Kit',
+      price: '129.00',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      url: 'https://www.q-tune.com/',
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: {
+          '@type': 'MonetaryAmount',
+          value: '0',
+          currency: 'USD',
+        },
+        shippingDestination: {
+          '@type': 'DefinedRegion',
+          addressCountry: 'US',
+        },
+      },
+    },
+    {
+      '@type': 'Offer',
+      name: '125B Kit',
+      price: '129.00',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      url: 'https://www.q-tune.com/',
+    },
+    {
+      '@type': 'Offer',
+      name: 'No Enclosure Kit',
+      price: '117.00',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      url: 'https://www.q-tune.com/',
+    },
+  ],
+};
+---
+
+<HomeLayout
+  title="Q-Tune"
+  description="Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 2.8-inch LCD, ultra-accurate pitch detection, buffered or true bypass, and USB-C firmware upgrades. Build a professional-grade tuner pedal with easy soldering and custom enclosure options."
+  structuredData={productSchema}
+>
+  <!-- Hero -->
+  <HeroSection />
+
+  <!-- Buy section -->
+  <section class="py-16 bg-cream-bg">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <BuySection />
+      <EnclosureModal />
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section class="py-12 bg-cream-muted">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6">
+      <YouTubeEmbed videoId="gKlhl48I9eU" title="Q-Tune Overview" />
+    </div>
+  </section>
+
+  <!-- Description -->
+  <section class="py-16 bg-cream-bg">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6">
+      <div class="prose prose-lg max-w-none">
+        <p>Q-Tune Chromatic Instrument Tuner is the <strong>first of its kind</strong> in the <strong>DIY</strong> pedal world — a <strong>high-precision</strong> tuner with a full <strong>2.8" LCD</strong>, offered as a <strong>solder-it-yourself kit</strong> in a rugged stompbox enclosure.</p>
+
+        <p>At its core, Q-Tune uses an advanced pitch detection algorithm to lock onto your note with incredible speed and stability. The dynamic display gives you real-time visual feedback in a way that's clear, responsive, and easy to read on dark stages or bright practice rooms.</p>
+
+        <p>Build it yourself. Gig with confidence. Pro-level precision with DIY-level satisfaction.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carousel -->
+  <ProductCarousel />
+
+  <!-- Features -->
+  <FeatureList />
+
+  <!-- What You Get -->
+  <section class="py-16 bg-cream-muted">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-center mb-8">What You Get</h2>
+      <ul class="space-y-3 text-lg text-text-body max-w-md mx-auto">
+        <li class="flex items-start gap-3">
+          <span class="text-amber-glow mt-1">&#x2022;</span>
+          Pre-flashed ESP32 module
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-amber-glow mt-1">&#x2022;</span>
+          2.8" TFT LCD display
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-amber-glow mt-1">&#x2022;</span>
+          Custom PCB + all components
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-amber-glow mt-1">&#x2022;</span>
+          Aluminum enclosure (125B or 1590B)
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-amber-glow mt-1">&#x2022;</span>
+          Full assembly guide (PDF)
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <CommunitySection />
+
+  <!-- Newsletter -->
+  <NewsletterEmbed />
+</HomeLayout>

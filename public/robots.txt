@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /beta-install/
+Sitemap: https://www.q-tune.com/sitemap-index.xml

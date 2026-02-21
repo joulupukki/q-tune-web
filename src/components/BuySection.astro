@@ -1,0 +1,28 @@
+---
+import BuyButton from './BuyButton.astro';
+import RegionModal from './RegionModal.astro';
+import { products } from '../data/products';
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+  {products.map((p) => (
+    <BuyButton {...p}>
+      {p.name === 'No Enclosure' && (
+        <div class="mt-4 text-sm text-text-muted space-y-2">
+          <div>
+            <strong class="text-text-heading">Tayda Drill Templates:</strong><br />
+            <a href="https://drill.taydakits.com/box-designs/new?public_key=bWxYL0R0T0dBRHBmZkZOSGR3Yk40UT09Cg==" target="_blank" rel="noopener">1590B</a>,{' '}
+            <a href="https://drill.taydakits.com/box-designs/new?public_key=SmRhZzVaSm8vSlFtK3M5anBxRktQdz09Cg==" target="_blank" rel="noopener">125B</a>
+          </div>
+          <div>
+            <strong class="text-text-heading">UV PDF Templates:</strong><br />
+            <a href="/assets/uv-templates/Q-Tune-1590B-v4.8curves.pdf" target="_blank">1590B</a>,{' '}
+            <a href="/assets/uv-templates/Q-Tune-125B-v4.8curves.pdf" target="_blank">125B</a>
+          </div>
+        </div>
+      )}
+    </BuyButton>
+  ))}
+</div>
+
+<RegionModal />

@@ -1,0 +1,44 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import FirmwareInstaller from '../components/FirmwareInstaller.astro';
+import VersionPicker from '../components/VersionPicker.astro';
+---
+
+<PageLayout
+  title="Beta Install"
+  noindex={true}
+>
+  <div class="bg-amber-glow/10 border border-amber-glow/30 text-amber-dark px-4 py-3 rounded-lg mb-6 not-prose">
+    <strong>Beta Firmware</strong> — This page installs pre-release firmware. It may contain bugs or incomplete features. Use at your own risk.
+  </div>
+
+  <h3>Requirements:</h3>
+  <ul>
+    <li>Chrome Web Browser</li>
+    <li>USB-C Data Cable</li>
+  </ul>
+
+  <div class="not-prose">
+    <VersionPicker
+      directory="public/assets/install/beta"
+      manifestPrefix="/assets/install/beta/manifest-"
+    />
+  </div>
+
+  <h3>Instructions:</h3>
+  <ol>
+    <li>Plug in Q-Tune to your computer using a USB-C data cable and then click the <strong>Connect to device</strong> button.</li>
+    <li>If your computer recognizes the Q-Tune, it will show up as an option starting with <strong>USB JTAG/serial...</strong>.</li>
+    <li>Select that option and click the <strong>Connect</strong> button.</li>
+    <li>Click the <strong>Install Q-Tune</strong> option.</li>
+    <li><strong>DO NOT</strong> select the <strong>Erase device</strong> option unless you want to erase all of your user settings.</li>
+    <li>Click the <strong>Next</strong> button and then confirm by clicking the <strong>Install</strong> button.</li>
+    <li>Wait for the installer to finish. Once it's done you can unplug the USB-C cable and put Q-Tune to use on your pedalboard!</li>
+  </ol>
+
+  <hr />
+
+  <FirmwareInstaller manifest="" />
+</PageLayout>
+
+<script is:inline defer src="/assets/install/js/main.js"></script>

@@ -1,0 +1,15 @@
+---
+import FeatureItem from './FeatureItem.astro';
+import { features } from '../data/features';
+---
+
+<section class="py-16 bg-cream-bg">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <h2 class="text-3xl sm:text-4xl font-heading font-bold text-center mb-10">Why Q-Tune Is Different</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {features.map((f) => (
+        <FeatureItem title={f.title} description={f.description} />
+      ))}
+    </div>
+  </div>
+</section>

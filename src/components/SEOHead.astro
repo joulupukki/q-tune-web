@@ -1,0 +1,48 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  noindex?: boolean;
+  canonicalUrl?: string;
+  ogImage?: string;
+  structuredData?: object;
+}
+
+const {
+  title,
+  description = 'Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 2.8-inch LCD, ultra-accurate pitch detection, buffered or true bypass, and USB-C firmware upgrades.',
+  noindex = false,
+  canonicalUrl,
+  ogImage = '/assets/images/q-tune-hero.jpg',
+  structuredData,
+} = Astro.props;
+
+const siteUrl = 'https://www.q-tune.com';
+const pageTitle = title === 'Q-Tune' ? title : `${title} | Q-Tune`;
+const canonical = canonicalUrl || new URL(Astro.url.pathname, siteUrl).href;
+const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+---
+
+<title>{pageTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogImageUrl} />
+<meta property="og:site_name" content="Q-Tune" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImageUrl} />
+
+{structuredData && (
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+)}

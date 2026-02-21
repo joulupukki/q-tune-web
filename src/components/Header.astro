@@ -1,0 +1,70 @@
+---
+import NavLink from './NavLink.astro';
+import { navigation } from '../data/navigation';
+---
+
+<header class="sticky top-0 z-50 border-b border-dark-border bg-dark-bg/95 backdrop-blur-sm">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="flex h-16 items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 text-white hover:text-amber-light transition-colors">
+        <span class="text-xl font-heading font-bold tracking-tight">Q-Tune</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-1">
+        {navigation.map((item) => (
+          <NavLink href={item.href} label={item.label} />
+        ))}
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden p-2 text-gray-400 hover:text-white transition-colors"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <nav id="mobile-menu" class="hidden md:hidden border-t border-dark-border bg-dark-surface">
+    <div class="px-4 py-3 space-y-1">
+      {navigation.map((item) => (
+        <a
+          href={item.href}
+          class:list={[
+            'block px-3 py-2 rounded-lg text-sm font-medium transition-colors',
+            Astro.url.pathname === item.href
+              ? 'text-amber-light bg-dark-card'
+              : 'text-gray-400 hover:text-white hover:bg-dark-card',
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+    </div>
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const hamburger = document.getElementById('hamburger-icon');
+  const close = document.getElementById('close-icon');
+
+  btn?.addEventListener('click', () => {
+    const isOpen = menu?.classList.toggle('hidden') === false;
+    hamburger?.classList.toggle('hidden', isOpen);
+    close?.classList.toggle('hidden', !isOpen);
+    btn.setAttribute('aria-expanded', String(isOpen));
+  });
+</script>

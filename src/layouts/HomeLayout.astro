@@ -1,0 +1,15 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  structuredData?: object;
+}
+
+const { title, description, structuredData } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} structuredData={structuredData}>
+  <slot />
+</BaseLayout>

@@ -4,63 +4,85 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-This is the marketing and documentation website for **Q-Tune** — a DIY chromatic guitar tuner pedal kit based on an ESP32-S3 microcontroller. The site is hosted at [q-tune.com](https://www.q-tune.com) and also serves as the firmware OTA update portal via ESP Web Tools.
+This is the marketing and documentation website for **Q-Tune** — a DIY chromatic guitar tuner pedal kit based on an ESP32-S3 microcontroller. The site is hosted at [q-tune.com](https://www.q-tune.com) and also serves as the firmware OTA update portal via ESP Web Tools. Built with **Astro** + **Tailwind CSS**, deployed to GitHub Pages via GitHub Actions.
 
 ## Commands
 
-All Jekyll commands must be run from the `docs/` directory:
-
 ```bash
-cd docs
+# Install dependencies
+npm install
 
-# Install dependencies (first time or after Gemfile changes)
-bundle install
+# Dev server with hot reload
+npm run dev
 
-# Serve locally with live reload
-bundle exec jekyll serve
-# or use the helper script:
-./run-jekyll.sh
+# Production build
+npm run build
+
+# Preview production build locally
+npm run preview
 ```
 
-The site builds to `docs/_site/` (gitignored).
+The site builds to `dist/` (gitignored).
 
 ## Architecture
 
-### Site Structure
+### Tech Stack
 
-- **`docs/`** — Jekyll site root. All content lives here.
-  - **`_config.yml`** — Site config: uses `jekyll/minima` remote theme, nav pages are explicitly ordered there under `minima.nav_pages`.
-  - **`_includes/custom-head.html`** — Sitewide `<head>` additions: Google Analytics, Glider.js image carousel, global CSS for buy buttons and video embeds.
-  - **`_includes/footer.html`** — Custom footer with copyright and legal links.
-  - **`index.markdown`** — Homepage with buy buttons, product image carousel (Glider.js), and feature descriptions.
-  - **`install.markdown`** — Firmware installer page using [ESP Web Tools](https://esphome.github.io/esp-web-tools/) (`esp-web-install-button` web component).
-  - **`build-instructions.markdown`** — Links to PDF assembly guides and build videos.
+- **Astro** — static site generator
+- **Tailwind CSS** — utility-first CSS with `@tailwindcss/typography` for prose
+- **TypeScript** — strict mode
+- **GitHub Actions** — CI/CD deployment to GitHub Pages
+
+### Project Structure
+
+- **`src/pages/`** — All site pages. `.astro` for component pages, `.md` for legal/prose pages.
+- **`src/layouts/`** — `BaseLayout.astro` (HTML shell), `PageLayout.astro` (content pages with title banner + prose), `HomeLayout.astro` (full-bleed passthrough).
+- **`src/components/`** — Reusable Astro components (Header, Footer, SEOHead, FirmwareInstaller, BuyButton, etc.).
+- **`src/data/`** — TypeScript data files: `navigation.ts`, `products.ts`, `features.ts`, `faq.ts`.
+- **`src/styles/global.css`** — Tailwind directives and base theme overrides.
+- **`public/`** — Static assets served as-is at their URL paths.
+- **`public/assets/install/`** — Firmware distribution system (see below).
+
+### Design System
+
+Dark/moody pedal-culture aesthetic:
+- Background: `#0a0a0f` (near-black), surfaces: `#12121a`, `#1a1a26`, `#252535`
+- Accent: `#d4a054` (warm amber/gold)
+- Text: `#e8e6e3` (body), `#f5f3f0` (headings), `#9a9aaa` (muted)
+- Fonts: Outfit (headings), Inter (body), JetBrains Mono (technical)
 
 ### Firmware OTA Updates
 
-The `docs/assets/install/` directory is the firmware distribution system:
+The `public/assets/install/` directory is the firmware distribution system:
 
-- **`artifacts/manifest.json`** — Points to the current firmware version. When releasing a new firmware version, this file must be updated to reference the new `.bin` filename and version number.
-- **`artifacts/*.bin`** — Compiled ESP32-S3 firmware binaries. Three files are required per release: the main app binary (`q-tune-<version>.bin`), `bootloader.bin`, and `partition-table.bin`.
-- **`js/main.js`** — Compiled/bundled JS for the install page (not hand-edited; source is elsewhere).
+- **`artifacts/manifest.json`** — Points to the current production firmware version.
+- **`artifacts/*.bin`** — Production firmware binaries.
+- **`beta/`** — Beta firmware binaries + per-version manifest JSON files.
 
 **To release a new firmware version:**
-1. Add the new `q-tune-<version>.bin` to `docs/assets/install/artifacts/`
-2. Update `docs/assets/install/artifacts/manifest.json` to point to the new binary and update the `version` field.
+1. Add the new `q-tune-<version>.bin` to `public/assets/install/artifacts/`
+2. Update `public/assets/install/artifacts/manifest.json` to point to the new binary and update the `version` field.
 
 **To release a beta firmware version:**
-1. Add `q-tune-<version>.bin` to `docs/assets/install/beta/` (also add `bootloader.bin` and `partition-table.bin` if they changed).
-2. Create `docs/assets/install/beta/manifest-<version>.json` (copy an existing one and update `version` and the `q-tune-*.bin` path).
-3. Redeploy — the version dropdown on `/beta-install/` auto-discovers all `q-tune-*.bin` files in the `beta/` directory at Jekyll build time.
-4. Share `/beta-install/` directly — it is excluded from the nav, sitemap, and `robots.txt`.
+1. Add `q-tune-<version>.bin` to `public/assets/install/beta/`
+2. Create `public/assets/install/beta/manifest-<version>.json`
+3. Redeploy — the `BetaVersionPicker` component auto-discovers all `q-tune-*.bin` files in `beta/` at build time via `fs.readdirSync`.
 
 ### Buy Buttons
 
-Purchase links use Stripe's hosted checkout. Each buy button in `index.markdown` has a `data-url-us` attribute containing a Stripe URL. A region-selection modal (JS inline in `index.markdown`) intercepts clicks and redirects to the appropriate Stripe link.
+Purchase links use Stripe's hosted checkout. Product data (names, prices, Stripe URLs) lives in `src/data/products.ts`. A `RegionModal` component intercepts buy button clicks and redirects to the Stripe URL for the selected region.
 
 ### Key External Dependencies
 
-- **ESP Web Tools** — loaded from unpkg CDN on the install page for in-browser ESP32 flashing.
-- **Glider.js** — image carousel on the homepage, loaded from jsDelivr CDN.
-- **Stripe** — payment processing, linked via hosted buy buttons.
-- **Google Analytics** — tag `G-CVGF0BKRZD`, included in `custom-head.html`.
+- **ESP Web Tools** — loaded from unpkg CDN on install pages for in-browser ESP32 flashing.
+- **Stripe** — payment processing via hosted checkout URLs.
+- **Google Analytics** — tag `G-CVGF0BKRZD` via `GoogleAnalytics.astro` component.
+- **Kit.com** — newsletter signup embed on homepage.
+
+### SEO
+
+- Product schema (JSON-LD) on homepage
+- FAQPage schema on FAQ page
+- Per-page meta tags via `SEOHead.astro` component
+- Sitemap auto-generated by `@astrojs/sitemap` (excludes `/beta-install/`)
+- `robots.txt` in `public/` disallows `/beta-install/`

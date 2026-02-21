@@ -1,0 +1,34 @@
+---
+interface Props {
+  manifest: string;
+  id?: string;
+}
+
+const { manifest, id = 'button_web_install' } = Astro.props;
+---
+
+<div class="flex justify-center my-8">
+  <esp-web-install-button id={id} manifest={manifest}>
+    <button
+      type="button"
+      slot="activate"
+      class="inline-flex items-center px-8 py-3 bg-amber-glow text-white font-semibold text-lg rounded-lg hover:bg-amber-dark transition-all duration-200 shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+    >
+      Connect to device
+    </button>
+    <span slot="not-allowed">
+      <div class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+        <strong>Not Allowed</strong>
+        <p>Flashing is only supported from the local host or from a secure web site.</p>
+      </div>
+    </span>
+    <span slot="notsupported">
+      <div class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+        <strong>Browser Not Supported</strong>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API#browser_compatibility">Make sure you are using a compatible browser</a></p>
+      </div>
+    </span>
+  </esp-web-install-button>
+</div>
+
+<script is:inline type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>

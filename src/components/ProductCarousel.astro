@@ -1,0 +1,123 @@
+---
+const images = [
+  '11-q-tune-product-shot.jpg',
+  '12-q-tune-product-shot.jpg',
+  '01-q-tune-product-shot.jpg',
+  '02-q-tune-product-shot.jpg',
+  '03-q-tune-product-shot.jpg',
+  '04-q-tune-product-shot.jpg',
+  '05-q-tune-product-shot.jpg',
+  '06-q-tune-product-shot.jpg',
+  '07-q-tune-product-shot.jpg',
+  '08-q-tune-product-shot.jpg',
+  '09-q-tune-product-shot.jpg',
+  '10-q-tune-product-shot.jpg',
+];
+---
+
+<section class="py-12 bg-cream-muted">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6">
+    <div class="relative" id="carousel-viewport">
+      <!-- Slides container -->
+      <div class="overflow-hidden rounded-xl" id="carousel-container">
+        <div class="flex transition-transform duration-500 ease-out" id="carousel-track">
+          {images.map((img, i) => (
+            <div class="flex-[0_0_100%] min-w-0">
+              <img
+                src={`/assets/images/${img}`}
+                alt={`Q-Tune product shot ${i + 1}`}
+                class="w-full h-auto max-h-[500px] object-contain mx-auto"
+                loading={i < 2 ? 'eager' : 'lazy'}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Prev/Next buttons -->
+      <button
+        id="carousel-prev"
+        class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-cream-surface/80 border border-cream-border text-text-heading hover:bg-amber-glow hover:text-white transition-colors z-10 shadow"
+        aria-label="Previous slide"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button
+        id="carousel-next"
+        class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-cream-surface/80 border border-cream-border text-text-heading hover:bg-amber-glow hover:text-white transition-colors z-10 shadow"
+        aria-label="Next slide"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      <!-- Dots -->
+      <div class="flex justify-center gap-2 mt-4" id="carousel-dots">
+        {images.map((_, i) => (
+          <button
+            class:list={[
+              'w-2.5 h-2.5 rounded-full transition-colors',
+              i === 0 ? 'bg-amber-glow' : 'bg-cream-border hover:bg-text-muted',
+            ]}
+            data-index={i}
+            aria-label={`Go to slide ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const track = document.getElementById('carousel-track') as HTMLElement;
+  const dots = document.querySelectorAll('#carousel-dots button');
+  const prevBtn = document.getElementById('carousel-prev');
+  const nextBtn = document.getElementById('carousel-next');
+  const totalSlides = dots.length;
+  let current = 0;
+  let autoplayTimer: ReturnType<typeof setInterval>;
+
+  function goTo(index: number) {
+    current = ((index % totalSlides) + totalSlides) % totalSlides;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => {
+      d.classList.toggle('bg-amber-glow', i === current);
+      d.classList.toggle('bg-cream-border', i !== current);
+    });
+  }
+
+  function startAutoplay() {
+    autoplayTimer = setInterval(() => goTo(current + 1), 5000);
+  }
+
+  function resetAutoplay() {
+    clearInterval(autoplayTimer);
+    startAutoplay();
+  }
+
+  prevBtn?.addEventListener('click', () => { goTo(current - 1); resetAutoplay(); });
+  nextBtn?.addEventListener('click', () => { goTo(current + 1); resetAutoplay(); });
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      goTo(Number((dot as HTMLElement).dataset.index));
+      resetAutoplay();
+    });
+  });
+
+  // Touch/swipe support
+  let touchStartX = 0;
+  const container = document.getElementById('carousel-container');
+  container?.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  container?.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      goTo(diff > 0 ? current + 1 : current - 1);
+      resetAutoplay();
+    }
+  });
+
+  startAutoplay();
+</script>

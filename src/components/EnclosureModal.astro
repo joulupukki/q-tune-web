@@ -1,0 +1,61 @@
+---
+---
+
+<div class="flex justify-center my-6">
+  <button
+    id="enclosure-compare-btn"
+    class="border-2 border-cream-border rounded-lg p-1.5 cursor-pointer hover:border-amber-glow/40 transition-all duration-200 hover:shadow-lg"
+  >
+    <img
+      src="/assets/images/1590b-vs-125b-button.jpg"
+      alt="Compare 1590B and 125B Enclosure Sizes"
+      class="h-36 w-auto rounded"
+    />
+  </button>
+</div>
+<p class="text-center font-semibold text-text-heading">No soldering required inside either enclosure.</p>
+
+<!-- Modal -->
+<div
+  id="enclosure-modal"
+  class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/50 backdrop-blur-sm p-4"
+>
+  <div class="bg-cream-surface border border-cream-border rounded-xl p-6 max-w-lg w-full max-h-[90vh] overflow-y-auto text-center shadow-2xl">
+    <img
+      src="/assets/images/q-tune-1590b-vs-125b.jpg"
+      alt="1590B vs 125B Comparison"
+      class="w-full h-auto rounded-lg mb-4"
+    />
+    <p class="text-text-heading"><strong>1590B:</strong> More compact. Fits easily on tight pedalboards.</p>
+    <p class="text-text-heading"><strong>125B:</strong> Larger. Could fit in better with your existing pedals.</p>
+    <button
+      id="enclosure-modal-close"
+      class="mt-4 px-6 py-2 bg-cream-muted text-text-heading rounded-lg hover:bg-cream-border transition-colors"
+    >
+      Close
+    </button>
+  </div>
+</div>
+
+<script>
+  const openBtn = document.getElementById('enclosure-compare-btn');
+  const modal = document.getElementById('enclosure-modal');
+  const closeBtn = document.getElementById('enclosure-modal-close');
+
+  openBtn?.addEventListener('click', () => {
+    modal?.classList.remove('hidden');
+    modal?.classList.add('flex');
+  });
+
+  closeBtn?.addEventListener('click', () => {
+    modal?.classList.add('hidden');
+    modal?.classList.remove('flex');
+  });
+
+  modal?.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  });
+</script>
