@@ -1,0 +1,28 @@
+---
+interface Props {
+  question: string;
+  open?: boolean;
+}
+
+const { question, open = false } = Astro.props;
+---
+
+<details
+  class="group border border-cream-border rounded-lg overflow-hidden transition-colors hover:border-amber-glow/30"
+  open={open}
+>
+  <summary class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer select-none bg-cream-surface hover:bg-cream-muted transition-colors">
+    <span class="font-heading font-semibold text-text-heading">{question}</span>
+    <svg
+      class="w-5 h-5 text-text-muted shrink-0 transition-transform duration-200 group-open:rotate-180"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </summary>
+  <div class="px-5 py-4 text-text-body prose max-w-none">
+    <slot />
+  </div>
+</details>

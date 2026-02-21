@@ -1,0 +1,31 @@
+---
+interface Props {
+  name: string;
+  variant: string;
+  price: number;
+  stripeUrl: string;
+  buttonLabel: string;
+}
+
+const { name, variant, price, stripeUrl, buttonLabel } = Astro.props;
+---
+
+<div class="bg-cream-surface border border-cream-border rounded-xl p-6 text-center hover:border-amber-glow/40 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+  <div class="text-lg font-heading font-semibold text-text-heading mb-1">
+    <strong>{name}</strong> Kit
+  </div>
+  <div class="text-sm font-semibold text-success mb-3">
+    IN STOCK &<br />READY TO SHIP
+  </div>
+  <div class="text-4xl font-bold text-text-heading mb-1">${price}</div>
+  <div class="text-sm text-text-muted mb-4">+ FREE Shipping</div>
+
+  <button
+    class="buy-btn w-full py-3 px-6 bg-amber-glow text-white font-semibold rounded-lg hover:bg-amber-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-[0.98]"
+    data-url-us={stripeUrl}
+  >
+    {buttonLabel}
+  </button>
+
+  <slot />
+</div>

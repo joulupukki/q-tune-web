@@ -1,0 +1,45 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+
+const betaDir = path.join(process.cwd(), 'public/assets/install/beta');
+const files = fs.readdirSync(betaDir);
+const versions = files
+  .filter((f: string) => f.startsWith('q-tune-') && f.endsWith('.bin'))
+  .map((f: string) => f.replace('q-tune-', '').replace('.bin', ''))
+  .sort((a: string, b: string) => {
+    const pa = a.split('.').map(Number);
+    const pb = b.split('.').map(Number);
+    for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+      const diff = (pb[i] || 0) - (pa[i] || 0);
+      if (diff !== 0) return diff;
+    }
+    return 0;
+  });
+---
+
+<div class="mb-6">
+  <label for="version-select" class="block text-sm font-medium text-text-muted mb-2">Select Version:</label>
+  <select
+    id="version-select"
+    class="bg-cream-surface border border-cream-border text-text-heading rounded-lg px-4 py-2.5 text-base font-mono focus:outline-none focus:border-amber-glow focus:ring-1 focus:ring-amber-glow transition-colors"
+  >
+    {versions.map((v: string) => (
+      <option value={v}>{v}</option>
+    ))}
+  </select>
+</div>
+
+<script>
+  const select = document.getElementById('version-select') as HTMLSelectElement;
+  const installButton = document.getElementById('button_web_install');
+
+  function updateManifest() {
+    if (installButton && select) {
+      installButton.setAttribute('manifest', '/assets/install/beta/manifest-' + select.value + '.json');
+    }
+  }
+
+  select?.addEventListener('change', updateManifest);
+  updateManifest();
+</script>
