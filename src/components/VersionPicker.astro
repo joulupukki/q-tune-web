@@ -42,15 +42,17 @@ const versions = (minVersion ? allVersions.filter((v: string) => compareVersions
 </div>
 
 <script define:vars={{ manifestPrefix }}>
-  const select = document.getElementById('version-select');
-  const installButton = document.getElementById('button_web_install');
+  document.addEventListener('DOMContentLoaded', () => {
+    const select = document.getElementById('version-select');
+    const installButton = document.getElementById('button_web_install');
 
-  function updateManifest() {
-    if (installButton && select) {
-      installButton.setAttribute('manifest', manifestPrefix + select.value + '.json');
+    function updateManifest() {
+      if (installButton && select) {
+        installButton.setAttribute('manifest', manifestPrefix + select.value + '.json');
+      }
     }
-  }
 
-  select?.addEventListener('change', updateManifest);
-  updateManifest();
+    select?.addEventListener('change', updateManifest);
+    updateManifest();
+  });
 </script>
