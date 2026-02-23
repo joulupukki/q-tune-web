@@ -79,6 +79,10 @@ Purchase links use Stripe's hosted checkout. Product data (names, prices, Stripe
 - **Google Analytics** — tag `G-CVGF0BKRZD` via `GoogleAnalytics.astro` component.
 - **Kit.com** — newsletter signup embed on homepage.
 
+### Git Commits
+
+- Never include `Co-Authored-By` or any Claude/AI attribution in commit messages.
+
 ### SEO
 
 - Product schema (JSON-LD) on homepage
