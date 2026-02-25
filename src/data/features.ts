@@ -22,7 +22,7 @@ export const features: Feature[] = [
   },
   {
     title: 'Multiple Tuning Display Styles',
-    description: 'Choose between several visual layouts — meter, strobe-inspired, big letter display, and more. All styles support full-range chromatic tuning.',
+    description: 'Choose between several visual layouts — meter, strobe-inspired, needle, orbital, big letter display, and more. All styles support full-range chromatic tuning.',
   },
   {
     title: 'Monitoring Mode',
@@ -31,6 +31,18 @@ export const features: Feature[] = [
   {
     title: 'Top-Mounted Jacks',
     description: 'Both audio and DC jacks are located on the top edge—saving precious pedalboard space and keeping your rig tidy.',
+  },
+  {
+    title: 'MicroSD Card Support',
+    description: 'Load custom standby images, animated visualizers, and set lists from a microSD card. Make your tuner truly yours.',
+  },
+  {
+    title: 'Standby Screens & Visualizers',
+    description: 'Pick from built-in standby screens including a plasma feedback visualizer and spectrum analyzer — or load your own custom images via SD card.',
+  },
+  {
+    title: 'Set List Display',
+    description: 'Load a plain-text set list onto the SD card and scroll through your songs on stage — right on the tuner screen.',
   },
   {
     title: 'USB-C Firmware Upgrades',
