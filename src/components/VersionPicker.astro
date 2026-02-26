@@ -22,9 +22,10 @@ function compareVersions(a: string, b: string): number {
 
 const dir = path.join(process.cwd(), directory);
 const files = fs.readdirSync(dir);
-const allVersions = files
+const allVersions = [...new Set(files
   .filter((f: string) => f.startsWith('q-tune-') && f.endsWith('.bin'))
-  .map((f: string) => f.replace('q-tune-', '').replace('.bin', ''));
+  .map((f: string) => f.replace('q-tune-merged-', '').replace('q-tune-', '').replace('.bin', ''))
+)];
 const versions = (minVersion ? allVersions.filter((v: string) => compareVersions(v, minVersion) >= 0) : allVersions)
   .sort((a: string, b: string) => compareVersions(b, a));
 ---
