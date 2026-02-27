@@ -1,0 +1,17 @@
+{
+  "name": "Q-Tune Beta",
+  "version": "3.0.2",
+  "new_install_skip_erase": true,
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        {
+          "path": "q-tune-merged-3.0.2.bin",
+          "offset": "0x0"
+        }
+      ]
+    }
+  ]
+}
