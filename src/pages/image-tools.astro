@@ -1,0 +1,191 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Image Tools"
+  description="Prepare custom standby screen images for your Q-Tune pedal. Resize and crop JPEGs and animated GIFs to fit the 240x320 or 320x240 display — all processing happens in your browser."
+>
+  <p>
+    Q-Tune supports custom standby screen images. Use this tool to resize or crop your JPEG and animated GIF files to fit the display. Everything runs in your browser — no files are uploaded anywhere.
+  </p>
+
+  <div class="not-prose mt-8">
+    <!-- Drop Zone -->
+    <div
+      id="drop-zone"
+      class="drop-zone border-2 border-dashed border-cream-border rounded-xl p-12 text-center cursor-pointer transition-colors duration-200 hover:border-amber-glow hover:bg-amber-glow/5"
+    >
+      <svg class="mx-auto mb-4 w-12 h-12 text-text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+      </svg>
+      <p class="text-text-muted text-lg font-medium">Drop a JPG or GIF here</p>
+      <p class="text-text-muted text-sm mt-1">or click to browse</p>
+      <input id="file-input" type="file" accept=".jpg,.jpeg,.gif,image/jpeg,image/gif" class="hidden" />
+    </div>
+
+    <!-- File Info -->
+    <div id="file-info" class="hidden mt-6 bg-cream-muted rounded-lg p-4">
+      <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+        <div>
+          <span class="text-text-muted">File:</span>
+          <span id="file-name" class="font-medium text-text-heading"></span>
+        </div>
+        <div>
+          <span class="text-text-muted">Type:</span>
+          <span id="file-type" class="font-medium text-text-heading"></span>
+        </div>
+        <div>
+          <span class="text-text-muted">Dimensions:</span>
+          <span id="file-dimensions" class="font-medium text-text-heading"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mode Selector -->
+    <div id="mode-selector" class="hidden mt-6">
+      <p class="text-sm text-text-muted mb-3 font-medium">Choose an operation:</p>
+      <div class="flex flex-wrap gap-2">
+        <button
+          id="mode-resize"
+          type="button"
+          class="mode-btn bg-cream-muted text-text-body px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-150"
+        >
+          Resize (max 320px)
+        </button>
+        <button
+          id="mode-resize-square"
+          type="button"
+          class="mode-btn hidden bg-cream-muted text-text-body px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-150"
+        >
+          Resize Square (240&times;240)
+        </button>
+        <button
+          id="mode-crop-portrait"
+          type="button"
+          class="mode-btn bg-cream-muted text-text-body px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-150"
+        >
+          Crop Portrait (240&times;320)
+        </button>
+        <button
+          id="mode-crop-landscape"
+          type="button"
+          class="mode-btn bg-cream-muted text-text-body px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-150"
+        >
+          Crop Landscape (320&times;240)
+        </button>
+      </div>
+    </div>
+
+    <!-- Editor Area (Cropper.js target) -->
+    <div id="editor-area" class="hidden mt-6">
+      <div class="cropper-wrapper rounded-lg overflow-hidden bg-cream-muted" style="max-height: 500px;">
+        <img id="editor-image" src="" alt="Image to edit" class="block max-w-full" />
+      </div>
+    </div>
+
+    <!-- Apply Crop Button -->
+    <div class="mt-4">
+      <button
+        id="btn-apply-crop"
+        type="button"
+        class="hidden bg-amber-glow text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-amber-dark transition-colors duration-150"
+      >
+        Apply Crop
+      </button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div id="progress-area" class="hidden mt-6">
+      <div class="bg-cream-muted rounded-full h-3 overflow-hidden">
+        <div id="progress-bar" class="bg-amber-glow h-full rounded-full transition-all duration-150" style="width: 0%"></div>
+      </div>
+      <p id="progress-text" class="text-sm text-text-muted mt-2"></p>
+    </div>
+
+    <!-- Already Small Message -->
+    <div id="already-small" class="hidden mt-6 bg-cream-muted rounded-lg p-4">
+      <p class="text-sm text-text-body">
+        This image is already 320px or smaller in both dimensions. You can download it as-is.
+      </p>
+    </div>
+
+    <!-- Result Area -->
+    <div id="result-area" class="hidden mt-6 bg-cream-muted rounded-lg p-4">
+      <p class="text-sm font-medium text-text-heading mb-3">Result:</p>
+      <img id="result-preview" src="" alt="Processed result" class="rounded-lg max-w-full max-h-80 mx-auto block" />
+      <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm mt-3">
+        <div>
+          <span class="text-text-muted">Dimensions:</span>
+          <span id="result-dimensions" class="font-medium text-text-heading"></span>
+        </div>
+        <div>
+          <span class="text-text-muted">Size:</span>
+          <span id="result-size" class="font-medium text-text-heading"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex gap-3 mt-6">
+      <button
+        id="btn-download"
+        type="button"
+        class="hidden bg-amber-glow text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-amber-dark transition-colors duration-150"
+      >
+        Download
+      </button>
+      <button
+        id="btn-start-over"
+        type="button"
+        class="hidden bg-cream-muted text-text-body font-semibold px-6 py-2.5 rounded-lg hover:bg-cream-border transition-colors duration-150"
+      >
+        Start Over
+      </button>
+    </div>
+  </div>
+</PageLayout>
+
+<script>
+  import { initImageTools } from '../scripts/image-tools/index';
+  initImageTools();
+</script>
+
+<style>
+  .drop-zone.drag-over {
+    border-color: #c4903a;
+    background-color: rgba(196, 144, 58, 0.05);
+  }
+
+  /* Cropper.js overrides */
+  :global(.cropper-view-box) {
+    outline-color: #c4903a !important;
+    outline: 1px solid #c4903a !important;
+  }
+
+  :global(.cropper-line) {
+    background-color: #c4903a !important;
+  }
+
+  :global(.cropper-point) {
+    background-color: #c4903a !important;
+  }
+
+  :global(.cropper-dashed) {
+    border-color: #c4903a !important;
+  }
+
+  :global(.cropper-center::before),
+  :global(.cropper-center::after) {
+    background-color: #c4903a !important;
+  }
+
+  :global(.cropper-modal) {
+    background-color: #000 !important;
+    opacity: 0.6 !important;
+  }
+</style>
+
+<style is:global>
+  @import 'cropperjs/dist/cropper.css';
+</style>
