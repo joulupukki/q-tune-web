@@ -8,8 +8,16 @@
       "chipFamily": "ESP32-S3",
       "parts": [
         {
-          "path": "q-tune-merged-3.0.4.bin",
+          "path": "bootloader-3.0.4.bin",
           "offset": "0x0"
+        },
+        {
+          "path": "partition-table-3.0.4.bin",
+          "offset": "0x8000"
+        },
+        {
+          "path": "q-tune-3.0.4.bin",
+          "offset": "0x10000"
         }
       ]
     }
