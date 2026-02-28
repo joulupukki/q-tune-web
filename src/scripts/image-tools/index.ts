@@ -5,6 +5,7 @@ import {
   setupDropZone,
   show,
   hide,
+  showError,
   updateProgress,
   showResult,
   triggerDownload,
@@ -42,6 +43,71 @@ export function initImageTools() {
   els.btnApplyCrop.addEventListener('click', applyCrop);
   els.btnDownload.addEventListener('click', download);
   els.btnStartOver.addEventListener('click', startOver);
+
+  els.btnFetchUrl.addEventListener('click', fetchFromUrl);
+  els.urlInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') fetchFromUrl();
+  });
+}
+
+async function fetchFromUrl() {
+  const url = els.urlInput.value.trim();
+  if (!url) return;
+
+  try {
+    new URL(url);
+  } catch {
+    showError('Please enter a valid URL.');
+    return;
+  }
+
+  els.btnFetchUrl.disabled = true;
+  els.btnFetchUrl.textContent = 'Loading...';
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch (${response.status})`);
+    }
+
+    const contentType = response.headers.get('content-type') || '';
+    let mimeType: string;
+    if (contentType.includes('image/gif')) {
+      mimeType = 'image/gif';
+    } else if (
+      contentType.includes('image/jpeg') ||
+      contentType.includes('image/jpg')
+    ) {
+      mimeType = 'image/jpeg';
+    } else {
+      // Infer from URL extension as fallback
+      const ext = url.split('?')[0].split('.').pop()?.toLowerCase();
+      if (ext === 'gif') {
+        mimeType = 'image/gif';
+      } else if (ext === 'jpg' || ext === 'jpeg') {
+        mimeType = 'image/jpeg';
+      } else {
+        throw new Error('URL must point to a JPEG or GIF image.');
+      }
+    }
+
+    const blob = await response.blob();
+    const filename =
+      url.split('?')[0].split('/').pop() || `image.${mimeType === 'image/gif' ? 'gif' : 'jpg'}`;
+    const file = new File([blob], filename, { type: mimeType });
+    handleFile(file);
+  } catch (err) {
+    const message =
+      err instanceof TypeError
+        ? 'Could not fetch the image. The server may not allow cross-origin requests.'
+        : err instanceof Error
+          ? err.message
+          : 'Failed to load image from URL.';
+    showError(message);
+  } finally {
+    els.btnFetchUrl.disabled = false;
+    els.btnFetchUrl.textContent = 'Load';
+  }
 }
 
 function handleFile(file: File) {
@@ -73,6 +139,7 @@ function handleFile(file: File) {
     show(els.fileInfo);
     show(els.modeSelector);
     hide(els.dropZone);
+    hide(els.urlInputArea);
     hide(els.resultArea);
     hide(els.btnDownload);
     hide(els.btnStartOver);
@@ -269,8 +336,10 @@ function startOver() {
   hide(els.progressArea);
   hide(els.alreadySmall);
   show(els.dropZone);
+  show(els.urlInputArea);
 
   els.fileInput.value = '';
+  els.urlInput.value = '';
 }
 
 function generateFilename(

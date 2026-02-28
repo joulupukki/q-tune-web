@@ -24,6 +24,30 @@ import PageLayout from '../layouts/PageLayout.astro';
       <input id="file-input" type="file" accept=".jpg,.jpeg,.gif,image/jpeg,image/gif" class="hidden" />
     </div>
 
+    <!-- URL Input -->
+    <div id="url-input-area" class="mt-4">
+      <div class="flex items-center gap-3 text-sm text-text-muted mb-3">
+        <div class="h-px flex-1 bg-cream-border"></div>
+        <span>or paste an image URL</span>
+        <div class="h-px flex-1 bg-cream-border"></div>
+      </div>
+      <div class="flex gap-2">
+        <input
+          id="url-input"
+          type="url"
+          placeholder="https://example.com/image.jpg"
+          class="flex-1 bg-cream-surface border border-cream-border rounded-lg px-4 py-2.5 text-sm text-text-body placeholder:text-text-muted/50 focus:outline-none focus:border-amber-glow transition-colors duration-150"
+        />
+        <button
+          id="btn-fetch-url"
+          type="button"
+          class="bg-amber-glow text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-amber-dark transition-colors duration-150 text-sm whitespace-nowrap"
+        >
+          Load
+        </button>
+      </div>
+    </div>
+
     <!-- File Info -->
     <div id="file-info" class="hidden mt-6 bg-cream-muted rounded-lg p-4">
       <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">

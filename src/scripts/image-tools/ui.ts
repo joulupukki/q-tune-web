@@ -23,6 +23,9 @@ export interface Elements {
   progressBar: HTMLDivElement;
   progressText: HTMLSpanElement;
   alreadySmall: HTMLDivElement;
+  urlInputArea: HTMLDivElement;
+  urlInput: HTMLInputElement;
+  btnFetchUrl: HTMLButtonElement;
 }
 
 export function getElements(): Elements {
@@ -51,6 +54,9 @@ export function getElements(): Elements {
     progressBar: document.getElementById('progress-bar') as HTMLDivElement,
     progressText: document.getElementById('progress-text') as HTMLSpanElement,
     alreadySmall: document.getElementById('already-small') as HTMLDivElement,
+    urlInputArea: document.getElementById('url-input-area') as HTMLDivElement,
+    urlInput: document.getElementById('url-input') as HTMLInputElement,
+    btnFetchUrl: document.getElementById('btn-fetch-url') as HTMLButtonElement,
   };
 }
 
@@ -99,7 +105,7 @@ function handleFileValidation(file: File, onFile: (file: File) => void) {
   onFile(file);
 }
 
-function showError(message: string) {
+export function showError(message: string) {
   const existing = document.getElementById('error-toast');
   if (existing) existing.remove();
 
