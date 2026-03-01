@@ -271,14 +271,24 @@ async function applyCrop() {
     hide(els.btnApplyCrop);
 
     const buffer = await currentFile.arrayBuffer();
-    const result = await cropGif(
+    let result = await cropGif(
       buffer,
       cropData.x,
       cropData.y,
       cropData.width,
       cropData.height,
-      (pct, text) => updateProgress(els, pct, text),
+      (pct, text) => updateProgress(els, pct * 0.5, text),
     );
+
+    // Resize cropped result so largest dimension is 320px
+    if (result.width > targetW || result.height > targetH) {
+      const maxDim = Math.max(targetW, targetH);
+      const croppedBuffer = await result.blob.arrayBuffer();
+      result = await resizeGif(croppedBuffer, maxDim, (pct, text) =>
+        updateProgress(els, 50 + pct * 0.5, text),
+      );
+    }
+
     resultBlob = result.blob;
     resultFilename = generateFilename(currentFile.name, 'cropped', 'gif');
     showResult(els, result.blob, result.width, result.height);
