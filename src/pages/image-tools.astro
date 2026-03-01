@@ -98,6 +98,10 @@ import PageLayout from '../layouts/PageLayout.astro';
         >
           Crop Landscape (320&times;240)
         </button>
+        <label id="optimize-option" class="hidden ml-auto flex items-center gap-2 cursor-pointer select-none">
+          <input id="optimize-checkbox" type="checkbox" class="accent-amber-glow w-4 h-4 cursor-pointer" />
+          <span class="text-sm text-text-body font-semibold">Optimize GIF</span>
+        </label>
       </div>
     </div>
 
@@ -147,6 +151,29 @@ import PageLayout from '../layouts/PageLayout.astro';
           <span class="text-text-muted">Size:</span>
           <span id="result-size" class="font-medium text-text-heading"></span>
         </div>
+      </div>
+    </div>
+
+    <!-- Optimize Suggestion Banner -->
+    <div id="optimize-suggestion" class="hidden mt-4 bg-amber-glow/10 border border-amber-glow/30 rounded-lg p-4">
+      <p class="text-sm text-text-body">
+        This GIF is over 400 KB which may be large for the ESP32 display. Optimization can reduce the file size by lowering the color palette and using frame delta encoding.
+      </p>
+      <div class="flex gap-2 mt-3">
+        <button
+          id="btn-optimize-suggestion"
+          type="button"
+          class="bg-amber-glow text-white font-semibold px-4 py-1.5 rounded-lg hover:bg-amber-dark transition-colors duration-150 text-sm"
+        >
+          Optimize
+        </button>
+        <button
+          id="btn-dismiss-suggestion"
+          type="button"
+          class="bg-cream-muted text-text-body font-semibold px-4 py-1.5 rounded-lg hover:bg-cream-border transition-colors duration-150 text-sm"
+        >
+          Dismiss
+        </button>
       </div>
     </div>
 

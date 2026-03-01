@@ -11,7 +11,7 @@ import {
   triggerDownload,
 } from './ui';
 import { resizeImage, cropImage } from './jpeg-processor';
-import { resizeGif, cropGif } from './gif-processor';
+import { resizeGif, cropGif, optimizeGif } from './gif-processor';
 
 type Mode = 'resize' | 'resize-square' | 'crop-portrait' | 'crop-landscape';
 
@@ -38,6 +38,11 @@ export function initImageTools() {
   );
   els.modeCropLandscape.addEventListener('click', () =>
     selectMode('crop-landscape'),
+  );
+
+  els.btnOptimizeSuggestion.addEventListener('click', runOptimizeOnResult);
+  els.btnDismissSuggestion.addEventListener('click', () =>
+    hide(els.optimizeSuggestion),
   );
 
   els.btnApplyCrop.addEventListener('click', applyCrop);
@@ -136,6 +141,13 @@ function handleFile(file: File) {
       hide(els.modeResizeSquare);
     }
 
+    // Show optimize checkbox for GIF files
+    if (file.type === 'image/gif') {
+      show(els.optimizeOption);
+    } else {
+      hide(els.optimizeOption);
+    }
+
     show(els.fileInfo);
     show(els.modeSelector);
     hide(els.dropZone);
@@ -183,6 +195,7 @@ function selectMode(mode: Mode) {
   hide(els.btnStartOver);
   hide(els.alreadySmall);
   hide(els.progressArea);
+  hide(els.optimizeSuggestion);
   destroyCropper();
 
   if (mode === 'resize' || mode === 'resize-square') {
@@ -238,12 +251,25 @@ async function processResize(maxDim = 320) {
 
   if (currentFile.type === 'image/gif') {
     const buffer = await currentFile.arrayBuffer();
+    const shouldOptimize = els.optimizeCheckbox.checked;
+    const progressScale = shouldOptimize ? 0.5 : 1;
     const result = await resizeGif(buffer, maxDim, (pct, text) =>
-      updateProgress(els, pct, text),
+      updateProgress(els, pct * progressScale, text),
     );
-    resultBlob = result.blob;
-    resultFilename = generateFilename(currentFile.name, 'resized', 'gif');
-    showResult(els, result.blob, result.width, result.height);
+    if (shouldOptimize) {
+      const optBuffer = await result.blob.arrayBuffer();
+      const optResult = await optimizeGif(optBuffer, (pct, text) =>
+        updateProgress(els, 50 + pct * 0.5, text),
+      );
+      resultBlob = optResult.blob;
+      resultFilename = generateFilename(currentFile.name, 'resized', 'gif');
+      showResult(els, optResult.blob, optResult.width, optResult.height);
+    } else {
+      resultBlob = result.blob;
+      resultFilename = generateFilename(currentFile.name, 'resized', 'gif');
+      showResult(els, result.blob, result.width, result.height);
+      showOptimizeSuggestion();
+    }
   } else {
     // JPEG
     show(els.progressArea);
@@ -270,6 +296,7 @@ async function applyCrop() {
     hide(els.editorArea);
     hide(els.btnApplyCrop);
 
+    const shouldOptimize = els.optimizeCheckbox.checked;
     const buffer = await currentFile.arrayBuffer();
     let result = await cropGif(
       buffer,
@@ -277,7 +304,7 @@ async function applyCrop() {
       cropData.y,
       cropData.width,
       cropData.height,
-      (pct, text) => updateProgress(els, pct * 0.5, text),
+      (pct, text) => updateProgress(els, pct * 0.33, text),
     );
 
     // Resize cropped result so largest dimension is 320px
@@ -285,13 +312,24 @@ async function applyCrop() {
       const maxDim = Math.max(targetW, targetH);
       const croppedBuffer = await result.blob.arrayBuffer();
       result = await resizeGif(croppedBuffer, maxDim, (pct, text) =>
-        updateProgress(els, 50 + pct * 0.5, text),
+        updateProgress(els, 33 + pct * 0.33, text),
       );
     }
 
-    resultBlob = result.blob;
-    resultFilename = generateFilename(currentFile.name, 'cropped', 'gif');
-    showResult(els, result.blob, result.width, result.height);
+    if (shouldOptimize) {
+      const optBuffer = await result.blob.arrayBuffer();
+      const optResult = await optimizeGif(optBuffer, (pct, text) =>
+        updateProgress(els, 66 + pct * 0.34, text),
+      );
+      resultBlob = optResult.blob;
+      resultFilename = generateFilename(currentFile.name, 'cropped', 'gif');
+      showResult(els, optResult.blob, optResult.width, optResult.height);
+    } else {
+      resultBlob = result.blob;
+      resultFilename = generateFilename(currentFile.name, 'cropped', 'gif');
+      showResult(els, result.blob, result.width, result.height);
+      showOptimizeSuggestion();
+    }
   } else {
     // Get cropped canvas from Cropper.js before destroying it
     const croppedCanvas = cropper.getCroppedCanvas({
@@ -308,6 +346,29 @@ async function applyCrop() {
     resultBlob = result.blob;
     resultFilename = generateFilename(currentFile.name, 'cropped', 'jpg');
     showResult(els, result.blob, result.width, result.height);
+  }
+}
+
+async function runOptimizeOnResult() {
+  if (!resultBlob) return;
+
+  hide(els.optimizeSuggestion);
+  hide(els.resultArea);
+  hide(els.btnDownload);
+  hide(els.btnStartOver);
+
+  const buffer = await resultBlob.arrayBuffer();
+  const result = await optimizeGif(buffer, (pct, text) =>
+    updateProgress(els, pct, text),
+  );
+  resultBlob = result.blob;
+  resultFilename = resultFilename.replace(/\.(gif)$/i, '-optimized.$1');
+  showResult(els, result.blob, result.width, result.height);
+}
+
+function showOptimizeSuggestion() {
+  if (resultBlob && resultBlob.size > 400 * 1024) {
+    show(els.optimizeSuggestion);
   }
 }
 
@@ -335,6 +396,9 @@ function startOver() {
     btn.classList.add('bg-cream-muted', 'text-text-body');
   });
   hide(els.modeResizeSquare);
+  hide(els.optimizeOption);
+  els.optimizeCheckbox.checked = false;
+  hide(els.optimizeSuggestion);
 
   hide(els.fileInfo);
   hide(els.modeSelector);

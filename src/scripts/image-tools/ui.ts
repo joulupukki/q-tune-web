@@ -10,6 +10,8 @@ export interface Elements {
   modeResizeSquare: HTMLButtonElement;
   modeCropPortrait: HTMLButtonElement;
   modeCropLandscape: HTMLButtonElement;
+  optimizeOption: HTMLLabelElement;
+  optimizeCheckbox: HTMLInputElement;
   editorArea: HTMLDivElement;
   editorImage: HTMLImageElement;
   resultArea: HTMLDivElement;
@@ -26,6 +28,9 @@ export interface Elements {
   urlInputArea: HTMLDivElement;
   urlInput: HTMLInputElement;
   btnFetchUrl: HTMLButtonElement;
+  optimizeSuggestion: HTMLDivElement;
+  btnOptimizeSuggestion: HTMLButtonElement;
+  btnDismissSuggestion: HTMLButtonElement;
 }
 
 export function getElements(): Elements {
@@ -41,6 +46,8 @@ export function getElements(): Elements {
     modeResizeSquare: document.getElementById('mode-resize-square') as HTMLButtonElement,
     modeCropPortrait: document.getElementById('mode-crop-portrait') as HTMLButtonElement,
     modeCropLandscape: document.getElementById('mode-crop-landscape') as HTMLButtonElement,
+    optimizeOption: document.getElementById('optimize-option') as HTMLLabelElement,
+    optimizeCheckbox: document.getElementById('optimize-checkbox') as HTMLInputElement,
     editorArea: document.getElementById('editor-area') as HTMLDivElement,
     editorImage: document.getElementById('editor-image') as HTMLImageElement,
     resultArea: document.getElementById('result-area') as HTMLDivElement,
@@ -57,6 +64,9 @@ export function getElements(): Elements {
     urlInputArea: document.getElementById('url-input-area') as HTMLDivElement,
     urlInput: document.getElementById('url-input') as HTMLInputElement,
     btnFetchUrl: document.getElementById('btn-fetch-url') as HTMLButtonElement,
+    optimizeSuggestion: document.getElementById('optimize-suggestion') as HTMLDivElement,
+    btnOptimizeSuggestion: document.getElementById('btn-optimize-suggestion') as HTMLButtonElement,
+    btnDismissSuggestion: document.getElementById('btn-dismiss-suggestion') as HTMLButtonElement,
   };
 }
 

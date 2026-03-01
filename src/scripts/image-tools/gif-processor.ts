@@ -32,6 +32,7 @@ function encodeFrame(
   height: number,
   delay: number,
   dispose: number,
+  maxColors = 256,
 ) {
   // Detect transparency
   let hasTransparency = false;
@@ -57,7 +58,7 @@ function encodeFrame(
     }
   }
 
-  const palette = quantize(data, 256);
+  const palette = quantize(data, maxColors);
   const index = applyPalette(data, palette);
 
   const opts: Record<string, unknown> = { palette, delay, dispose };
@@ -324,6 +325,158 @@ async function processSingleFrameResize(
 
   const blob = new Blob([encoder.bytes()], { type: 'image/gif' });
   return { blob, width: outW, height: outH };
+}
+
+function buildDelta(
+  current: Uint8ClampedArray,
+  previous: Uint8ClampedArray,
+): Uint8ClampedArray {
+  const delta = new Uint8ClampedArray(current.length);
+  for (let i = 0; i < current.length; i += 4) {
+    if (
+      current[i] === previous[i] &&
+      current[i + 1] === previous[i + 1] &&
+      current[i + 2] === previous[i + 2] &&
+      current[i + 3] === previous[i + 3]
+    ) {
+      // Unchanged pixel → transparent
+      delta[i] = 0;
+      delta[i + 1] = 0;
+      delta[i + 2] = 0;
+      delta[i + 3] = 0;
+    } else {
+      delta[i] = current[i];
+      delta[i + 1] = current[i + 1];
+      delta[i + 2] = current[i + 2];
+      delta[i + 3] = current[i + 3];
+    }
+  }
+  return delta;
+}
+
+async function encodeOptimized(
+  buffer: ArrayBuffer,
+  maxColors: number,
+  onProgress?: ProgressCallback,
+): Promise<GifResult> {
+  const { frames, width, height } = decodeGif(buffer);
+
+  // Full-size compositing canvas
+  const compCanvas = document.createElement('canvas');
+  compCanvas.width = width;
+  compCanvas.height = height;
+  const compCtx = compCanvas.getContext('2d')!;
+
+  // Reading canvas (same size as compositing)
+  const readCanvas = document.createElement('canvas');
+  readCanvas.width = width;
+  readCanvas.height = height;
+  const readCtx = readCanvas.getContext('2d')!;
+
+  const encoder = GIFEncoder();
+  let prevPixels: Uint8ClampedArray | null = null;
+
+  for (let i = 0; i < frames.length; i++) {
+    const frame = frames[i];
+
+    // Composite frame patch onto full canvas
+    const patchCanvas = document.createElement('canvas');
+    patchCanvas.width = frame.width;
+    patchCanvas.height = frame.height;
+    patchCanvas.getContext('2d')!.putImageData(frame.patch, 0, 0);
+    compCtx.drawImage(patchCanvas, frame.left, frame.top);
+
+    // Read composited pixels
+    readCtx.clearRect(0, 0, width, height);
+    readCtx.drawImage(compCanvas, 0, 0);
+    const currentPixels = readCtx.getImageData(0, 0, width, height).data;
+
+    if (i === 0 || !prevPixels) {
+      // First frame: encode fully
+      encodeFrame(encoder, currentPixels, width, height, frame.delay, 0, maxColors);
+    } else {
+      // Delta frame: only encode changed pixels
+      const delta = buildDelta(currentPixels, prevPixels);
+      encodeFrame(encoder, delta, width, height, frame.delay, 0, maxColors);
+    }
+
+    // Save composited pixels (not delta) for next comparison
+    prevPixels = new Uint8ClampedArray(currentPixels);
+
+    // Apply source disposal to compositing canvas
+    if (frame.disposalType === 2) {
+      compCtx.clearRect(frame.left, frame.top, frame.width, frame.height);
+    } else if (frame.disposalType === 3) {
+      compCtx.clearRect(frame.left, frame.top, frame.width, frame.height);
+    }
+
+    if (onProgress) {
+      onProgress(
+        ((i + 1) / frames.length) * 100,
+        `Optimizing frame ${i + 1} of ${frames.length}`,
+      );
+    }
+    await yieldToUI();
+  }
+
+  encoder.finish();
+  const output = encoder.bytes();
+  const blob = new Blob([output], { type: 'image/gif' });
+  return { blob, width, height };
+}
+
+function processSingleFrameOptimize(
+  buffer: ArrayBuffer,
+  maxColors: number,
+): GifResult {
+  const { frames, width, height } = decodeGif(buffer);
+  const frame = frames[0];
+
+  const compCanvas = document.createElement('canvas');
+  compCanvas.width = width;
+  compCanvas.height = height;
+  const compCtx = compCanvas.getContext('2d')!;
+  const patchCanvas = document.createElement('canvas');
+  patchCanvas.width = frame.width;
+  patchCanvas.height = frame.height;
+  patchCanvas.getContext('2d')!.putImageData(frame.patch, 0, 0);
+  compCtx.drawImage(patchCanvas, frame.left, frame.top);
+
+  const imageData = compCtx.getImageData(0, 0, width, height);
+  const encoder = GIFEncoder();
+  encodeFrame(encoder, imageData.data, width, height, 0, 0, maxColors);
+  encoder.finish();
+
+  const blob = new Blob([encoder.bytes()], { type: 'image/gif' });
+  return { blob, width, height };
+}
+
+export async function optimizeGif(
+  buffer: ArrayBuffer,
+  onProgress?: ProgressCallback,
+): Promise<GifResult> {
+  const { frames } = decodeGif(buffer);
+
+  if (frames.length === 1) {
+    // Single-frame: only color reduction, no delta encoding
+    const result128 = processSingleFrameOptimize(buffer, 128);
+    if (result128.blob.size > 400 * 1024) {
+      const result64 = processSingleFrameOptimize(buffer, 64);
+      return result64.blob.size < result128.blob.size ? result64 : result128;
+    }
+    return result128;
+  }
+
+  // First pass: 128 colors + delta encoding
+  const result128 = await encodeOptimized(buffer, 128, onProgress);
+
+  if (result128.blob.size > 400 * 1024) {
+    // Second pass: 64 colors + delta encoding
+    const result64 = await encodeOptimized(buffer, 64, onProgress);
+    return result64.blob.size < result128.blob.size ? result64 : result128;
+  }
+
+  return result128;
 }
 
 async function processSingleFrameCrop(
