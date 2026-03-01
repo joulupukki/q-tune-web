@@ -1,0 +1,25 @@
+{
+  "name": "Q-Tune Beta",
+  "version": "3.0.7",
+  "new_install_skip_erase": true,
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        {
+          "path": "bootloader-3.0.7.bin",
+          "offset": "0x0"
+        },
+        {
+          "path": "partition-table-3.0.7.bin",
+          "offset": "0x8000"
+        },
+        {
+          "path": "q-tune-3.0.7.bin",
+          "offset": "0x10000"
+        }
+      ]
+    }
+  ]
+}
