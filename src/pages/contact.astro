@@ -1,0 +1,56 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Contact Us"
+  description="Get in touch with the Q-Tune team. Have a question about your build, firmware, or just want to say hello? Send us a message."
+>
+  <p>Have a question about your build, firmware, or just want to say hello? Fill out the form below and we'll get back to you as soon as we can.</p>
+
+  <form action="https://api.web3forms.com/submit" method="POST" class="not-prose mt-8 space-y-6">
+    <input type="hidden" name="access_key" value="41142bfc-224f-4b31-84c3-e28d506c016c" />
+    <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+    <input type="checkbox" name="botcheck" class="hidden" />
+
+    <div>
+      <label for="name" class="block text-text-heading font-heading mb-2">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        required
+        class="w-full border border-cream-border rounded-lg px-4 py-3 bg-cream-surface text-text-body focus:outline-none focus:ring-2 focus:ring-amber-glow focus:border-amber-glow"
+      />
+    </div>
+
+    <div>
+      <label for="email" class="block text-text-heading font-heading mb-2">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        required
+        class="w-full border border-cream-border rounded-lg px-4 py-3 bg-cream-surface text-text-body focus:outline-none focus:ring-2 focus:ring-amber-glow focus:border-amber-glow"
+      />
+    </div>
+
+    <div>
+      <label for="message" class="block text-text-heading font-heading mb-2">Message</label>
+      <textarea
+        name="message"
+        id="message"
+        rows="5"
+        required
+        class="w-full border border-cream-border rounded-lg px-4 py-3 bg-cream-surface text-text-body focus:outline-none focus:ring-2 focus:ring-amber-glow focus:border-amber-glow resize-y"
+      ></textarea>
+    </div>
+
+    <button
+      type="submit"
+      class="inline-flex items-center px-6 py-3 bg-amber-glow text-white font-semibold rounded-lg hover:bg-amber-dark transition-colors"
+    >
+      Send Message
+    </button>
+  </form>
+</PageLayout>
