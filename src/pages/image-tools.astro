@@ -7,7 +7,7 @@ import PageLayout from '../layouts/PageLayout.astro';
   description="Prepare custom standby screen images for your Q-Tune pedal. Resize and crop JPEGs and animated GIFs to fit the 240x320 or 320x240 display — all processing happens in your browser."
 >
   <p>
-    Q-Tune supports custom standby screen images. Use this tool to resize or crop your JPEG and animated GIF files to fit the display. Everything runs in your browser — no files are uploaded anywhere.
+    Q-Tune supports custom standby screen images. Use this tool to resize or crop your JPEG and animated GIF files to fit the display. Everything runs in your browser — no files are uploaded anywhere. Smaller file sizes load faster on the pedal, so keeping images compact gives you quicker standby screen transitions.
   </p>
 
   <div class="not-prose mt-8">
@@ -103,6 +103,11 @@ import PageLayout from '../layouts/PageLayout.astro';
           <span class="text-sm text-text-body font-semibold">Optimize GIF</span>
         </label>
       </div>
+      <p id="optimize-hint" class="hidden text-xs text-text-muted mt-2 ml-auto max-w-64 text-right">
+        Reduces file size by lowering the<br />
+        color palette and encoding only pixels<br />
+        that change between frames.
+      </p>
     </div>
 
     <!-- Editor Area (Cropper.js target) -->

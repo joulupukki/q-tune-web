@@ -12,6 +12,7 @@ export interface Elements {
   modeCropLandscape: HTMLButtonElement;
   optimizeOption: HTMLLabelElement;
   optimizeCheckbox: HTMLInputElement;
+  optimizeHint: HTMLParagraphElement;
   editorArea: HTMLDivElement;
   editorImage: HTMLImageElement;
   resultArea: HTMLDivElement;
@@ -48,6 +49,7 @@ export function getElements(): Elements {
     modeCropLandscape: document.getElementById('mode-crop-landscape') as HTMLButtonElement,
     optimizeOption: document.getElementById('optimize-option') as HTMLLabelElement,
     optimizeCheckbox: document.getElementById('optimize-checkbox') as HTMLInputElement,
+    optimizeHint: document.getElementById('optimize-hint') as HTMLParagraphElement,
     editorArea: document.getElementById('editor-area') as HTMLDivElement,
     editorImage: document.getElementById('editor-image') as HTMLImageElement,
     resultArea: document.getElementById('result-area') as HTMLDivElement,

@@ -144,8 +144,10 @@ function handleFile(file: File) {
     // Show optimize checkbox for GIF files
     if (file.type === 'image/gif') {
       show(els.optimizeOption);
+      show(els.optimizeHint);
     } else {
       hide(els.optimizeOption);
+      hide(els.optimizeHint);
     }
 
     show(els.fileInfo);
@@ -397,6 +399,7 @@ function startOver() {
   });
   hide(els.modeResizeSquare);
   hide(els.optimizeOption);
+  hide(els.optimizeHint);
   els.optimizeCheckbox.checked = false;
   hide(els.optimizeSuggestion);
 
