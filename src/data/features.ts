@@ -33,16 +33,16 @@ export const features: Feature[] = [
     description: 'Both audio and DC jacks are located on the top edge—saving precious pedalboard space and keeping your rig tidy.',
   },
   {
-    title: 'MicroSD Card Support',
-    description: 'Load custom standby images, animated visualizers, and set lists from a microSD card. Make your tuner truly yours.',
+    title: 'Internal Storage Support',
+    description: 'Store custom standby images, animated GIFs, and set lists. Make your tuner truly yours.',
   },
   {
     title: 'Standby Screens & Visualizers',
-    description: 'Pick from built-in standby screens including a plasma feedback visualizer and spectrum analyzer — or load your own custom images via SD card.',
+    description: 'Pick from built-in standby screens including a plasma feedback visualizer and spectrum analyzer — or load your own custom images.',
   },
   {
     title: 'Set List Display',
-    description: 'Load a plain-text set list onto the SD card and scroll through your songs on stage — right on the tuner screen.',
+    description: 'Load a plain-text set list onto tuner and see your songs right on the tuner screen.',
   },
   {
     title: 'USB-C Firmware Upgrades',
