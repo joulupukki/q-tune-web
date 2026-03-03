@@ -1,0 +1,399 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="User Manual"
+  description="Complete user manual for the Q-Tune chromatic guitar tuner pedal. Learn about controls, tuning styles, bypass modes, settings, internal storage, USB Drive Mode, Wi-Fi, and firmware updates."
+>
+  <!-- Table of Contents -->
+  <nav class="not-prose mb-10 rounded-lg border border-cream-border bg-cream-muted p-5">
+    <p class="mb-3 text-sm font-heading font-semibold uppercase tracking-wide text-text-muted">Contents</p>
+    <ol class="columns-1 sm:columns-2 gap-x-8 space-y-1 list-decimal list-inside text-[15px]">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#controls">Controls</a></li>
+      <li><a href="#tuning-styles">Tuning Display Styles</a></li>
+      <li><a href="#bypass-modes">Bypass Modes</a></li>
+      <li><a href="#standby-screens">Standby Screens</a></li>
+      <li><a href="#settings">Settings Menu</a></li>
+      <li><a href="#internal-storage">Internal Storage</a></li>
+      <li><a href="#usb-drive-mode">USB Drive Mode</a></li>
+      <li><a href="#wifi-server">Wi-Fi Server</a></li>
+      <li><a href="#firmware-updates">Firmware Updates</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1. Overview -->
+  <h2 id="overview" class="scroll-mt-20">Overview</h2>
+  <p>
+    Q-Tune is a DIY chromatic guitar tuner pedal built around an ESP32-S3 microcontroller. It features a 2.8" capacitive touch color LCD, multiple tuning display styles, true bypass and buffered bypass options, customizable standby screens, internal storage for images and set lists, and upgradable firmware via USB-C or over-the-air Wi-Fi updates.
+  </p>
+  <p>
+    The pedal operates in two primary modes: <strong>Standby</strong> (signal passes through, screen shows an idle animation or custom image) and <strong>Tuning</strong> (signal is muted via relay, screen shows pitch detection). Switching between modes is done with the footswitch.
+  </p>
+
+  <!-- 2. Controls -->
+  <h2 id="controls" class="scroll-mt-20">Controls</h2>
+
+  <h3>Standby Mode</h3>
+  <ul>
+    <li><strong>Footswitch press</strong> — Enter Tuning mode (mutes signal)</li>
+    <li><strong>Footswitch long press</strong> — When viewing a JPEG/GIF image, advances to the next image. When viewing a set list, advances to the next set list file.</li>
+    <li><strong>Tap screen</strong> — Interact with the current standby screen (if applicable)</li>
+  </ul>
+
+  <h3>Tuning Mode</h3>
+  <ul>
+    <li><strong>Footswitch press</strong> — Return to Standby mode (unmutes signal)</li>
+    <li><strong>Footswitch long press</strong> — Open Settings menu</li>
+    <li><strong>Tap Q logo</strong> — Open Settings menu</li>
+  </ul>
+
+  <h3>Settings Menu</h3>
+  <ul>
+    <li><strong>Tap a button</strong> — Select or cycle through the button's options</li>
+    <li><strong>Footswitch press</strong> — Advance to the next button</li>
+    <li><strong>Footswitch double press</strong> — Go back to the previous button</li>
+    <li><strong>Footswitch long press</strong> — Simulate tapping the highlighted button</li>
+  </ul>
+
+  <h3>Power-On</h3>
+  <ul>
+    <li><strong>Hold footswitch while powering on</strong> — Enter USB Drive Mode</li>
+  </ul>
+
+  <!-- 3. Tuning Display Styles -->
+  <h2 id="tuning-styles" class="scroll-mt-20">Tuning Display Styles</h2>
+  <p>Q-Tune includes seven main tuning display styles. You can select your preferred style in <a href="#settings">Settings</a>.</p>
+
+  <div class="overflow-x-auto">
+    <table>
+      <thead>
+        <tr>
+          <th>Style</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Meter</strong></td>
+          <td>Classic analog meter with a needle that sweeps left/right to indicate pitch offset.</td>
+        </tr>
+        <tr>
+          <td><strong>Strobe</strong></td>
+          <td>Scrolling strobe bars — bars stop moving when in tune. Direction indicates sharp or flat.</td>
+        </tr>
+        <tr>
+          <td><strong>Biggie</strong></td>
+          <td>Large, bold note name display with a simple sharp/flat indicator. Easy to read from a distance.</td>
+        </tr>
+        <tr>
+          <td><strong>Attitude</strong></td>
+          <td>A tuning display inspired by an airplane's attitude indicator. The UI replicates a similar instrument-style interface to show pitch offset.</td>
+        </tr>
+        <tr>
+          <td><strong>Needle</strong></td>
+          <td>A clean, minimal needle-style tuner display.</td>
+        </tr>
+        <tr>
+          <td><strong>Orbital</strong></td>
+          <td>A dot orbits a central note display. It rotates clockwise when sharp and counter-clockwise when flat, and is stationary when in tune. The orbit widens when flat and narrows when sharp — a perfect circle means in tune.</td>
+        </tr>
+        <tr>
+          <td><strong>Record Time</strong></td>
+          <td>A vinyl record that spins when a signal is detected. A slider control indicates how close the note is to being in tune.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Utility Tuners</h3>
+  <p>Two additional tuning styles are available after enabling them in the <a href="#settings">Advanced settings</a>:</p>
+
+  <div class="overflow-x-auto">
+    <table>
+      <thead>
+        <tr>
+          <th>Style</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Quizzer</strong></td>
+          <td>Tests your knowledge of the fretboard by indicating a note you should play and the next note coming up. A helpful practice tool for fretboard note location drills.</td>
+        </tr>
+        <tr>
+          <td><strong>Techie</strong></td>
+          <td>A diagnostic-style display showing raw frequency, cents offset, and other technical details.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 4. Bypass Modes -->
+  <h2 id="bypass-modes" class="scroll-mt-20">Bypass Modes</h2>
+  <p>The bypass mode determines how your signal is routed when the tuner is in Standby (not actively tuning). Change the bypass mode in <a href="#settings">Settings</a>.</p>
+
+  <div class="overflow-x-auto">
+    <table>
+      <thead>
+        <tr>
+          <th>Mode</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>True Bypass</strong></td>
+          <td>Signal is routed directly from input to output via a mechanical relay, completely bypassing all electronics. This is the default.</td>
+        </tr>
+        <tr>
+          <td><strong>Buffered</strong></td>
+          <td>Signal passes through a buffer circuit when bypassed. Useful for preserving tone on long cable runs or large pedalboards.</td>
+        </tr>
+        <tr>
+          <td><strong>BB + Monitoring</strong></td>
+          <td>Buffered Bypass with Monitoring. The tuner continues to detect pitch even when in Standby, so you can see your current note without muting.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 5. Standby Screens -->
+  <h2 id="standby-screens" class="scroll-mt-20">Standby Screens</h2>
+  <p>When the tuner is in Standby mode, the LCD shows one of the following screens. You can select your preferred standby screen in <a href="#settings">Settings</a>.</p>
+
+  <div class="overflow-x-auto">
+    <table>
+      <thead>
+        <tr>
+          <th>Screen</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Blank</strong></td>
+          <td>A blank, dark screen — minimal distraction on stage.</td>
+        </tr>
+        <tr>
+          <td><strong>Q</strong></td>
+          <td>The Q-Tune logo. This is the default standby screen.</td>
+        </tr>
+        <tr>
+          <td><strong>Bouncy</strong></td>
+          <td>An animated bouncing Q-Tune logo. In Buffered Bypass mode, the bounce reacts to the frequencies you play.</td>
+        </tr>
+        <tr>
+          <td><strong>Corner Quest</strong></td>
+          <td>A playful take on the classic DVD logo screensaver. Tap the screen to control a paddle for a fun mini-game — or in Buffered Bypass mode, use your guitar: low strings move the paddle left, high strings move it right.</td>
+        </tr>
+        <tr>
+          <td><strong>Maze Runner</strong></td>
+          <td>A maze-generation game that creates and solves random mazes.</td>
+        </tr>
+        <tr>
+          <td><strong>Plasma</strong></td>
+          <td>A colorful, animated plasma effect.</td>
+        </tr>
+        <tr>
+          <td><strong>Q-Spawn</strong></td>
+          <td>Spawns a swarm of moving Q-Tune logos. In Buffered Bypass mode, tap the screen to launch a fun fretboard quiz game.</td>
+        </tr>
+        <tr>
+          <td><strong>Reactor</strong></td>
+          <td>An animated reactor core visual effect.</td>
+        </tr>
+        <tr>
+          <td><strong>Spectrum</strong></td>
+          <td>A spectrum analyzer visualization. In Buffered Bypass mode, it reacts to your played notes in real time.</td>
+        </tr>
+        <tr>
+          <td><strong>Image</strong></td>
+          <td>Displays custom JPEG and animated GIF images from internal storage. See <a href="#internal-storage">Internal Storage</a> for details.</td>
+        </tr>
+        <tr>
+          <td><strong>Set List</strong></td>
+          <td>Displays a set list loaded from a text file. Long press the footswitch to advance to the next set list. See <a href="#internal-storage">Internal Storage</a> for details.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 6. Settings Menu -->
+  <h2 id="settings" class="scroll-mt-20">Settings Menu</h2>
+  <p>Open the Settings menu by tapping the Q-Tune logo or long pressing the footswitch while in Tuning mode. Settings are organized into multiple pages. Tap buttons to navigate and cycle through options. See <a href="#controls">Controls</a> for footswitch navigation shortcuts.</p>
+
+  <h3>Tuner Settings</h3>
+  <div class="overflow-x-auto">
+    <table>
+      <thead>
+        <tr>
+          <th>Setting</th>
+          <th>Options</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Style</strong></td>
+          <td>Select the style of tuner (Meter, Strobe, etc)</td>
+          <td>Meter</td>
+        </tr>
+        <tr>
+          <td><strong>In-Tune Range</strong></td>
+          <td>&pm;1 to &pm;6 cents</td>
+          <td>&pm;3 cents</td>
+        </tr>
+        <tr>
+          <td><strong>Bypass Type</strong></td>
+          <td>True Bypass, Buffered, BB + Monitoring<br/>(Monitoring allows you to still see the tuner in Standby)</td>
+          <td>True Bypass</td>
+        </tr>
+        <tr>
+          <td><strong>Reference Pitch</strong></td>
+          <td>400–480 Hz (in 1 Hz steps)</td>
+          <td>440 Hz</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Display Settings</h3>
+  <div class="overflow-x-auto">
+    <table>
+      <thead>
+        <tr>
+          <th>Setting</th>
+          <th>Options</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Main Color</strong></td>
+          <td>8 color options</td>
+          <td>White</td>
+        </tr>
+        <tr>
+          <td><strong>Brightness</strong></td>
+          <td>10%–100% (in 10% steps)</td>
+          <td>80%</td>
+        </tr>
+        <tr>
+          <td><strong>Rotation</strong></td>
+          <td>Normal, Left, Right, Upside Down</td>
+          <td>Normal</td>
+        </tr>
+        <tr>
+          <td><strong>Standby Screen</strong></td>
+          <td>Select the standby screen (Blank, Q, Bouncy, etc)</td>
+          <td>Q</td>
+        </tr>
+        <tr>
+          <td><strong>Initial Screen</strong></td>
+          <td>Standby, Tuning</td>
+          <td>Standby</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Advanced Settings</h3>
+  <div class="overflow-x-auto">
+    <table>
+      <thead>
+        <tr>
+          <th>Setting</th>
+          <th>Options</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Utility Tuners</strong></td>
+          <td>Enabled, Disabled</td>
+          <td>Disabled</td>
+        </tr>
+        <tr>
+          <td><strong>Display Cents</strong></td>
+          <td>Enabled, Disabled — shows a &pm; cents readout while tuning</td>
+          <td>Disabled</td>
+        </tr>
+        <tr>
+          <td><strong>Wi-Fi Server</strong></td>
+          <td>Enter Wi-Fi Server mode to upload set lists and images</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>Factory Reset</strong></td>
+          <td>Reset the entire tuner to default settings</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 7. Internal Storage -->
+  <h2 id="internal-storage" class="scroll-mt-20">Internal Storage</h2>
+  <p>Q-Tune has 8MB of internal storage for custom standby images and set list files. Files can be managed via <a href="#usb-drive-mode">USB Drive Mode</a> or the <a href="#wifi-server">Wi-Fi Server</a>.</p>
+
+  <h3>Custom Images</h3>
+  <ul>
+    <li>Place JPEG and animated GIF files in the <code>standby/</code> folder</li>
+    <li>Supported resolutions: <strong>320&times;240</strong> (landscape) or <strong>240&times;320</strong> (portrait)</li>
+    <li>Smaller file sizes mean faster load times — keep images optimized for the best experience</li>
+    <li>The <a href="/image-tools/">Image Tools</a> page can resize and convert your images, and includes a GIF optimizer that reduces the color palette and file size</li>
+    <li>This is a DIY tuner — experimentation is encouraged! Try different images and GIFs to make your pedal your own</li>
+  </ul>
+
+  <h3>Set Lists</h3>
+  <ul>
+    <li>Place plain text <code>.txt</code> files in the <code>setlists/</code> folder</li>
+    <li>One song title per line</li>
+    <li>The display automatically adjusts the font size based on how many songs are in each file</li>
+    <li>Experiment with the number of lines per file for the best results on your screen</li>
+  </ul>
+
+  <!-- 8. USB Drive Mode -->
+  <h2 id="usb-drive-mode" class="scroll-mt-20">USB Drive Mode</h2>
+  <p>USB Drive Mode lets you access Q-Tune's internal storage directly from your computer, just like a USB flash drive. Use it to add or remove custom images and set list files.</p>
+  <ol>
+    <li><strong>Hold the footswitch</strong> while plugging in the USB-C cable (or while powering on the pedal via USB).</li>
+    <li>The screen will display a USB Drive Mode indicator.</li>
+    <li>The pedal will appear as a removable drive on your computer.</li>
+    <li>Copy files to the <code>standby/</code> and <code>setlists/</code> folders as described in the <a href="#internal-storage">Internal Storage</a> section.</li>
+    <li>Eject the drive and unplug the cable. The pedal will restart with the new files loaded.</li>
+  </ol>
+
+  <!-- 9. Wi-Fi Server -->
+  <h2 id="wifi-server" class="scroll-mt-20">Wi-Fi Server</h2>
+  <p>Q-Tune can run a built-in Wi-Fi server that lets you manage images, set lists, and settings from any device with a web browser — no cables required.</p>
+  <ol>
+    <li>Open <a href="#settings">Settings</a> and navigate to the <strong>Advanced</strong> page.</li>
+    <li>Tap <strong>Wi-Fi Server</strong> to start.</li>
+    <li>The pedal will create a Wi-Fi access point. The screen will display the network name and password.</li>
+    <li>Connect your phone or computer to that Wi-Fi network.</li>
+    <li>Open a web browser and go to the address shown on the pedal's screen.</li>
+    <li>Use the web interface to upload/delete images, manage set lists, and adjust settings.</li>
+    <li>When finished, tap <strong>Wi-Fi Server</strong> in Settings to set it to <strong>Stop</strong>. The tuner will reboot with all your changes to images and set lists ready to use.</li>
+  </ol>
+
+  <!-- 10. Firmware Updates -->
+  <h2 id="firmware-updates" class="scroll-mt-20">Firmware Updates</h2>
+  <p>Q-Tune firmware can be updated directly from your browser using a USB-C data cable. No special software is required.</p>
+  <ol>
+    <li>Go to the <a href="/install/">Install</a> page on this website and follow the instructions.</li>
+    <li>Connect your Q-Tune to your computer with a USB-C data cable.</li>
+    <li>Click the <strong>Install</strong> button and follow the on-screen prompts.</li>
+    <li>The firmware will be flashed to your pedal. Once complete, the pedal will restart automatically.</li>
+  </ol>
+  <p>Your settings, custom images, and set lists are preserved during firmware updates unless you select the Erase option.</p>
+</PageLayout>
+
+<style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
