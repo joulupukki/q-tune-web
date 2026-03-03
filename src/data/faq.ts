@@ -12,7 +12,7 @@ export const faqData: FaqEntry[] = [
   {
     question: 'Can a fully-assembled Q-Tune be purchased?',
     answer:
-      'Q-Tune is a DIY kit. You can purchase a full kit that includes the PCB and required components from the Q-Tune website. Visit the <a href="/build/">build page</a> for assembly instructions.',
+      'Q-Tune is a DIY kit. You can purchase a full kit that includes the PCB and required components from the Q-Tune website. Visit the <a href="/build/">build page</a> for assembly instructions. If soldering isn\'t your thing, we do have a limited number of pre-built Q-Tune tuners available — <a href="/contact/">contact us</a> to check availability.',
   },
   {
     question: 'Do I need to know how to solder?',
@@ -64,17 +64,17 @@ export const faqData: FaqEntry[] = [
   {
     question: 'Is this project suitable for beginners?',
     answer:
-      "Q-Tune is best suited for intermediate builders who have experience with soldering and basic electronics. If you're new to DIY audio projects, you may want to get some practice first, or enlist help from a more experienced friend. But, if you're determined, by all means, go for it!",
+      "Q-Tune is best suited for intermediate builders who have experience with soldering and basic electronics. If you're new to DIY audio projects, you may want to get some practice first, or enlist help from a more experienced friend. But, if you're determined, by all means, go for it! Not into soldering? We have a limited number of pre-built Q-Tune tuners available — <a href=\"/contact/\">contact us</a> to find out more.",
   },
   {
     question: 'Is Q-Tune available outside of the United States?',
     answer:
-      'Shipping can get a little bit tricky, but if you are interested and live outside of the United States, please contact us on the <a href="https://forum.pedalpcb.com/forums/qtune/" target="_blank" rel="noopener">Q-Tune DIY Tuner Forum</a> or on our <a href="https://discord.gg/evtjkEj9GX" target="_blank" rel="noopener">Discord</a> and let\'s see what we can work out with you.',
+      'Shipping can get a little bit tricky, but if you are interested and live outside of the United States, please <a href="/contact/">contact us</a> and let\'s see what we can work out with you.',
   },
   {
     question: 'Will there be future versions or improvements?',
     answer:
-      "We're always looking for improvements and new features. If there's something you'd love to see, please let us know. As newer versions are available, we will post them on the <a href=\"/install/\">web installer</a> page.",
+      "We're always looking for improvements and new features. If there's something you'd love to see, please <a href=\"/contact/\">let us know</a>. As newer versions are available, we will post them on the <a href=\"/install/\">web installer</a> page.",
   },
   {
     question: 'Oops! Something Missing from Your Kit?',
