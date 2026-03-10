@@ -1,0 +1,30 @@
+---
+const testimonials = [
+  {
+    quote: "Fast, accurate, and dependable tuning — feels solid and consistent. The LCD display makes it super easy to use, and the controls are intuitive.",
+    author: "Q-Tune Builder",
+  },
+  {
+    quote: "Compared to something like the Peterson StroboStomp, the Q-Tune offers more visual feedback and customization, plus the satisfaction and fun of building it yourself... a versatile, fast, and accurate tuner that looks great on the board.",
+    author: "Sam W.",
+  },
+  {
+    quote: "The instructions are impressive — well written and thorough, with helpful pictures. Well-written instructions make it approachable for intermediate builders.",
+    author: "Q-Tune Builder",
+  },
+];
+---
+
+<section class="py-16 bg-cream-muted">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <h2 class="text-3xl sm:text-4xl font-heading font-bold text-center mb-10">What Builders Are Saying</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {testimonials.map((t) => (
+        <div class="bg-cream-surface border border-cream-border border-l-4 border-l-amber-glow rounded-lg p-6">
+          <p class="italic text-text-body leading-relaxed">"{t.quote}"</p>
+          <p class="mt-4 text-text-muted text-sm">— {t.author}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
