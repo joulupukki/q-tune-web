@@ -7,7 +7,7 @@ export default defineConfig({
   integrations: [
     tailwind(),
     sitemap({
-      filter: (page) => !page.includes('/beta-install'),
+      filter: (page) => !page.includes('/beta-install') && !page.includes('/smd-build'),
     }),
   ],
   trailingSlash: 'ignore',

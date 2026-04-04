@@ -1,0 +1,29 @@
+---
+// Redirect page for QR code on PCB back — tracks analytics before redirecting to /build
+---
+<html>
+  <head>
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-CVGF0BKRZD"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CVGF0BKRZD');
+      // Send pageview for /smd-build, then redirect
+      gtag('event', 'page_view', {
+        page_path: '/smd-build',
+        page_title: 'SMD Build QR Redirect',
+        send_to: 'G-CVGF0BKRZD',
+        event_callback: function() {
+          window.location.replace('/build');
+        }
+      });
+      // Fallback redirect if GA is blocked or slow
+      setTimeout(function() {
+        window.location.replace('/build');
+      }, 1500);
+    </script>
+    <meta http-equiv="refresh" content="3;url=/build">
+  </head>
+  <body></body>
+</html>
