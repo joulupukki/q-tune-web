@@ -11,21 +11,99 @@ import YouTubeEmbed from '../components/YouTubeEmbed.astro';
 
   <hr />
 
-  <p>On June 17, 2024, <a href="http://www.boydtimothy.com/" target="_blank" rel="noopener">Boyd Timothy</a> stumbled across a small preamp kit that Ryan Schultz was selling on the Acoustic Guitar Forum Classifieds. Impressed by the clever design of Ryan's "T-Pre" kit, Boyd reached out—and the rest, as they say, is history.</p>
+  <h2>How It Started</h2>
 
-  <p>What started as a simple message turned into a full-blown collaboration. When Ryan floated the idea of creating a DIY guitar tuner kit, Boyd was all in. The two began trading ideas, testing ESP32 dev boards, and refining circuits late into the night—for months.</p>
+  <p>On June 17, 2024, <a href="http://www.boydtimothy.com/" target="_blank" rel="noopener">Boyd Timothy</a> stumbled across a small preamp kit that Ryan Schultz was selling on the Acoustic Guitar Forum Classifieds. Impressed by the clever design of Ryan's "T-Pre" kit, Boyd reached out, and the rest, as they say, is history.</p>
 
-  <p>After nearly a year of prototyping, tinkering, and fine-tuning, <strong>Q-Tune</strong> was born—the world's first <strong>DIY guitar tuner pedal kit</strong>. It's built for makers, tinkerers, and tone chasers who want more than off-the-shelf gear.</p>
+  <p>What started as a simple message turned into a full-blown collaboration. When Ryan floated the idea of creating a DIY guitar tuner kit, Boyd was all in. The two began trading ideas, testing ESP32 dev boards, and refining circuits late into the night, for months.</p>
+
+  <p>After nearly a year of prototyping, tinkering, and fine-tuning, <strong>Q-Tune</strong> was born: the world's first <strong>DIY guitar tuner pedal kit</strong>. It's built for makers, tinkerers, and tone chasers who want more than off-the-shelf gear.</p>
 
   <p>Q-Tune: A pro-level tuner that <strong>YOU build yourself</strong>.</p>
 
   <hr />
 
-  <p>Here's a picture of some of the various prototypes we've experimented with:</p>
+  <h2>Why Q-Tune Exists</h2>
+
+  <p>If you've ever looked at the tuner pedal market, you've probably noticed something: every option is a sealed, mass-produced box. You buy it, you use it, and that's it. No customization. No updates. No way to make it yours.</p>
+
+  <p>Meanwhile, the DIY pedal world is thriving. You can build your own overdrive, your own delay, your own fuzz. But a tuner? That option simply didn't exist. We thought that was a shame.</p>
+
+  <p>We also wanted a tuner that could actually <strong>get better over time</strong>. Because Q-Tune runs on an ESP32 microcontroller, we can push firmware updates that improve accuracy, add features, and refine the experience long after you've built your kit. Your tuner isn't frozen in time the day it ships.</p>
+
+  <p>And accuracy really matters to us. If you play guitar, you know how much intonation affects your sound. We wanted a tuner that takes precision seriously. It can't just be, "close enough," but genuinely dialed in. That's the standard we hold ourselves to.</p>
+
+  <hr />
+
+  <h2>Meet the Makers</h2>
+
+  <div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+    <!-- Boyd -->
+    <div class="bg-cream-surface border border-cream-border rounded-xl p-6 shadow-sm">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="w-16 h-16 rounded-full bg-cream-muted border-2 border-amber-glow flex items-center justify-center flex-shrink-0">
+          <span class="text-xl font-heading font-bold text-amber-glow">BT</span>
+        </div>
+        <div>
+          <h3 class="text-lg font-heading font-bold text-text-heading">Boyd Timothy</h3>
+          <p class="text-sm text-text-muted">Firmware &amp; Software</p>
+        </div>
+      </div>
+      <p class="text-text-body text-base leading-relaxed">
+        Boyd is a software engineer and musician based in Highland, Utah. He writes the firmware that makes Q-Tune tick, builds the website, and handles the OTA update system. He's the kind of person who'll spend a weekend optimizing a pitch detection algorithm and then pick up a guitar to see if it actually <em>feels</em> right. If something about Q-Tune works smoothly, there's a good chance Boyd was up late making sure of it.
+      </p>
+    </div>
+
+    <!-- Ryan -->
+    <div class="bg-cream-surface border border-cream-border rounded-xl p-6 shadow-sm">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="w-16 h-16 rounded-full bg-cream-muted border-2 border-amber-glow flex items-center justify-center flex-shrink-0">
+          <span class="text-xl font-heading font-bold text-amber-glow">RS</span>
+        </div>
+        <div>
+          <h3 class="text-lg font-heading font-bold text-text-heading">Ryan Schultz</h3>
+          <p class="text-sm text-text-muted">Hardware &amp; Circuit Design</p>
+        </div>
+      </div>
+      <p class="text-text-body text-base leading-relaxed">
+        Ryan is the hardware mind behind Q-Tune, based in Knoxville, Tennessee. He designed the T-Pre preamp kit that started this whole partnership, and he brought that same thoughtful approach to Q-Tune's circuit design and PCB layout. Ryan has a knack for making complex electronics approachable. His designs are clean, well-documented, and built with the DIY builder in mind. If the kit feels like something you can actually build and be proud of, that's Ryan's influence.
+      </p>
+    </div>
+  </div>
+
+  <hr />
+
+  <p>Here's a picture of some older prototype versions of Q-Tune we experimented with:</p>
 
   <img
     src="/assets/images/about-q-tune-board-revisions.jpg"
     alt="Q-Tune Prototype Revisions"
     class="rounded-lg"
   />
+
+  <hr />
+
+  <h2>What We Believe</h2>
+
+  <div class="not-prose my-8 space-y-4">
+    <div class="border-l-4 border-amber-glow pl-5 py-1">
+      <p class="text-text-heading font-heading font-semibold text-lg">Building is better than buying.</p>
+      <p class="text-text-body mt-1">There's something deeply satisfying about using gear you assembled with your own hands. We want more musicians to experience that.</p>
+    </div>
+
+    <div class="border-l-4 border-amber-glow pl-5 py-1">
+      <p class="text-text-heading font-heading font-semibold text-lg">Your gear should grow with you.</p>
+      <p class="text-text-body mt-1">Firmware updates mean Q-Tune keeps getting better. New features, improved accuracy, refinements based on real feedback from real players.</p>
+    </div>
+
+    <div class="border-l-4 border-amber-glow pl-5 py-1">
+      <p class="text-text-heading font-heading font-semibold text-lg">DIY shouldn't mean "figure it out yourself."</p>
+      <p class="text-text-body mt-1">We write clear instructions, answer every question, and design kits that are genuinely buildable. The challenge should be fun, not frustrating.</p>
+    </div>
+
+    <div class="border-l-4 border-amber-glow pl-5 py-1">
+      <p class="text-text-heading font-heading font-semibold text-lg">Small and independent on purpose.</p>
+      <p class="text-text-body mt-1">We're two guys who love guitars and making things. That's not a limitation. It means every decision is made by people who actually use what we build.</p>
+    </div>
+  </div>
 </PageLayout>

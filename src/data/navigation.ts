@@ -12,5 +12,6 @@ export const navigation: NavItem[] = [
   { label: 'Tools', href: '/image-tools/' },
   { label: 'FAQ', href: '/faq/' },
   { label: 'About', href: '/about/' },
+  { label: 'Press', href: '/press/' },
   { label: 'Contact', href: '/contact/' },
 ];

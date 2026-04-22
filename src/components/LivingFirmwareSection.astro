@@ -1,0 +1,137 @@
+---
+const timeline = [
+  {
+    date: 'Mar 2025',
+    title: 'True / Buffered Bypass',
+    description: 'v2.0.0 adds relay-based switching so you pick the signal path that fits your rig.',
+  },
+  {
+    date: 'May 2025',
+    title: 'New Tuner Styles',
+    description: 'Biggie big-letter, Record Time strobe, and Techie debug tuners join the lineup.',
+  },
+  {
+    date: 'Jul 2025',
+    title: 'First Kits Ship',
+    description: 'v2.6.6 goes out to the first builders, with a refined 180° Meter tuner.',
+  },
+  {
+    date: 'Feb 2026',
+    title: 'Accuracy & Stability Overhaul',
+    description: 'New Needle tuner UI and pitch-detection fixes for faster, more stable tracking (v2.7.0).',
+  },
+  {
+    date: 'Feb 2026',
+    title: 'Wi-Fi Uploads',
+    description: 'Embedded web server with captive portal — upload set lists and custom standby images from your phone (v3.0).',
+  },
+  {
+    date: 'Mar 2026',
+    title: 'Animated GIF Standby',
+    description: "Drop a GIF onto your tuner. Because your downtime should be fun too (v4.0).",
+  },
+];
+
+const futureEntry = {
+  date: 'What\u2019s Next?',
+  title: 'You tell us.',
+  description: 'Join the Discord and help shape what Q-Tune becomes.',
+};
+---
+
+<section class="py-16 sm:py-20 bg-cream-muted">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6">
+
+    <!-- Section heading -->
+    <div class="text-center mb-12 sm:mb-16">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold mb-3">Q-Tune Gets Better Over Time</h2>
+      <p class="text-text-muted text-lg max-w-2xl mx-auto">
+        Most pedals are finished the day they ship. Q-Tune is just getting started.
+      </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative">
+
+      <!-- Vertical line (hidden on mobile, shown on sm+) -->
+      <div class="hidden sm:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-amber-glow/30 -translate-x-1/2" aria-hidden="true"></div>
+
+      <!-- Mobile vertical line (left-aligned) -->
+      <div class="sm:hidden absolute left-4 top-0 bottom-0 w-0.5 bg-amber-glow/30" aria-hidden="true"></div>
+
+      <div class="space-y-8 sm:space-y-10">
+        {timeline.map((entry, i) => (
+          <div class={`relative flex items-start sm:items-center gap-4 sm:gap-0 ${i % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'}`}>
+
+            {/* Mobile dot */}
+            <div class="sm:hidden relative z-10 flex-shrink-0 w-8 h-8 rounded-full bg-amber-glow flex items-center justify-center shadow-md">
+              <div class="w-2.5 h-2.5 rounded-full bg-cream-surface"></div>
+            </div>
+
+            {/* Card */}
+            <div class={`flex-1 sm:w-[calc(50%-2rem)] ${i % 2 === 0 ? 'sm:pr-10 sm:text-right' : 'sm:pl-10 sm:text-left'}`}>
+              <div class="bg-cream-surface border border-cream-border rounded-lg p-4 sm:p-5 shadow-sm hover:shadow-md hover:border-amber-glow/30 transition-all duration-200">
+                <span class="inline-block text-xs font-mono text-amber-glow font-semibold tracking-wide uppercase mb-1">{entry.date}</span>
+                <h3 class="text-base sm:text-lg font-heading font-semibold text-text-heading mb-1">{entry.title}</h3>
+                <p class="text-sm text-text-muted leading-relaxed">{entry.description}</p>
+              </div>
+            </div>
+
+            {/* Desktop center dot */}
+            <div class="hidden sm:flex absolute left-1/2 -translate-x-1/2 z-10 w-8 h-8 rounded-full bg-amber-glow items-center justify-center shadow-md">
+              <div class="w-2.5 h-2.5 rounded-full bg-cream-surface"></div>
+            </div>
+
+            {/* Spacer for the other side on desktop */}
+            <div class="hidden sm:block sm:w-[calc(50%-2rem)]"></div>
+          </div>
+        ))}
+
+        {/* Future entry — visually distinct */}
+        <div class="relative flex items-start sm:items-center gap-4 sm:gap-0 sm:flex-row">
+
+          {/* Mobile dot — dashed ring */}
+          <div class="sm:hidden relative z-10 flex-shrink-0 w-8 h-8 rounded-full border-2 border-dashed border-amber-glow bg-cream-muted flex items-center justify-center">
+            <div class="w-2 h-2 rounded-full bg-amber-glow animate-pulse"></div>
+          </div>
+
+          {/* Card */}
+          <div class="flex-1 sm:w-[calc(50%-2rem)] sm:pr-10 sm:text-right">
+            <div class="bg-cream-surface/60 border-2 border-dashed border-amber-glow/40 rounded-lg p-4 sm:p-5">
+              <span class="inline-block text-xs font-mono text-amber-glow font-semibold tracking-wide uppercase mb-1">{futureEntry.date}</span>
+              <h3 class="text-base sm:text-lg font-heading font-semibold text-text-heading mb-1">{futureEntry.title}</h3>
+              <p class="text-sm text-text-muted leading-relaxed">{futureEntry.description}</p>
+            </div>
+          </div>
+
+          {/* Desktop center dot — dashed ring */}
+          <div class="hidden sm:flex absolute left-1/2 -translate-x-1/2 z-10 w-8 h-8 rounded-full border-2 border-dashed border-amber-glow bg-cream-muted items-center justify-center">
+            <div class="w-2 h-2 rounded-full bg-amber-glow animate-pulse"></div>
+          </div>
+
+          {/* Spacer */}
+          <div class="hidden sm:block sm:w-[calc(50%-2rem)]"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Community callout -->
+    <div class="mt-14 sm:mt-16 text-center">
+      <h3 class="text-2xl sm:text-3xl font-heading font-bold mb-3">You Drive What's Next</h3>
+      <p class="text-text-muted text-base sm:text-lg max-w-xl mx-auto mb-6">
+        Every major feature started as a suggestion from someone in the community. Got an idea? We're listening.
+      </p>
+      <a
+        href="https://discord.gg/evtjkEj9GX"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-cream-surface border border-cream-border rounded-lg hover:border-amber-glow/40 hover:shadow-md transition-all duration-200 text-text-heading hover:text-amber-glow font-medium"
+      >
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+        </svg>
+        Join the Discord
+      </a>
+    </div>
+  </div>
+</section>

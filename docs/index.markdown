@@ -407,7 +407,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 - **🧰 Real DIY Experience**<br/>No code to write, no guesswork – pro-quality parts and PCB, ready to solder.
 
-- **📏 Two Footprint Options**<br/>Choose the classic **125B** or tight-packed **1590B** size (select at checkout).
+- **📏 Two Footprint Options**<br/>Choose the classic **125B** or tight-packed **1590B** size.
 
 - **🛠️ First of Its Kind**<br/>Q-Tune is the first DIY pedal kit to offer **a full-color display, studio-grade accuracy**, and a **rugged enclosure** – all as a legit built-it-yourself project.
 
