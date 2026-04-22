@@ -14,7 +14,7 @@ export const features: Feature[] = [
   },
   {
     title: 'Touch & Tune',
-    description: 'Navigate settings effortlessly with a responsive touchscreen. No extra buttons, no hassle.',
+    description: 'Navigate settings effortlessly with a responsive touchscreen.',
   },
   {
     title: 'Buffered Bypass Option',
@@ -50,7 +50,7 @@ export const features: Feature[] = [
   },
   {
     title: 'Real DIY Experience',
-    description: 'No code to write, no guesswork. Everything you need is in the kit. Pro-quality parts, a custom PCB, and clear instructions that make sense.',
+    description: 'Everything you need is in the kit: pro-quality parts, a custom PCB, and clear instructions that make sense.',
   },
   {
     title: 'Two Footprint Options',
