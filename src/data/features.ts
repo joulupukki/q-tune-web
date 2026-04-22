@@ -14,7 +14,7 @@ export const features: Feature[] = [
   },
   {
     title: 'Touch & Tune',
-    description: 'Navigate settings effortlessly with a responsive touchscreen—no extra buttons, no hassle.',
+    description: 'Navigate settings effortlessly with a responsive touchscreen. No extra buttons, no hassle.',
   },
   {
     title: 'Buffered Bypass Option',
@@ -26,11 +26,11 @@ export const features: Feature[] = [
   },
   {
     title: 'Monitoring Mode',
-    description: 'Watch pitch in real-time while playing — ideal for intonation and practice (using buffered bypass).',
+    description: 'Watch pitch in real-time while playing. Ideal for intonation and practice (using buffered bypass).',
   },
   {
     title: 'Top-Mounted Jacks',
-    description: 'Both audio and DC jacks are located on the top edge—saving precious pedalboard space and keeping your rig tidy.',
+    description: 'Both audio and DC jacks are located on the top edge, saving precious pedalboard space and keeping your rig tidy.',
   },
   {
     title: 'Internal Storage Support',

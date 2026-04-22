@@ -12,7 +12,7 @@ export const faqData: FaqEntry[] = [
   {
     question: 'Can a fully-assembled Q-Tune be purchased?',
     answer:
-      'Q-Tune is a DIY kit. You can purchase a full kit that includes the PCB and required components from the Q-Tune website. Visit the <a href="/build/">build page</a> for assembly instructions. If soldering isn\'t your thing, we do have a limited number of pre-built Q-Tune tuners available — <a href="/contact/">contact us</a> to check availability.',
+      'Q-Tune is a DIY kit. You can purchase a full kit that includes the PCB and required components from the Q-Tune website. Visit the <a href="/build/">build page</a> for assembly instructions. If soldering isn\'t your thing, we do have a limited number of pre-built Q-Tune tuners available. <a href="/contact/">Contact us</a> to check availability.',
   },
   {
     question: 'Do I need to know how to solder?',
@@ -64,7 +64,7 @@ export const faqData: FaqEntry[] = [
   {
     question: 'Is this project suitable for beginners?',
     answer:
-      "Q-Tune is best suited for intermediate builders who have experience with soldering and basic electronics. If you're new to DIY audio projects, you may want to get some practice first, or enlist help from a more experienced friend. But, if you're determined, by all means, go for it! Not into soldering? We have a limited number of pre-built Q-Tune tuners available — <a href=\"/contact/\">contact us</a> to find out more.",
+      "Q-Tune is best suited for intermediate builders who have experience with soldering and basic electronics. If you're new to DIY audio projects, you may want to get some practice first, or enlist help from a more experienced friend. But, if you're determined, by all means, go for it! Not into soldering? We have a limited number of pre-built Q-Tune tuners available. <a href=\"/contact/\">Contact us</a> to find out more.",
   },
   {
     question: 'Is Q-Tune available outside of the United States?',
