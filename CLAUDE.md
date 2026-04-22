@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-This is the marketing and documentation website for **Q-Tune** — a DIY chromatic guitar tuner pedal kit based on an ESP32-S3 microcontroller. The site is hosted at [q-tune.com](https://www.q-tune.com) and also serves as the firmware OTA update portal via ESP Web Tools. Built with **Astro** + **Tailwind CSS**, deployed to GitHub Pages via GitHub Actions.
+This is the marketing and documentation website for **Q-Tune** — a DIY chromatic guitar tuner pedal kit based on an ESP32-S3 microcontroller. The site is hosted at [q-tune.com](https://www.q-tune.com) and also serves as the USB-C firmware installer via ESP Web Tools (browser-based flashing over WebSerial). Built with **Astro** + **Tailwind CSS**, deployed to GitHub Pages via GitHub Actions.
 
 ## Commands
 
@@ -51,7 +51,7 @@ Dark/moody pedal-culture aesthetic:
 - Text: `#e8e6e3` (body), `#f5f3f0` (headings), `#9a9aaa` (muted)
 - Fonts: Outfit (headings), Inter (body), JetBrains Mono (technical)
 
-### Firmware OTA Updates
+### Firmware Updates (USB-C via ESP Web Tools)
 
 The `public/assets/install/` directory is the firmware distribution system:
 
