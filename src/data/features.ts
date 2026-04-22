@@ -34,7 +34,7 @@ export const features: Feature[] = [
   },
   {
     title: 'Internal Storage Support',
-    description: 'Store custom standby images, animated GIFs, and set lists. Make your tuner truly yours.',
+    description: 'Store custom standby images, animated GIFs, and set lists. Make your tuner yours.',
   },
   {
     title: 'Standby Screens & Visualizers',
@@ -50,7 +50,7 @@ export const features: Feature[] = [
   },
   {
     title: 'Real DIY Experience',
-    description: 'No code to write, no guesswork. Everything you need is in the kit. Pro-quality parts, a custom PCB, and clear instructions that actually make sense.',
+    description: 'No code to write, no guesswork. Everything you need is in the kit. Pro-quality parts, a custom PCB, and clear instructions that make sense.',
   },
   {
     title: 'Two Footprint Options',
