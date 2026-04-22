@@ -1,17 +1,22 @@
 export interface NavItem {
   label: string;
-  href: string;
+  href?: string;
+  children?: NavItem[];
 }
 
 export const navigation: NavItem[] = [
   { label: 'Home', href: '/' },
-  { label: 'Build', href: '/build/' },
-  { label: 'Install', href: '/install/' },
-  { label: 'Manual', href: '/user-manual/' },
   { label: 'Specs', href: '/specifications/' },
-  { label: 'Tools', href: '/image-tools/' },
   { label: 'FAQ', href: '/faq/' },
   { label: 'About', href: '/about/' },
-  { label: 'Press', href: '/press/' },
+  {
+    label: 'Owners',
+    children: [
+      { label: 'Build Guide', href: '/build/' },
+      { label: 'Firmware Install', href: '/install/' },
+      { label: 'User Manual', href: '/user-manual/' },
+      { label: 'Image Tools', href: '/image-tools/' },
+    ],
+  },
   { label: 'Contact', href: '/contact/' },
 ];
