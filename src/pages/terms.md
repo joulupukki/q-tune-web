@@ -5,14 +5,14 @@ description: "Q-Tune shipping, return, and refund policies including pre-order s
 ---
 
 ## Q-Tune Shipping and Return Policies
-Updated 31 May 2025
+Updated 15 May 2026
 
 ### Transit Times
 Although we try to ship all orders as quickly as possible, transit times are not guaranteed. No refunds or credits will be given due to shipments arriving after the estimated delivery date. Any claims should be filed with the carrier.
 
 #### Pre-Orders
 
-If you have purchased a pre-order kit and the kit has not shipped to you within 45 business days, you have the option of requesting a refund. In that unlikely event, we will contact you directly with an update and steps of how to request a refund if you choose.
+The solderless Q-Tune is currently sold as a pre-order. Pre-order kits are expected to ship in **June or July 2026**. If we are unable to ship your kit within that window, we will contact you directly with an update, and anyone who no longer wants to wait may request a full refund.
 
 ### International Shipping Methods
 

@@ -22,7 +22,7 @@ export const faqData: FaqEntry[] = [
   {
     question: 'When will my pre-order ship?',
     answer:
-      "Pre-orders for the Q-Tune kit ship in June–July 2026. We'll email you with tracking as soon as your order is on its way.",
+      'Pre-orders for the Q-Tune kit are expected to ship in June or July 2026. We\'ll email you with tracking as soon as your order is on its way. If we can\'t ship within that window, we\'ll reach out with an update, and you can request a full refund if you\'d rather not wait. See our <a href="/terms/">Shipping &amp; Returns</a> page for details.',
   },
   {
     question: 'Does Q-Tune come fully assembled?',
