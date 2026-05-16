@@ -4,9 +4,20 @@ import YouTubeEmbed from '../components/YouTubeEmbed.astro';
 ---
 
 <PageLayout
-  title="Build Instructions"
-  description="Access detailed PDF build instructions and how-to videos for assembling your Q-Tune guitar tuner pedal kit with step-by-step guidance."
+  title="Solder Kit Build Instructions"
+  description="PDF build instructions and how-to videos for the Q-Tune Solder Kit (Through-Hole) guitar tuner pedal."
 >
+  <!-- Wrong kit? Jump to the solderless assembly guide. -->
+  <div class="not-prose mb-6 rounded-lg border border-cream-border bg-cream-muted px-5 py-4">
+    <p class="text-text-body">
+      <strong class="text-text-heading">These instructions are for the Q-Tune Solder Kit (Through-Hole)</strong>, the kit with loose components you solder onto the board. Building the standard,
+      no-solder Q-Tune instead?<br />
+      <a href="/assembly/" class="text-amber-glow hover:text-amber-dark font-medium">
+        Go to the Q-Tune Assembly Guide &rarr;
+      </a>
+    </p>
+  </div>
+
   <h2>Download the full PDF build instructions (version 1.0.6):</h2>
 
   <ul>

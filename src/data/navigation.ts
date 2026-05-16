@@ -12,7 +12,8 @@ export const navigation: NavItem[] = [
   {
     label: 'Owners',
     children: [
-      { label: 'Build Guide', href: '/build/' },
+      { label: 'Assembly Guide', href: '/assembly/' },
+      { label: 'Solder Kit Build', href: '/build/' },
       { label: 'Firmware Install', href: '/install/' },
       { label: 'User Manual', href: '/user-manual/' },
       { label: 'Image Tools', href: '/image-tools/' },

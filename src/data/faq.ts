@@ -7,21 +7,33 @@ export const faqData: FaqEntry[] = [
   {
     question: 'What is Q-Tune?',
     answer:
-      'Q-Tune is the first DIY guitar tuner pedal kit designed for musicians, builders, and tinkerers who want a high-performance tuner they can build and modify themselves.',
-  },
-  {
-    question: 'Can a fully-assembled Q-Tune be purchased?',
-    answer:
-      'Q-Tune is a DIY kit. You can purchase a full kit that includes the PCB and required components from the Q-Tune website. Visit the <a href="/build/">build page</a> for assembly instructions. If soldering isn\'t your thing, we do have a limited number of pre-built Q-Tune tuners available. <a href="/contact/">Contact us</a> to check availability.',
+      'Q-Tune is the first DIY guitar tuner pedal kit designed for musicians, builders, and tinkerers who want a high-performance tuner they can build themselves. It has a bright 2.8" touchscreen, studio-grade accuracy, and firmware that keeps improving over USB-C.',
   },
   {
     question: 'Do I need to know how to solder?',
     answer:
-      "Yes. The Q-Tune kit requires intermediate soldering skills. If you're new to soldering, we recommend practicing on a simple beginner kit first before attempting to assemble Q-Tune.",
+      'No. The standard <strong>Q-Tune</strong> kit requires no soldering at all. The circuit board comes pre-assembled, and the kit goes together with simple hand tools in about 15–30 minutes. If you <em>want</em> the soldering experience, the <strong>Q-Tune Solder Kit (Through-Hole)</strong> is also available and requires intermediate soldering skills.',
+  },
+  {
+    question: "What's the difference between the Q-Tune kit and the Solder Kit?",
+    answer:
+      'Both build the exact same tuner with the same features. The standard <strong>Q-Tune</strong> kit has the circuit board pre-assembled, so it snaps together with hand tools in 15–30 minutes. No soldering or electronics experience needed. The <strong>Q-Tune Solder Kit (Through-Hole)</strong> ships with loose components you solder onto the board yourself, for builders who want the full hands-on experience.',
+  },
+  {
+    question: 'When will my pre-order ship?',
+    answer:
+      "Pre-orders for the Q-Tune kit ship in June–July 2026. We'll email you with tracking as soon as your order is on its way.",
+  },
+  {
+    question: 'Does Q-Tune come fully assembled?',
+    answer:
+      'Q-Tune ships as a kit you put together yourself, which is part of the fun. But the standard kit needs no soldering and most builders finish in 15–30 minutes with the included hand tools. Follow the <a href="/assembly/">assembly guide</a> and you\'ll be tuning in no time.',
   },
   {
     question: 'What tools do I need to build Q-Tune?',
-    answer: `At minimum, you'll need:
+    answer: `The standard <strong>Q-Tune</strong> kit includes the two hex keys you need. You'll also want a screwdriver and a wrench from your own toolbox. The <a href="/assembly/">assembly guide</a> lists everything.
+<br /><br />
+The <strong>Q-Tune Solder Kit (Through-Hole)</strong> additionally requires:
 <ul>
 <li>A soldering iron and solder</li>
 <li>Wire cutters/strippers</li>
@@ -33,13 +45,18 @@ export const faqData: FaqEntry[] = [
   {
     question: "What's included in the kit?",
     answer: `<ul>
-<li>Pre-flashed ESP32 module</li>
+<li>Pre-assembled, pre-flashed Q-Tune board</li>
 <li>2.8" Capacitive Touch LCD Display</li>
-<li>Custom PCB + all needed components</li>
-<li>Mounting hardware</li>
+<li>Connectorized footswitch and cables (no soldering)</li>
+<li>All mounting hardware and hex keys</li>
 <li>A painted aluminum enclosure</li>
-<li>Full assembly guide (downloadable on the <a href="/build/">build page</a>)</li>
+<li>Step-by-step assembly guide (downloadable on the <a href="/assembly/">assembly page</a>)</li>
 </ul>`,
+  },
+  {
+    question: 'Is this project suitable for beginners?',
+    answer:
+      'Yes. The standard <strong>Q-Tune</strong> kit is designed so anyone can build it. No soldering or electronics experience required. The <strong>Q-Tune Solder Kit (Through-Hole)</strong> is best suited for intermediate builders comfortable with soldering and basic electronics.',
   },
   {
     question: 'Can I update the software?',
@@ -62,11 +79,6 @@ export const faqData: FaqEntry[] = [
       'Since Q-Tune is a DIY kit, we cannot offer a formal warranty. However, please join the <a href="https://discord.gg/evtjkEj9GX" target="_blank" rel="noopener">Q-Tune Builder\'s Discord</a> and we or other builders may be able to help you troubleshoot.',
   },
   {
-    question: 'Is this project suitable for beginners?',
-    answer:
-      "Q-Tune is best suited for intermediate builders who have experience with soldering and basic electronics. If you're new to DIY audio projects, you may want to get some practice first, or enlist help from a more experienced friend. But, if you're determined, by all means, go for it! Not into soldering? We have a limited number of pre-built Q-Tune tuners available. <a href=\"/contact/\">Contact us</a> to find out more.",
-  },
-  {
     question: 'Is Q-Tune available outside of the United States?',
     answer:
       'Shipping can get a little bit tricky, but if you are interested and live outside of the United States, please <a href="/contact/">contact us</a> and let\'s see what we can work out with you.',
@@ -79,7 +91,7 @@ export const faqData: FaqEntry[] = [
   {
     question: 'Oops! Something Missing from Your Kit?',
     answer:
-      'It\'s rare, but it happens. The <a href="/build/">build documentation</a> includes an inventory of parts. If you received the wrong parts, or if something was left out, please let us know as soon as possible and we\'ll make it right. Fill out the <a href="/missing-parts/" target="_blank">Missing Parts Form</a>.',
+      'It\'s rare, but it happens. The assembly guide includes an inventory of parts. If you received the wrong parts, or if something was left out, please let us know as soon as possible and we\'ll make it right. Fill out the <a href="/missing-parts/" target="_blank">Missing Parts Form</a>.',
   },
   {
     question: 'How can I get support?',

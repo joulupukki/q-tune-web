@@ -35,6 +35,23 @@ import VersionPicker from '../components/VersionPicker.astro';
     <li>Wait for the installer to finish. Once it's done you can unplug the USB-C cable and put Q-Tune to use on your pedalboard!</li>
   </ol>
 
+  <h3>First install of v5.0 or newer</h3>
+  <p>
+    Q-Tune v5.0 added support for two different boards. The first time you install
+    v5.0 or newer, or any time you do a factory reset, your tuner shows a setup screen
+    with two options: <strong>Solderless</strong> (the standard Q-Tune) and
+    <strong>Thru-Hole</strong> (the Q-Tune Solder Kit). You only choose once.
+  </p>
+  <div class="not-prose my-6 rounded-lg border border-amber-glow/40 bg-amber-glow/10 px-5 py-4">
+    <p class="text-text-body">
+      <strong class="text-text-heading">Choose carefully.</strong> The GPIOs that
+      drive the relays and switches are reversed between the two boards. If you pick
+      the wrong one, bypass and switching won't work correctly. Pick
+      <strong>Solderless</strong> for the standard kit, or <strong>Thru-Hole</strong>
+      if you soldered the board together from loose components.
+    </p>
+  </div>
+
   <hr />
 
   <FirmwareInstaller manifest="" />

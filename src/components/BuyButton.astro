@@ -5,18 +5,26 @@ interface Props {
   price: number;
   stripeUrl: string;
   buttonLabel: string;
+  status?: 'available' | 'preorder';
 }
 
-const { name, variant, price, stripeUrl, buttonLabel } = Astro.props;
+const { name, price, stripeUrl, buttonLabel, status = 'available' } = Astro.props;
+const isPreorder = status === 'preorder';
 ---
 
 <div class="bg-cream-surface border border-cream-border rounded-xl p-6 text-center hover:border-amber-glow/40 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
   <div class="text-lg font-heading font-semibold text-text-heading mb-1">
     <strong>{name}</strong> Kit
   </div>
-  <div class="text-sm font-semibold text-success mb-3">
-    IN STOCK &<br />READY TO SHIP
-  </div>
+  {isPreorder ? (
+    <div class="text-sm font-semibold text-amber-dark mb-3">
+      PRE-ORDER<br />SHIPS JUNE&ndash;JULY 2026
+    </div>
+  ) : (
+    <div class="text-sm font-semibold text-success mb-3">
+      IN STOCK &<br />READY TO SHIP
+    </div>
+  )}
   <div class="text-4xl font-bold text-text-heading mb-1">${price}</div>
   <div class="text-sm text-text-muted mb-4">+ FREE Shipping</div>
 

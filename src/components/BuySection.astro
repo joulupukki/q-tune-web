@@ -1,11 +1,26 @@
 ---
 import BuyButton from './BuyButton.astro';
 import RegionModal from './RegionModal.astro';
-import { products } from '../data/products';
+import EnclosureModal from './EnclosureModal.astro';
+import { qTuneProducts, solderKitProducts } from '../data/products';
+
+// Shared styling for the accentuated (preferred) Q-Tune column in the comparison table.
+const qCol = 'border-x-2 border-amber-glow bg-amber-glow/10';
 ---
 
+<!-- Q-Tune — the standard solderless kit -->
+<div class="text-center mb-8">
+  <span class="inline-block px-3 py-1 rounded-full bg-amber-glow text-white text-xs font-bold uppercase tracking-wide mb-3">
+    No Soldering Required
+  </span>
+  <h2 class="text-3xl sm:text-4xl font-heading font-bold text-text-heading mb-2">Build Your Q-Tune</h2>
+  <p class="text-text-body text-lg max-w-xl mx-auto">
+    Assembles in 15&ndash;30 minutes with simple hand tools. No soldering, no electronics experience. Just your own pro-grade tuner pedal.
+  </p>
+</div>
+
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
-  {products.map((p) => (
+  {qTuneProducts.map((p) => (
     <BuyButton {...p}>
       {p.name === 'No Enclosure' && (
         <div class="mt-4 text-sm text-text-muted space-y-2">
@@ -23,6 +38,84 @@ import { products } from '../data/products';
       )}
     </BuyButton>
   ))}
+</div>
+
+<!-- Comparison: Q-Tune vs Solder Kit -->
+<div class="max-w-3xl mx-auto mt-12">
+  <div class="overflow-hidden rounded-xl border border-cream-border">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-cream-muted text-text-heading">
+          <th class="text-left font-heading font-semibold px-4 py-3"></th>
+          <th class={`font-heading font-semibold px-4 py-3 border-t-2 ${qCol}`}>
+            <span class="inline-block mb-1 px-2 py-0.5 rounded-full bg-amber-glow text-white text-[10px] font-bold uppercase tracking-wide">New</span><br />
+            Q-Tune
+          </th>
+          <th class="font-heading font-semibold px-4 py-3">Solder Kit<br /><span class="text-xs font-normal text-text-muted">(Through-Hole)</span></th>
+        </tr>
+      </thead>
+      <tbody class="text-text-body">
+        <tr class="border-t border-cream-border">
+          <td class="px-4 py-3 font-semibold text-text-heading">Soldering</td>
+          <td class={`px-4 py-3 text-center ${qCol}`}>None</td>
+          <td class="px-4 py-3 text-center">Required (intermediate)</td>
+        </tr>
+        <tr class="border-t border-cream-border bg-cream-muted/40">
+          <td class="px-4 py-3 font-semibold text-text-heading">Assembly time</td>
+          <td class={`px-4 py-3 text-center ${qCol}`}>15&ndash;30 minutes</td>
+          <td class="px-4 py-3 text-center">A few hours</td>
+        </tr>
+        <tr class="border-t border-cream-border">
+          <td class="px-4 py-3 font-semibold text-text-heading">Experience needed</td>
+          <td class={`px-4 py-3 text-center ${qCol}`}>None</td>
+          <td class="px-4 py-3 text-center">DIY electronics</td>
+        </tr>
+        <tr class="border-t border-cream-border bg-cream-muted/40">
+          <td class="px-4 py-3 font-semibold text-text-heading">Price</td>
+          <td class={`px-4 py-3 text-center border-b-2 ${qCol}`}>From $117</td>
+          <td class="px-4 py-3 text-center">From $117</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Enclosure picker: 1590B vs 125B -->
+<div class="mt-12">
+  <EnclosureModal />
+</div>
+
+<!-- Q-Tune Solder Kit (Through-Hole) — the original, for builders who want to solder -->
+<div class="mt-12 pt-10 border-t border-cream-border">
+  <div class="text-center mb-8">
+    <h3 class="text-2xl sm:text-3xl font-heading font-bold text-text-heading mb-2">
+      Q-Tune Solder Kit <span class="text-text-muted font-normal">(Through-Hole)</span>
+    </h3>
+    <p class="text-text-body max-w-xl mx-auto">
+      The original Q-Tune kit, for builders who want the full hands-on soldering experience. Same tuner, same features. You populate and solder the board yourself.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+    {solderKitProducts.map((p) => (
+      <BuyButton {...p}>
+        {p.name === 'No Enclosure' && (
+          <div class="mt-4 text-sm text-text-muted space-y-2">
+            <div>
+              <strong class="text-text-heading">Tayda Drill Templates:</strong><br />
+              <a href="https://drill.taydakits.com/box-designs/new?public_key=bWxYL0R0T0dBRHBmZkZOSGR3Yk40UT09Cg==" target="_blank" rel="noopener">1590B</a>,{' '}
+              <a href="https://drill.taydakits.com/box-designs/new?public_key=SmRhZzVaSm8vSlFtK3M5anBxRktQdz09Cg==" target="_blank" rel="noopener">125B</a>
+            </div>
+            <div>
+              <strong class="text-text-heading">UV PDF Templates:</strong><br />
+              <a href="/assets/uv-templates/Q-Tune-1590B-v4.8curves.pdf" target="_blank">1590B</a>,{' '}
+              <a href="/assets/uv-templates/Q-Tune-125B-v4.8curves.pdf" target="_blank">125B</a>
+            </div>
+          </div>
+        )}
+      </BuyButton>
+    ))}
+  </div>
 </div>
 
 <RegionModal />

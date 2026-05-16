@@ -2,7 +2,6 @@
 import HomeLayout from '../layouts/HomeLayout.astro';
 import HeroSection from '../components/HeroSection.astro';
 import BuySection from '../components/BuySection.astro';
-import EnclosureModal from '../components/EnclosureModal.astro';
 import YouTubeEmbed from '../components/YouTubeEmbed.astro';
 import ProductCarousel from '../components/ProductCarousel.astro';
 import FeatureList from '../components/FeatureList.astro';
@@ -29,7 +28,7 @@ const productSchema = {
       name: '1590B Kit',
       price: '129.00',
       priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
+      availability: 'https://schema.org/PreOrder',
       url: 'https://www.q-tune.com/',
       priceValidUntil,
       hasMerchantReturnPolicy: {
@@ -73,7 +72,7 @@ const productSchema = {
       name: '125B Kit',
       price: '129.00',
       priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
+      availability: 'https://schema.org/PreOrder',
       url: 'https://www.q-tune.com/',
       priceValidUntil,
       hasMerchantReturnPolicy: {
@@ -117,7 +116,7 @@ const productSchema = {
       name: 'No Enclosure Kit',
       price: '117.00',
       priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
+      availability: 'https://schema.org/PreOrder',
       url: 'https://www.q-tune.com/',
       priceValidUntil,
       hasMerchantReturnPolicy: {
@@ -198,7 +197,7 @@ const productSchema = {
 
 <HomeLayout
   title="Q-Tune"
-  description="Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 2.8-inch LCD, ultra-accurate pitch detection, buffered or true bypass, and USB-C firmware upgrades. Build a professional-grade tuner pedal with easy soldering and custom enclosure options."
+  description="Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 2.8-inch LCD, ultra-accurate pitch detection, buffered or true bypass, and USB-C firmware upgrades. Build a professional-grade tuner pedal in 15-30 minutes. No soldering required."
   structuredData={productSchema}
 >
   <!-- Hero -->
@@ -208,8 +207,6 @@ const productSchema = {
   <section id="buy" class="py-16 bg-cream-bg scroll-mt-20">
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
       <BuySection />
-      <EnclosureModal />
-      <p class="text-center text-text-body text-lg font-semibold mt-8">Not into soldering? We can build one for you — <a href="/contact/">contact us</a>.</p>
     </div>
   </section>
 
@@ -224,11 +221,11 @@ const productSchema = {
   <section class="py-16 bg-cream-bg">
     <div class="mx-auto max-w-4xl px-4 sm:px-6">
       <div class="prose prose-lg max-w-none">
-        <p>Q-Tune Chromatic Instrument Tuner is the <strong>first of its kind</strong> in the <strong>DIY</strong> pedal world — a <strong>high-precision</strong> tuner with a full <strong>2.8" LCD</strong>, offered as a <strong>solder-it-yourself kit</strong> in a rugged stompbox enclosure.</p>
+        <p>Q-Tune Chromatic Instrument Tuner is the <strong>first of its kind</strong> in the <strong>DIY</strong> pedal world, a <strong>high-precision</strong> tuner with a full <strong>2.8" LCD</strong>, offered as a <strong>solderless kit</strong> you assemble yourself in a rugged stompbox enclosure.</p>
 
         <p>At its core, Q-Tune uses an advanced pitch detection algorithm to lock onto your note with incredible speed and stability. The dynamic display gives you real-time visual feedback in a way that's clear, responsive, and easy to read on dark stages or bright practice rooms.</p>
 
-        <p>Build it yourself. Gig with confidence. Pro-level precision with DIY-level satisfaction.</p>
+        <p>No soldering iron. No electronics experience. Snap it together in 15&ndash;30 minutes, gig with confidence, and enjoy pro-level precision with DIY-level satisfaction.</p>
       </div>
     </div>
   </section>
@@ -247,7 +244,7 @@ const productSchema = {
     <div class="mx-auto max-w-3xl px-4 sm:px-6 text-center">
       <div class="border-l-4 border-amber-glow pl-6 sm:pl-8 text-left">
         <p class="text-lg sm:text-xl text-text-body leading-relaxed">
-          Q-Tune is designed by <strong class="text-text-heading">Boyd</strong> and <strong class="text-text-heading">Ryan</strong> — a software engineer and a mechanical engineer who both play guitar and got tired of tuners that couldn't keep up. Every feature, every firmware update, every kit ships because two people actually care about getting it right.
+          Q-Tune is designed by <strong class="text-text-heading">Boyd</strong> and <strong class="text-text-heading">Ryan</strong>, a software engineer and a mechanical engineer who both play guitar and got tired of tuners that couldn't keep up. Every feature, every firmware update, every kit ships because two people care about getting it right.
         </p>
         <a href="/about/" class="inline-block mt-4 text-amber-glow hover:text-amber-dark font-medium">
           Read our story &rarr;
@@ -266,23 +263,27 @@ const productSchema = {
       <ul class="space-y-3 text-lg text-text-body max-w-md mx-auto">
         <li class="flex items-start gap-3">
           <span class="text-amber-glow mt-1">&#x2022;</span>
-          Pre-flashed ESP32 module
+          Pre-assembled, pre-flashed Q-Tune board
         </li>
         <li class="flex items-start gap-3">
           <span class="text-amber-glow mt-1">&#x2022;</span>
-          2.8" TFT LCD display
+          2.8" touchscreen LCD
         </li>
         <li class="flex items-start gap-3">
           <span class="text-amber-glow mt-1">&#x2022;</span>
-          Custom PCB + all components
+          Connectorized footswitch &amp; cables (no soldering)
         </li>
         <li class="flex items-start gap-3">
           <span class="text-amber-glow mt-1">&#x2022;</span>
-          Aluminum enclosure (125B or 1590B)
+          All mounting hardware and hex keys included
         </li>
         <li class="flex items-start gap-3">
           <span class="text-amber-glow mt-1">&#x2022;</span>
-          Full assembly guide (PDF)
+          Painted aluminum enclosure (125B or 1590B)
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-amber-glow mt-1">&#x2022;</span>
+          Step-by-step assembly guide
         </li>
       </ul>
     </div>

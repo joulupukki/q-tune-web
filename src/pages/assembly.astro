@@ -1,0 +1,72 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+
+const guidePdf =
+  'https://pub-afb386f68d8745a184d17ac1f48d3723.r2.dev/assembly/Q-Tune-Assembly-Guide-20260515.010.pdf';
+---
+
+<PageLayout
+  title="Q-Tune Assembly Guide"
+  description="Step-by-step assembly guide for the Q-Tune kit. No soldering required. Build your tuner pedal in 15–30 minutes with simple hand tools."
+>
+  <p>
+    Welcome! You're building the standard <strong>Q-Tune</strong> kit. There's
+    <strong>no soldering</strong> and no electronics experience required. Most
+    builders finish in <strong>15&ndash;30 minutes</strong>. Two hex keys are
+    included in the box; you'll also need a screwdriver and a wrench (some people prefer to use socket wrenches).
+  </p>
+
+  <!-- Wrong kit? Jump to the Solder Kit instructions. -->
+  <div class="not-prose my-6 rounded-lg border border-cream-border bg-cream-muted px-5 py-4">
+    <p class="text-text-body">
+      <strong class="text-text-heading">Have the Solder Kit instead?</strong>
+      If your kit came with loose components you solder onto the board, you have the
+      <strong>Q-Tune Solder Kit (Through-Hole)</strong>.
+      <a href="/build/" class="text-amber-glow hover:text-amber-dark font-medium"><br/>
+        Go to the Solder Kit build instructions &rarr;
+      </a>
+    </p>
+  </div>
+
+  <h2>Download the assembly guide</h2>
+
+  <ul>
+    <li>
+      <a href={guidePdf} target="_blank" rel="noopener">Q-Tune Assembly Guide (PDF)</a>
+    </li>
+  </ul>
+
+  <p>
+    The guide walks through every step with illustrations. Follow it in order, and keep
+    the small hardware organized as you go.
+  </p>
+
+  <h2>Video Walkthrough</h2>
+
+  <p>
+    Prefer to follow along on video? We're filming a complete, real-time build of the
+    Q-Tune kit from start to finish.
+  </p>
+
+  <div
+    class="not-prose my-6 flex aspect-video w-full items-center justify-center rounded-xl border-2 border-dashed border-cream-border bg-cream-muted text-center"
+  >
+    <div class="px-6">
+      <p class="font-heading text-lg font-semibold text-text-heading">
+        Video walkthrough coming soon
+      </p>
+      <p class="mt-1 text-sm text-text-muted">
+        We're putting the finishing touches on a full real-time build video. Check back soon.
+      </p>
+    </div>
+  </div>
+
+  <h2>Need a hand?</h2>
+
+  <p>
+    Stuck on a step, or missing a part? Join the
+    <a href="https://discord.gg/evtjkEj9GX" target="_blank" rel="noopener">Q-Tune Builder's Discord</a>.
+    If something was left out of your kit, fill out the
+    <a href="/missing-parts/" target="_blank">Missing Parts Form</a> and we'll make it right.
+  </p>
+</PageLayout>
