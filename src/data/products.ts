@@ -9,12 +9,11 @@ export interface Product {
 
 // The solderless Q-Tune — sold as a single 1590B kit, no other options.
 // Pre-order, ships June–July 2026.
-// TODO: replace the placeholder Stripe URL with the real pre-order payment link.
 export const qTuneProduct: Product = {
   name: 'Q-Tune',
   variant: 'Q-Tune (1590B)',
   price: 129,
-  stripeUrl: 'https://buy.stripe.com/PLACEHOLDER_QTUNE_PREORDER',
+  stripeUrl: 'https://buy.stripe.com/14AeVdeCV2pb1fx02o8og0m',
   buttonLabel: 'Pre-Order Q-Tune',
   status: 'preorder',
 };
