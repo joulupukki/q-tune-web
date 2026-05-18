@@ -49,7 +49,7 @@ The <strong>Q-Tune Solder Kit (Through-Hole)</strong> additionally requires:
 <li>2.8" Capacitive Touch LCD Display</li>
 <li>Connectorized footswitch and cables (no soldering)</li>
 <li>All mounting hardware and hex keys</li>
-<li>A painted aluminum enclosure</li>
+<li>A painted 1590B aluminum enclosure</li>
 <li>Step-by-step assembly guide (downloadable on the <a href="/assembly/">assembly page</a>)</li>
 </ul>`,
   },

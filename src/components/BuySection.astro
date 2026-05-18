@@ -2,7 +2,7 @@
 import BuyButton from './BuyButton.astro';
 import RegionModal from './RegionModal.astro';
 import EnclosureModal from './EnclosureModal.astro';
-import { qTuneProducts, solderKitProducts } from '../data/products';
+import { qTuneProduct, solderKitProducts } from '../data/products';
 
 // Shared styling for the accentuated (preferred) Q-Tune column in the comparison table.
 const qCol = 'border-x-2 border-amber-glow bg-amber-glow/10';
@@ -19,75 +19,18 @@ const qCol = 'border-x-2 border-amber-glow bg-amber-glow/10';
   </p>
 </div>
 
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
-  {qTuneProducts.map((p) => (
-    <BuyButton {...p}>
-      {p.name === 'No Enclosure' && (
-        <div class="mt-4 text-sm text-text-muted space-y-2">
-          <div>
-            <strong class="text-text-heading">Tayda Drill Templates:</strong><br />
-            <a href="https://drill.taydakits.com/box-designs/new?public_key=bWxYL0R0T0dBRHBmZkZOSGR3Yk40UT09Cg==" target="_blank" rel="noopener">1590B</a>,{' '}
-            <a href="https://drill.taydakits.com/box-designs/new?public_key=SmRhZzVaSm8vSlFtK3M5anBxRktQdz09Cg==" target="_blank" rel="noopener">125B</a>
-          </div>
-          <div>
-            <strong class="text-text-heading">UV PDF Templates:</strong><br />
-            <a href="/assets/uv-templates/Q-Tune-1590B-v4.8curves.pdf" target="_blank">1590B</a>,{' '}
-            <a href="/assets/uv-templates/Q-Tune-125B-v4.8curves.pdf" target="_blank">125B</a>
-          </div>
-        </div>
-      )}
-    </BuyButton>
-  ))}
+<div class="max-w-xs mx-auto">
+  <BuyButton {...qTuneProduct}>
+    <div class="mt-3 text-sm text-text-muted">
+      <p>Powder-coated aluminum enclosure</p>
+      <p class="mt-1">Measures 4.4" &times; 2.4" &times; 1.2" (1590B)</p>
+    </div>
+  </BuyButton>
 </div>
 
 <p class="text-center text-sm text-text-muted max-w-xl mx-auto mt-6">
   Pre-order: kits are expected to ship June&ndash;July 2026. If we can't deliver within that window, you can request a full refund. See <a href="/terms/" class="text-amber-glow hover:text-amber-dark font-medium">Shipping &amp; Returns</a>.
 </p>
-
-<!-- Comparison: Q-Tune vs Solder Kit -->
-<div class="max-w-3xl mx-auto mt-12">
-  <div class="overflow-hidden rounded-xl border border-cream-border">
-    <table class="w-full text-sm">
-      <thead>
-        <tr class="bg-cream-muted text-text-heading">
-          <th class="text-left font-heading font-semibold px-4 py-3"></th>
-          <th class={`font-heading font-semibold px-4 py-3 border-t-2 ${qCol}`}>
-            <span class="inline-block mb-1 px-2 py-0.5 rounded-full bg-amber-glow text-white text-[10px] font-bold uppercase tracking-wide">New</span><br />
-            Q-Tune
-          </th>
-          <th class="font-heading font-semibold px-4 py-3">Solder Kit<br /><span class="text-xs font-normal text-text-muted">(Through-Hole)</span></th>
-        </tr>
-      </thead>
-      <tbody class="text-text-body">
-        <tr class="border-t border-cream-border">
-          <td class="px-4 py-3 font-semibold text-text-heading">Soldering</td>
-          <td class={`px-4 py-3 text-center ${qCol}`}>None</td>
-          <td class="px-4 py-3 text-center">Required (intermediate)</td>
-        </tr>
-        <tr class="border-t border-cream-border bg-cream-muted/40">
-          <td class="px-4 py-3 font-semibold text-text-heading">Assembly time</td>
-          <td class={`px-4 py-3 text-center ${qCol}`}>15&ndash;30 minutes</td>
-          <td class="px-4 py-3 text-center">A few hours</td>
-        </tr>
-        <tr class="border-t border-cream-border">
-          <td class="px-4 py-3 font-semibold text-text-heading">Experience needed</td>
-          <td class={`px-4 py-3 text-center ${qCol}`}>None</td>
-          <td class="px-4 py-3 text-center">DIY electronics</td>
-        </tr>
-        <tr class="border-t border-cream-border bg-cream-muted/40">
-          <td class="px-4 py-3 font-semibold text-text-heading">Price</td>
-          <td class={`px-4 py-3 text-center border-b-2 ${qCol}`}>From $117</td>
-          <td class="px-4 py-3 text-center">From $117</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<!-- Enclosure picker: 1590B vs 125B -->
-<div class="mt-12">
-  <EnclosureModal />
-</div>
 
 <!-- Q-Tune Solder Kit (Through-Hole) — the original, for builders who want to solder -->
 <div class="mt-12 pt-10 border-t border-cream-border">
@@ -119,6 +62,59 @@ const qCol = 'border-x-2 border-amber-glow bg-amber-glow/10';
         )}
       </BuyButton>
     ))}
+  </div>
+
+  <!-- Enclosure picker for the Solder Kit -->
+  <div class="mt-8">
+    <EnclosureModal />
+  </div>
+</div>
+
+<!-- Comparison: Q-Tune vs Solder Kit -->
+<div class="mt-12 pt-10 border-t border-cream-border">
+  <h3 class="text-2xl sm:text-3xl font-heading font-bold text-text-heading text-center mb-8">Compare the Kits</h3>
+  <div class="max-w-3xl mx-auto">
+    <div class="overflow-hidden rounded-xl border border-cream-border">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-cream-muted text-text-heading">
+            <th class="text-left font-heading font-semibold px-4 py-3"></th>
+            <th class={`font-heading font-semibold px-4 py-3 border-t-2 ${qCol}`}>
+              <span class="inline-block mb-1 px-2 py-0.5 rounded-full bg-amber-glow text-white text-[10px] font-bold uppercase tracking-wide">New</span><br />
+              Q-Tune
+            </th>
+            <th class="font-heading font-semibold px-4 py-3">Solder Kit<br /><span class="text-xs font-normal text-text-muted">(Through-Hole)</span></th>
+          </tr>
+        </thead>
+        <tbody class="text-text-body">
+          <tr class="border-t border-cream-border">
+            <td class="px-4 py-3 font-semibold text-text-heading">Soldering</td>
+            <td class={`px-4 py-3 text-center ${qCol}`}>None</td>
+            <td class="px-4 py-3 text-center">Required (intermediate)</td>
+          </tr>
+          <tr class="border-t border-cream-border bg-cream-muted/40">
+            <td class="px-4 py-3 font-semibold text-text-heading">Assembly time</td>
+            <td class={`px-4 py-3 text-center ${qCol}`}>15&ndash;30 minutes</td>
+            <td class="px-4 py-3 text-center">A few hours</td>
+          </tr>
+          <tr class="border-t border-cream-border">
+            <td class="px-4 py-3 font-semibold text-text-heading">Experience needed</td>
+            <td class={`px-4 py-3 text-center ${qCol}`}>None</td>
+            <td class="px-4 py-3 text-center">DIY electronics</td>
+          </tr>
+          <tr class="border-t border-cream-border bg-cream-muted/40">
+            <td class="px-4 py-3 font-semibold text-text-heading">Enclosure</td>
+            <td class={`px-4 py-3 text-center ${qCol}`}>1590B</td>
+            <td class="px-4 py-3 text-center">1590B, 125B, or none</td>
+          </tr>
+          <tr class="border-t border-cream-border">
+            <td class="px-4 py-3 font-semibold text-text-heading">Price</td>
+            <td class={`px-4 py-3 text-center border-b-2 ${qCol}`}>$129</td>
+            <td class="px-4 py-3 text-center">From $117</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 

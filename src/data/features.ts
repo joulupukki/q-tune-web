@@ -53,8 +53,8 @@ export const features: Feature[] = [
     description: 'Everything you need is in the kit: pro-quality parts, a custom PCB, and clear instructions that make sense.',
   },
   {
-    title: 'Two Footprint Options',
-    description: 'Choose the classic 125B or tight-packed 1590B size.',
+    title: 'Rugged Aluminum Enclosure',
+    description: 'Q-Tune ships in a durable powder-coated aluminum enclosure, compact enough to fit comfortably on a tight pedalboard.',
   },
   {
     title: 'First of Its Kind',

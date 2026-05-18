@@ -7,34 +7,17 @@ export interface Product {
   status: 'available' | 'preorder';
 }
 
-// The Q-Tune kit — the standard, solderless product. Pre-orders ship June–July 2026.
-// TODO: replace placeholder Stripe URLs with the real pre-order payment links.
-export const qTuneProducts: Product[] = [
-  {
-    name: '1590B',
-    variant: '1590B Kit',
-    price: 129,
-    stripeUrl: 'https://buy.stripe.com/PLACEHOLDER_QTUNE_PREORDER_1590B',
-    buttonLabel: 'Pre-Order 1590B',
-    status: 'preorder',
-  },
-  {
-    name: '125B',
-    variant: '125B Kit',
-    price: 129,
-    stripeUrl: 'https://buy.stripe.com/PLACEHOLDER_QTUNE_PREORDER_125B',
-    buttonLabel: 'Pre-Order 125B',
-    status: 'preorder',
-  },
-  {
-    name: 'No Enclosure',
-    variant: 'No Enclosure Kit',
-    price: 117,
-    stripeUrl: 'https://buy.stripe.com/PLACEHOLDER_QTUNE_PREORDER_NO_ENCLOSURE',
-    buttonLabel: 'Pre-Order w/o Enclosure',
-    status: 'preorder',
-  },
-];
+// The solderless Q-Tune — sold as a single 1590B kit, no other options.
+// Pre-order, ships June–July 2026.
+// TODO: replace the placeholder Stripe URL with the real pre-order payment link.
+export const qTuneProduct: Product = {
+  name: 'Q-Tune',
+  variant: 'Q-Tune (1590B)',
+  price: 129,
+  stripeUrl: 'https://buy.stripe.com/PLACEHOLDER_QTUNE_PREORDER',
+  buttonLabel: 'Pre-Order Q-Tune',
+  status: 'preorder',
+};
 
 // The original Q-Tune Solder Kit (Through-Hole) — for builders who want to solder.
 export const solderKitProducts: Product[] = [
