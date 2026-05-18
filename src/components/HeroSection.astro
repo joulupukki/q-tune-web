@@ -17,12 +17,24 @@
         </p>
       </div>
 
-      <!-- Hero image -->
-      <div class="flex-shrink-0 w-full max-w-md lg:max-w-lg">
+      <!-- Hero image: transparent pedal cut-out floating on the dark section -->
+      <div class="relative flex-shrink-0 w-full max-w-md lg:max-w-lg mx-auto">
+        <!-- Soft outer halo -->
+        <div
+          class="absolute left-1/2 top-1/2 w-[115%] aspect-square -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/15 blur-3xl"
+          aria-hidden="true"
+        ></div>
+        <!-- Brighter glow behind the screen -->
+        <div
+          class="absolute left-1/2 top-[42%] w-2/3 aspect-square -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/30 blur-2xl"
+          aria-hidden="true"
+        ></div>
         <img
-          src="/assets/images/q-tune-hero.jpg"
-          alt="Q-Tune DIY guitar tuner pedal kit"
-          class="w-full h-auto rounded-xl shadow-2xl shadow-black/40"
+          src="/assets/images/q-tune-hero.png"
+          alt="Q-Tune DIY guitar tuner pedal kit with the tuning display lit"
+          width="2640"
+          height="2640"
+          class="relative w-full h-auto"
         />
       </div>
     </div>
