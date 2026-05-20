@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+import YouTubeEmbed from '../components/YouTubeEmbed.astro';
 ---
 
 <PageLayout
@@ -33,22 +34,10 @@ import PageLayout from '../layouts/PageLayout.astro';
   <h2>Video Walkthrough</h2>
 
   <p>
-    We're filming a complete, real-time build of the Q-Tune kit from start to finish.
-    Check back here for the full video walkthrough.
+    Follow along with a complete, real-time build of the Q-Tune kit from start to finish.
   </p>
 
-  <div
-    class="not-prose my-6 flex aspect-video w-full items-center justify-center rounded-xl border-2 border-dashed border-cream-border bg-cream-muted text-center"
-  >
-    <div class="px-6">
-      <p class="font-heading text-lg font-semibold text-text-heading">
-        Video walkthrough coming soon
-      </p>
-      <p class="mt-1 text-sm text-text-muted">
-        We're putting the finishing touches on a full real-time build video. Check back soon.
-      </p>
-    </div>
-  </div>
+  <YouTubeEmbed videoId="cpOn1DBdCLg" title="Q-Tune Assembly Walkthrough" />
 
   <h2>Need a hand?</h2>
 
