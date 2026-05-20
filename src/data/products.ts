@@ -4,7 +4,7 @@ export interface Product {
   price: number;
   stripeUrl: string;
   buttonLabel: string;
-  status: 'available' | 'preorder';
+  status: 'available' | 'preorder' | 'soldout';
 }
 
 // The solderless Q-Tune — sold as a single 1590B kit, no other options.
@@ -26,7 +26,8 @@ export const solderKitProducts: Product[] = [
     price: 129,
     stripeUrl: 'https://buy.stripe.com/bJe14namFd3Pgar8yU8og0f',
     buttonLabel: 'Buy 1590B',
-    status: 'available',
+    // Temporarily out of stock — set back to 'available' when restocked.
+    status: 'soldout',
   },
   {
     name: '125B',
