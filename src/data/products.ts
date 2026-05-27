@@ -26,8 +26,7 @@ export const solderKitProducts: Product[] = [
     price: 129,
     stripeUrl: 'https://buy.stripe.com/bJe14namFd3Pgar8yU8og0f',
     buttonLabel: 'Buy 1590B',
-    // Temporarily out of stock — set back to 'available' when restocked.
-    status: 'soldout',
+    status: 'available',
   },
   {
     name: '125B',
