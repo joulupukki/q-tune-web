@@ -13,3 +13,7 @@ vendor/
 
 # OS
 .DS_Store
+
+# Claude Code & local planning — keep out of the public repo
+.claude/
+docs/superpowers/
