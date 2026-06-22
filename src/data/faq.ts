@@ -17,7 +17,7 @@ export const faqData: FaqEntry[] = [
   {
     question: "What's the difference between the Q-Tune kit and the Solder Kit?",
     answer:
-      'Both build the exact same tuner with the same features. The standard <strong>Q-Tune</strong> kit has the circuit board pre-assembled, so it snaps together with hand tools in 15–30 minutes. No soldering or electronics experience needed. The <strong>Q-Tune Solder Kit (Through-Hole)</strong> ships with loose components you solder onto the board yourself, for builders who want the full hands-on experience.',
+      'Both kits give you the same tuner: the same display, features, and firmware. The standard <strong>Q-Tune</strong> kit has the circuit board pre-assembled, so it snaps together with hand tools in 15–30 minutes. No soldering or electronics experience needed. The <strong>Q-Tune Solder Kit (Through-Hole)</strong> ships with loose components you solder onto the board yourself, for builders who want the full hands-on experience. The two differ slightly in how they handle bypass and headroom; we wrote up the details on the <a href="/blog/solderless-vs-solder-guitar-pedal-kits">blog</a>.',
   },
   {
     question: 'When will my pre-order ship?',

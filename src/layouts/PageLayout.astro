@@ -9,12 +9,45 @@ interface Props {
 }
 
 // Markdown pages deliver their frontmatter under Astro.props.frontmatter, while
-// .astro pages pass these as direct props — support both.
+// .astro pages pass these as direct props. Support both.
 const fm = (Astro.props as Record<string, any>).frontmatter ?? {};
 const title = Astro.props.title ?? fm.title;
 const description = Astro.props.description ?? fm.description;
 const noindex = Astro.props.noindex ?? fm.noindex;
-const structuredData = Astro.props.structuredData ?? fm.structuredData;
+const baseStructured = Astro.props.structuredData ?? fm.structuredData;
+
+// Blog pages get a BreadcrumbList (Home > Blog > Post). Generated from the URL,
+// so every new post picks it up automatically.
+const SITE = 'https://www.q-tune.com';
+const pathname = Astro.url.pathname;
+const isBlog = pathname.startsWith('/blog');
+const isBlogPost = isBlog && pathname.replace(/\/$/, '') !== '/blog';
+let breadcrumb: object | undefined;
+if (isBlog) {
+  const itemListElement: object[] = [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog/` },
+  ];
+  if (isBlogPost) {
+    itemListElement.push({
+      '@type': 'ListItem',
+      position: 3,
+      name: title,
+      item: new URL(pathname, SITE).href,
+    });
+  }
+  breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement,
+  };
+}
+
+const structuredData = breadcrumb
+  ? baseStructured
+    ? [baseStructured, breadcrumb]
+    : breadcrumb
+  : baseStructured;
 ---
 
 <BaseLayout title={title} description={description} noindex={noindex} structuredData={structuredData}>

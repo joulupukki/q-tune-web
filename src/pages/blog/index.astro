@@ -1,0 +1,36 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+
+// Markdown posts live alongside this file; pull their frontmatter for the listing.
+const modules = import.meta.glob('./*.md', { eager: true });
+const posts = Object.values(modules)
+  .map((m: any) => ({ ...m.frontmatter, url: m.url }))
+  .sort((a, b) => new Date(b.pubDate).valueOf() - new Date(a.pubDate).valueOf());
+
+const fmtDate = (d: string) =>
+  new Date(`${d}T12:00:00`).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+---
+
+<PageLayout
+  title="Blog"
+  description="Guides and notes from the makers of Q-Tune on building DIY tuner pedal kits, solderless vs. solder, and getting the most out of your build."
+>
+  <div class="not-prose space-y-6">
+    {posts.map((post) => (
+      <article class="border border-cream-border rounded-xl p-6 bg-cream-surface">
+        <h2 class="text-xl font-heading font-bold text-text-heading mb-1">
+          <a href={post.url} class="hover:text-amber-glow transition-colors">{post.title}</a>
+        </h2>
+        <p class="text-sm text-text-muted mb-3">{fmtDate(post.pubDate)}</p>
+        <p class="text-text-body leading-relaxed">{post.description}</p>
+        <a href={post.url} class="inline-block mt-3 text-amber-glow hover:text-amber-dark font-medium">
+          Read more &rarr;
+        </a>
+      </article>
+    ))}
+  </div>
+</PageLayout>
