@@ -1,0 +1,90 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import YouTubeEmbed from '../components/YouTubeEmbed.astro';
+import BuyButton from '../components/BuyButton.astro';
+import RegionModal from '../components/RegionModal.astro';
+import { qTuneProduct } from '../data/products';
+---
+
+<PageLayout
+  title="Gift a Q-Tune"
+  description="Looking for a meaningful gift for a guitarist? Q-Tune is a DIY tuner pedal kit they build themselves in 15–30 minutes, with no soldering or experience, then use on every gig."
+>
+  <p class="lead">
+    For the guitarist who already owns every pedal but has never built one. Q-Tune is a tuner they
+    assemble themselves, with no soldering and no electronics experience, then reach for at every
+    practice and every gig.
+  </p>
+
+  <hr />
+
+  <h2>Why it makes a good gift</h2>
+
+  <div class="not-prose grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+    <div class="bg-cream-surface border border-cream-border rounded-xl p-6">
+      <h3 class="text-lg font-heading font-bold text-text-heading mb-2">They build it themselves</h3>
+      <p class="text-text-body leading-relaxed">
+        That's the good part. Fifteen to thirty minutes of hands-on assembly, and they get the
+        lasting satisfaction of using gear they put together with their own hands.
+      </p>
+    </div>
+    <div class="bg-cream-surface border border-cream-border rounded-xl p-6">
+      <h3 class="text-lg font-heading font-bold text-text-heading mb-2">It actually gets used</h3>
+      <p class="text-text-body leading-relaxed">
+        Every guitarist needs a tuner. This isn't a novelty that ends up in a drawer. It earns a
+        permanent spot on their pedalboard.
+      </p>
+    </div>
+    <div class="bg-cream-surface border border-cream-border rounded-xl p-6">
+      <h3 class="text-lg font-heading font-bold text-text-heading mb-2">It keeps getting better</h3>
+      <p class="text-text-body leading-relaxed">
+        Free USB-C firmware updates add new tuning styles and features over time, long after the
+        gift is unwrapped.
+      </p>
+    </div>
+  </div>
+
+  <hr />
+
+  <h2>Will they be able to build it?</h2>
+
+  <p>
+    Yes, that's the whole point of the solderless kit. There's no soldering and no electronics
+    experience required. Everything is in the box, down to the hex keys, and most builders finish in
+    15–30 minutes. If they ever get stuck, the
+    <a href="https://discord.gg/evtjkEj9GX" target="_blank" rel="noopener">builder Discord</a>
+    and our support are there to help.
+  </p>
+
+  <p>Here's the entire build, start to finish:</p>
+
+  <YouTubeEmbed videoId="cpOn1DBdCLg" title="Q-Tune Assembly Walkthrough" />
+
+  <hr />
+
+  <h2>What's in the box</h2>
+
+  <ul>
+    <li>Pre-assembled, pre-flashed Q-Tune board</li>
+    <li>2.8" touchscreen LCD</li>
+    <li>Connectorized footswitch &amp; cables (no soldering)</li>
+    <li>All mounting hardware and hex keys</li>
+    <li>Painted aluminum enclosure</li>
+    <li>Step-by-step assembly guide</li>
+  </ul>
+
+  <hr />
+
+  <h2>Give one</h2>
+
+  <p>
+    Q-Tune is a pre-order, expected to ship June–July 2026, with free US shipping. If you need it by
+    a particular date, <a href="/contact/">reach out</a> and we'll let you know what's possible.
+  </p>
+
+  <div class="not-prose max-w-xs my-8">
+    <BuyButton {...qTuneProduct} />
+  </div>
+
+  <RegionModal />
+</PageLayout>

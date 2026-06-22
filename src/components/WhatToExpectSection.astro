@@ -1,0 +1,37 @@
+---
+const steps = [
+  {
+    title: 'Open the box',
+    body: 'Everything is in there: the pre-assembled, pre-flashed board, the 2.8" screen, the enclosure, the connectorized cables, and the hex keys to put it together.',
+  },
+  {
+    title: 'Follow the guide',
+    body: 'Parts snap and screw into place. No soldering iron, no electronics experience. Just the included hex keys and a screwdriver from your toolbox.',
+  },
+  {
+    title: 'Play',
+    body: '15–30 minutes later your tuner is in its enclosure and on your board, ready to plug in. The electronics are already done; the build is yours.',
+  },
+];
+---
+
+<section class="py-16 bg-cream-muted">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6">
+    <h2 class="text-3xl sm:text-4xl font-heading font-bold text-center mb-3">What to Expect</h2>
+    <p class="text-text-body text-lg text-center max-w-2xl mx-auto mb-10">
+      This is the whole build: three steps, start to finish.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {steps.map((step, i) => (
+        <div class="bg-cream-surface border border-cream-border rounded-xl p-6">
+          <div class="w-10 h-10 rounded-full bg-amber-glow text-white font-heading font-bold flex items-center justify-center mb-4">
+            {i + 1}
+          </div>
+          <h3 class="text-xl font-heading font-bold text-text-heading mb-2">{step.title}</h3>
+          <p class="text-text-body leading-relaxed">{step.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

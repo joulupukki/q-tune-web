@@ -5,6 +5,7 @@ import BuySection from '../components/BuySection.astro';
 import YouTubeEmbed from '../components/YouTubeEmbed.astro';
 import ProductCarousel from '../components/ProductCarousel.astro';
 import FeatureList from '../components/FeatureList.astro';
+import WhatToExpectSection from '../components/WhatToExpectSection.astro';
 import LivingFirmwareSection from '../components/LivingFirmwareSection.astro';
 import TestimonialSection from '../components/TestimonialSection.astro';
 import CommunitySection from '../components/CommunitySection.astro';
@@ -96,7 +97,7 @@ const productSchema = {
 
 <HomeLayout
   title="Solderless DIY Guitar Tuner Pedal Kit | Q-Tune"
-  description="Q-Tune is the first solderless DIY guitar tuner pedal kit — a bright 2.8-inch LCD, ultra-accurate chromatic pitch detection, buffered or true bypass, and USB-C firmware upgrades. Build a pro-grade tuner pedal in 15-30 minutes. No soldering required."
+  description="Q-Tune is the first solderless DIY guitar tuner pedal kit with a bright 2.8-inch LCD, ultra-accurate chromatic pitch detection, buffered or true bypass, and USB-C firmware upgrades. Build a pro-grade tuner pedal in 15-30 minutes. No soldering required."
   structuredData={productSchema}
 >
   <!-- Hero -->
@@ -138,6 +139,9 @@ const productSchema = {
       </div>
     </div>
   </section>
+
+  <!-- What to expect -->
+  <WhatToExpectSection />
 
   <!-- Carousel -->
   <ProductCarousel />
