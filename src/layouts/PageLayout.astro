@@ -8,7 +8,13 @@ interface Props {
   structuredData?: object;
 }
 
-const { title, description, noindex, structuredData } = Astro.props;
+// Markdown pages deliver their frontmatter under Astro.props.frontmatter, while
+// .astro pages pass these as direct props — support both.
+const fm = (Astro.props as Record<string, any>).frontmatter ?? {};
+const title = Astro.props.title ?? fm.title;
+const description = Astro.props.description ?? fm.description;
+const noindex = Astro.props.noindex ?? fm.noindex;
+const structuredData = Astro.props.structuredData ?? fm.structuredData;
 ---
 
 <BaseLayout title={title} description={description} noindex={noindex} structuredData={structuredData}>

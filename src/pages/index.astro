@@ -71,7 +71,7 @@ const productSchema = {
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '5',
-    reviewCount: '2',
+    reviewCount: '1',
     bestRating: '5',
     worstRating: '1',
   },
@@ -90,30 +90,27 @@ const productSchema = {
       },
       reviewBody: "I would say it's a great price for an accurate digital tuner with a large screen. It can be true or buffered bypass. It's definitely worth the money.",
     },
-    {
-      '@type': 'Review',
-      author: {
-        '@type': 'Person',
-        name: 'Anonymous',
-      },
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '5',
-        bestRating: '5',
-        worstRating: '1',
-      },
-    },
   ],
 };
 ---
 
 <HomeLayout
-  title="Q-Tune"
-  description="Q-Tune is the first DIY guitar tuner pedal kit featuring a bright 2.8-inch LCD, ultra-accurate pitch detection, buffered or true bypass, and USB-C firmware upgrades. Build a professional-grade tuner pedal in 15-30 minutes. No soldering required."
+  title="Solderless DIY Guitar Tuner Pedal Kit | Q-Tune"
+  description="Q-Tune is the first solderless DIY guitar tuner pedal kit — a bright 2.8-inch LCD, ultra-accurate chromatic pitch detection, buffered or true bypass, and USB-C firmware upgrades. Build a pro-grade tuner pedal in 15-30 minutes. No soldering required."
   structuredData={productSchema}
 >
   <!-- Hero -->
   <HeroSection />
+
+  <!-- Builder quote -->
+  <section class="py-6 bg-dark-bg border-t border-white/10">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 text-center">
+      <p class="text-base sm:text-lg text-gray-200 italic leading-relaxed">
+        &ldquo;It's replaced my StroboStomp HD on my board. The number output is more precise and easier to use, and it takes up much less space.&rdquo;
+      </p>
+      <p class="mt-2 text-sm text-gray-400">&mdash; Chris H., Q-Tune builder</p>
+    </div>
+  </section>
 
   <!-- Buy section -->
   <section id="buy" class="py-16 bg-cream-bg scroll-mt-20">

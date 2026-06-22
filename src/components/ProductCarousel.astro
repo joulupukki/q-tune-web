@@ -1,18 +1,19 @@
 ---
 // Images 11 & 12 (through-hole kit parts) are intentionally omitted — the files
 // remain on the server but are hidden from the carousel.
+// Each entry pairs the file with descriptive alt text for accessibility + image SEO.
 const images = [
-  'q-tune-solderless-kit.jpg',
-  '01-q-tune-product-shot.jpg',
-  '02-q-tune-product-shot.jpg',
-  '03-q-tune-product-shot.jpg',
-  '04-q-tune-product-shot.jpg',
-  '05-q-tune-product-shot.jpg',
-  '06-q-tune-product-shot.jpg',
-  '07-q-tune-product-shot.jpg',
-  '08-q-tune-product-shot.jpg',
-  '09-q-tune-product-shot.jpg',
-  '10-q-tune-product-shot.jpg',
+  { src: 'q-tune-solderless-kit.jpg', alt: 'Q-Tune solderless DIY guitar tuner pedal kit, all parts laid out before assembly' },
+  { src: '01-q-tune-product-shot.jpg', alt: 'Assembled Q-Tune tuner pedal showing the bright 2.8-inch chromatic tuning display' },
+  { src: '02-q-tune-product-shot.jpg', alt: 'Q-Tune tuner pedal front view in its powder-coated aluminum stompbox enclosure' },
+  { src: '03-q-tune-product-shot.jpg', alt: 'Q-Tune tuner pedal angled view showing the footswitch and screen' },
+  { src: '04-q-tune-product-shot.jpg', alt: 'Q-Tune pedal top edge with space-saving top-mounted audio and power jacks' },
+  { src: '05-q-tune-product-shot.jpg', alt: 'Close-up of the Q-Tune tuning display locked onto a note' },
+  { src: '06-q-tune-product-shot.jpg', alt: 'Q-Tune tuner pedal showing an alternate display style' },
+  { src: '07-q-tune-product-shot.jpg', alt: 'Q-Tune guitar tuner pedal on a pedalboard' },
+  { src: '08-q-tune-product-shot.jpg', alt: 'Q-Tune pedal side profile in the 1590B enclosure' },
+  { src: '09-q-tune-product-shot.jpg', alt: 'Q-Tune tuner pedal with the touchscreen display active' },
+  { src: '10-q-tune-product-shot.jpg', alt: 'Q-Tune DIY tuner pedal kit detail shot' },
 ];
 ---
 
@@ -25,8 +26,8 @@ const images = [
           {images.map((img, i) => (
             <div class="flex-[0_0_100%] min-w-0">
               <img
-                src={`/assets/images/${img}`}
-                alt={`Q-Tune product shot ${i + 1}`}
+                src={`/assets/images/${img.src}`}
+                alt={img.alt}
                 class="w-full h-auto max-h-[500px] object-contain mx-auto"
                 loading={i < 2 ? 'eager' : 'lazy'}
               />

@@ -13,6 +13,22 @@ interface Props {
 }
 
 const { title, description, noindex, structuredData } = Astro.props;
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Q-Tune',
+  legalName: 'Molinello Music',
+  url: 'https://www.q-tune.com',
+  logo: 'https://www.q-tune.com/favicon.png',
+  description:
+    'Q-Tune designs the first solderless DIY guitar tuner pedal kit — a chromatic tuner pedal you build yourself in 15–30 minutes with no soldering.',
+  sameAs: [
+    'https://www.instagram.com/qtunepedal',
+    'https://discord.gg/evtjkEj9GX',
+    'https://forum.pedalpcb.com/forums/qtune/',
+  ],
+};
 ---
 
 <!doctype html>
@@ -36,6 +52,7 @@ const { title, description, noindex, structuredData } = Astro.props;
       noindex={noindex}
       structuredData={structuredData}
     />
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
     <GoogleAnalytics />
   </head>
   <body class="min-h-screen flex flex-col">

@@ -18,7 +18,7 @@ const {
 } = Astro.props;
 
 const siteUrl = 'https://www.q-tune.com';
-const pageTitle = title === 'Q-Tune' ? title : `${title} | Q-Tune`;
+const pageTitle = !title ? 'Q-Tune' : title.includes('Q-Tune') ? title : `${title} | Q-Tune`;
 const canonical = canonicalUrl || new URL(Astro.url.pathname, siteUrl).href;
 const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 ---
