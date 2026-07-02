@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import YouTubeEmbed from '../components/YouTubeEmbed.astro';
+
+const repoUrl = 'https://github.com/joulupukki/q-tune-sdk';
+
+const features = [
+  {
+    title: 'C++ and LVGL',
+    body: 'Written in C++ with LVGL, the same UI library Q-Tune runs on. If you have drawn anything with LVGL, you will be at home.',
+  },
+  {
+    title: 'Docker builds',
+    body: 'Builds run in Docker, so there is no local toolchain to assemble. Clone, build, load onto your pedal.',
+  },
+  {
+    title: 'Sample plugins',
+    body: 'Start from working examples: gauge and phase tuner displays, plus a couple of standby screens.',
+  },
+  {
+    title: 'Live tuning data',
+    body: 'Your plugin gets the detected note, how many cents sharp or flat you are, and the user\'s settings.',
+  },
+  {
+    title: 'Open source',
+    body: 'Apache-2.0 licensed. Build plugins, share them, and even sell them.',
+  },
+  {
+    title: 'No C++? No problem',
+    body: 'Not a developer? Describe the screen you want and generate a starting point to build from.',
+  },
+];
+---
+
+<BaseLayout
+  title="Q-Tune SDK"
+  description="The open-source Q-Tune SDK lets you build custom tuner displays and standby screens for your Q-Tune pedal, in C++ and LVGL. Apache-2.0."
+>
+  <!-- Hero -->
+  <section class="bg-dark-bg text-white">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 py-16 sm:py-24 text-center">
+      <span class="inline-block px-3 py-1 mb-5 rounded-full bg-amber-glow/15 text-amber-light text-xs font-bold uppercase tracking-wide">
+        Open source &middot; Apache-2.0
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-4 text-white">
+        Build on your Q-Tune
+      </h1>
+      <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+        The Q-Tune SDK lets you write your own tuner displays and standby screens for the pedal. Same chip, same screen, your ideas.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+        <a href={repoUrl} target="_blank" rel="noopener" class="inline-flex items-center px-6 py-3 bg-amber-glow text-white font-semibold rounded-lg hover:bg-amber-dark transition-colors shadow-lg">
+          View the SDK on GitHub
+        </a>
+        <a href="/#buy" class="inline-flex items-center px-6 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+          Get a Q-Tune
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section class="py-12 bg-cream-muted">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <YouTubeEmbed videoId="B0TpQGBdE88" title="Q-Tune SDK walkthrough" />
+    </div>
+  </section>
+
+  <!-- What you can build -->
+  <section class="py-16 bg-cream-bg">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-center mb-3">What you can build</h2>
+      <p class="text-text-body text-lg text-center max-w-2xl mx-auto mb-10">
+        Two kinds of plugins, and anything you can draw with LVGL.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-cream-surface border border-cream-border rounded-xl p-6">
+          <h3 class="text-xl font-heading font-bold text-text-heading mb-2">Tuner displays</h3>
+          <p class="text-text-body leading-relaxed">
+            The screen you watch while you tune. Build a gauge, a needle, a strobe, or pixel art. Whatever you can draw.
+          </p>
+        </div>
+        <div class="bg-cream-surface border border-cream-border rounded-xl p-6">
+          <h3 class="text-xl font-heading font-bold text-text-heading mb-2">Standby screens</h3>
+          <p class="text-text-body leading-relaxed">
+            What is on screen when you are not tuning. Visualizers, animations, a set list, a clock, anything that fits the 240 by 320 display.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Built for makers -->
+  <section class="py-16 bg-cream-muted">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-center mb-10">Built for makers</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {features.map((f) => (
+          <div class="bg-cream-surface border border-cream-border rounded-xl p-6">
+            <h3 class="text-lg font-heading font-bold text-text-heading mb-2">{f.title}</h3>
+            <p class="text-text-body leading-relaxed">{f.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Start building -->
+  <section class="py-16 bg-cream-bg">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold mb-4">Start building</h2>
+      <p class="text-text-body text-lg mb-8 max-w-xl mx-auto">
+        Clone the repo, start from a sample, build with Docker, and load it onto your Q-Tune. The README walks through the whole thing.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <a href={repoUrl} target="_blank" rel="noopener" class="inline-flex items-center px-6 py-3 bg-amber-glow text-white font-semibold rounded-lg hover:bg-amber-dark transition-colors shadow-md">
+          Get the SDK on GitHub
+        </a>
+        <a href="/#buy" class="inline-flex items-center px-6 py-3 border border-cream-border text-text-heading font-semibold rounded-lg hover:border-amber-glow/40 hover:text-amber-glow transition-colors">
+          Get a Q-Tune
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

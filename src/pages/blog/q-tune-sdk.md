@@ -1,26 +1,14 @@
 ---
 layout: ../../layouts/PageLayout.astro
-title: "Meet the Q-Tune SDK: Build Your Own Displays and Screens"
+title: "Meet the Q-Tune SDK: Build Your Own Tuners and Standby Screens"
 description: "The Q-Tune SDK lets you build custom tuner displays and standby screens for your Q-Tune pedal. Here's what it is, who it's for, and how to start."
-pubDate: "2026-06-27"
+pubDate: "2026-07-01"
 author: "Boyd"
 ---
 
-<!--
-DRAFT / not published. Lives in _drafts/ so Astro does not build it.
-TO PUBLISH on launch day:
-  1. Set pubDate above to the launch date.
-  2. Replace the video placeholder below with the real embed (see the comment there).
-  3. Move this file up to src/pages/blog/q-tune-sdk.md, then commit + push.
--->
-
 Q-Tune has always been a tuner you build. Now it's also a tuner you can build on. The Q-Tune SDK is here, and it lets you write your own tuner displays and standby screens for the pedal.
 
-<!--
-LAUNCH-DAY VIDEO: markdown can't use the YouTubeEmbed component, so paste a responsive iframe here
-with the real video ID, for example:
-<div class="aspect-video my-6"><iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/VIDEO_ID" title="Q-Tune SDK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
--->
+<div class="aspect-video my-6"><iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/B0TpQGBdE88" title="Q-Tune SDK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 ## What you can build
 
