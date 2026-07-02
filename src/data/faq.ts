@@ -64,6 +64,11 @@ The <strong>Q-Tune Solder Kit (Through-Hole)</strong> additionally requires:
       'When new versions are available, you can upgrade your Q-Tune pedal with the <a href="/install/">web installer</a> using a standard USB-C data cable.',
   },
   {
+    question: 'Can I build my own tuner displays or standby screens?',
+    answer:
+      'Yes. The open-source <a href="https://github.com/joulupukki/q-tune-sdk" target="_blank" rel="noopener">Q-Tune SDK</a> lets you create your own tuner displays and standby screens in C++ and LVGL. It ships with sample plugins to start from, is Apache-2.0 licensed, and you\'re free to share or even sell what you make. See the <a href="/sdk/">SDK page</a> for details.',
+  },
+  {
     question: 'What tuning algorithm does it use?',
     answer:
       "Q-Tune uses an advanced zero-crossing detection algorithm (it's actually more complicated than that). It's designed for fast and accurate pitch detection, optimized for stringed instruments like guitar and bass.",

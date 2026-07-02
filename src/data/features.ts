@@ -49,6 +49,10 @@ export const features: Feature[] = [
     description: 'Your tuner keeps getting better after you build it. New display styles, new features, accuracy improvements. All delivered over USB-C through a simple web installer.',
   },
   {
+    title: 'Build Your Own with the SDK',
+    description: 'Go beyond the built-in screens. The open-source Q-Tune SDK lets you create your own tuner displays and standby screens, then load them onto your pedal.',
+  },
+  {
     title: 'Real DIY Experience',
     description: 'Everything you need is in the kit: pro-quality parts, a custom PCB, and clear instructions that make sense.',
   },
