@@ -20,9 +20,9 @@ export const faqData: FaqEntry[] = [
       'Both kits give you the same tuner: the same display, features, and firmware. The standard <strong>Q-Tune</strong> kit has the circuit board pre-assembled, so it snaps together with hand tools in 15–30 minutes. No soldering or electronics experience needed. The <strong>Q-Tune Solder Kit (Through-Hole)</strong> ships with loose components you solder onto the board yourself, for builders who want the full hands-on experience. The two differ slightly in how they handle bypass and headroom; we wrote up the details on the <a href="/blog/solderless-vs-solder-guitar-pedal-kits">blog</a>.',
   },
   {
-    question: 'When will my pre-order ship?',
+    question: 'When will my order ship?',
     answer:
-      'Pre-orders for the Q-Tune kit are expected to ship in June or July 2026. We\'ll email you with tracking as soon as your order is on its way. If we can\'t ship within that window, we\'ll reach out with an update, and you can request a full refund if you\'d rather not wait. See our <a href="/terms/">Shipping &amp; Returns</a> page for details.',
+      'Q-Tune kits are in stock. We\'ll email you tracking as soon as your order is on its way, and orders typically ship within a few business days. See our <a href="/terms/">Shipping &amp; Returns</a> page for details.',
   },
   {
     question: 'Does Q-Tune come fully assembled?',

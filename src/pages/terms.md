@@ -1,22 +1,18 @@
 ---
 layout: ../layouts/PageLayout.astro
 title: Shipping & Returns
-description: "Q-Tune shipping, return, and refund policies including pre-order shipping timelines, international shipping updates, customs duties, and California Prop 65 warning."
+description: "Q-Tune shipping, return, and refund policies including transit times, international shipping, customs duties, and California Prop 65 warning."
 ---
 
 ## Q-Tune Shipping and Return Policies
-Updated 15 May 2026
+Updated 3 July 2026
 
 ### Transit Times
 Although we try to ship all orders as quickly as possible, transit times are not guaranteed. No refunds or credits will be given due to shipments arriving after the estimated delivery date. Any claims should be filed with the carrier.
 
-#### Pre-Orders
-
-The solderless Q-Tune is currently sold as a pre-order. Pre-order kits are expected to ship in **June or July 2026**. If we are unable to ship your kit within that window, we will contact you directly with an update, and anyone who no longer wants to wait may request a full refund.
-
 ### International Shipping Methods
 
-- Internation shipping may not be available during the pre-order period. If/when that changes, we will update the information available here. If you live outside of the U.S. / Canada and are interested in purchasing a Q-Tune kit, please reach out on the Pedal PCB forums to Boyd or Ryan.
+- International shipping may not be available at this time. If/when that changes, we will update the information available here. If you live outside of the U.S. / Canada and are interested in purchasing a Q-Tune kit, please reach out on the Pedal PCB forums to Boyd or Ryan.
 
 ### Returns / Refunds
 

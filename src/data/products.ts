@@ -7,15 +7,14 @@ export interface Product {
   status: 'available' | 'preorder' | 'soldout';
 }
 
-// The solderless Q-Tune — sold as a single 1590B kit, no other options.
-// Pre-order, ships June–July 2026.
+// The solderless Q-Tune — sold as a single 1590B kit, no other options. In stock.
 export const qTuneProduct: Product = {
   name: 'Q-Tune',
   variant: 'Q-Tune (1590B)',
   price: 129,
   stripeUrl: 'https://buy.stripe.com/14AeVdeCV2pb1fx02o8og0m',
-  buttonLabel: 'Pre-Order Q-Tune',
-  status: 'preorder',
+  buttonLabel: 'Buy Q-Tune',
+  status: 'available',
 };
 
 // The original Q-Tune Solder Kit (Through-Hole) — for builders who want to solder.
