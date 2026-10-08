@@ -1,6 +1,5 @@
 ---
 import BuyButton from './BuyButton.astro';
-import RegionModal from './RegionModal.astro';
 import EnclosureModal from './EnclosureModal.astro';
 import YouTubeEmbed from './YouTubeEmbed.astro';
 import { qTuneProduct, solderKitProducts } from '../data/products';
@@ -27,6 +26,9 @@ const qCol = 'border-x-2 border-amber-glow bg-amber-glow/10';
       <p class="mt-1">Measures 4.4" &times; 2.4" &times; 1.2" (1590B)</p>
     </div>
   </BuyButton>
+  <p class="mt-3 text-center text-sm text-text-muted">
+    Shipping outside the US? <a href="/contact/">Tell us where you are</a> and we'll work it out.
+  </p>
 </div>
 
 <p class="text-center text-sm text-text-muted max-w-xl mx-auto mt-6">
@@ -66,7 +68,7 @@ const qCol = 'border-x-2 border-amber-glow bg-amber-glow/10';
 
   <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
     {solderKitProducts.map((p) => (
-      <BuyButton {...p}>
+      <BuyButton {...p} placement="solder-kit">
         {p.name === 'No Enclosure' && (
           <div class="mt-4 text-sm text-text-muted space-y-2">
             <div>
@@ -143,4 +145,3 @@ const qCol = 'border-x-2 border-amber-glow bg-amber-glow/10';
   </div>
 </div>
 
-<RegionModal />

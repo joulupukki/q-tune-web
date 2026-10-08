@@ -1,14 +1,16 @@
 ---
 interface Props {
+  id: string;
   name: string;
   variant: string;
   price: number;
   stripeUrl: string;
   buttonLabel: string;
   status?: 'available' | 'preorder' | 'soldout';
+  placement?: string;
 }
 
-const { name, price, stripeUrl, buttonLabel, status = 'available' } = Astro.props;
+const { id, name, price, stripeUrl, buttonLabel, status = 'available', placement = 'buy-section' } = Astro.props;
 const isPreorder = status === 'preorder';
 const isSoldOut = status === 'soldout';
 ---
@@ -49,12 +51,17 @@ const isSoldOut = status === 'soldout';
       Sold Out
     </button>
   ) : (
-    <button
-      class="buy-btn w-full py-3 px-6 bg-amber-glow text-white font-semibold rounded-lg hover:bg-amber-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-[0.98]"
-      data-url-us={stripeUrl}
+    <a
+      href={stripeUrl}
+      target="_blank"
+      rel="noopener"
+      class="buy-btn block w-full py-3 px-6 bg-amber-glow text-white font-semibold rounded-lg hover:bg-amber-dark hover:text-white transition-all duration-200 shadow-md hover:shadow-lg active:scale-[0.98]"
+      data-item-id={id}
+      data-item-price={price}
+      data-placement={placement}
     >
       {buttonLabel}
-    </button>
+    </a>
   )}
 
   <slot />

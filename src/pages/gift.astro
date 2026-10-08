@@ -2,7 +2,6 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import YouTubeEmbed from '../components/YouTubeEmbed.astro';
 import BuyButton from '../components/BuyButton.astro';
-import RegionModal from '../components/RegionModal.astro';
 import { qTuneProduct } from '../data/products';
 ---
 
@@ -83,8 +82,6 @@ import { qTuneProduct } from '../data/products';
   </p>
 
   <div class="not-prose max-w-xs my-8">
-    <BuyButton {...qTuneProduct} />
+    <BuyButton {...qTuneProduct} placement="gift" />
   </div>
-
-  <RegionModal />
 </PageLayout>

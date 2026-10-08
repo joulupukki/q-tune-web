@@ -17,3 +17,11 @@ vendor/
 # Claude Code & local planning — keep out of the public repo
 .claude/
 docs/superpowers/
+
+# Large build-instruction PDFs live in Cloudflare R2, not git
+docs/assets/build/*.pdf
+
+# Affinity sources and editor config
+*.afdesign
+*.afphoto
+.vscode/

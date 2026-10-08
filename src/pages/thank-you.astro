@@ -1,0 +1,30 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout title="Thank You" noindex={true}>
+  <p>
+    Thank you for your order! A receipt is on its way to your inbox, and your kit will ship soon.
+  </p>
+  <p>
+    While you wait, read the <a href="/assembly/">assembly guide</a>, then join the
+    <a href="https://discord.gg/evtjkEj9GX">builder Discord</a> to see what other builders are making.
+  </p>
+</PageLayout>
+
+<script is:inline>
+  (function () {
+    var q = new URLSearchParams(location.search);
+    var sid = q.get('session_id');
+    if (!sid || sid.indexOf('cs_') !== 0 || typeof window.gtag !== 'function') return;
+    var key = 'purchase:' + sid;
+    try { if (localStorage.getItem(key)) return; localStorage.setItem(key, '1'); } catch (e) {}
+    var value = Number(q.get('value')) || 0;
+    window.gtag('event', 'purchase', {
+      transaction_id: sid,
+      currency: 'USD',
+      value: value,
+      items: [{ item_id: q.get('sku') || 'unknown', item_name: 'Q-Tune Kit', price: value, quantity: 1 }],
+    });
+  })();
+</script>

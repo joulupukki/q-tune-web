@@ -1,4 +1,5 @@
 export interface Product {
+  id: string;
   name: string;
   variant: string;
   price: number;
@@ -9,6 +10,7 @@ export interface Product {
 
 // The solderless Q-Tune — sold as a single 1590B kit, no other options. In stock.
 export const qTuneProduct: Product = {
+  id: 'qtune-solderless-1590b',
   name: 'Q-Tune',
   variant: 'Q-Tune (1590B)',
   price: 129,
@@ -20,6 +22,7 @@ export const qTuneProduct: Product = {
 // The original Q-Tune Solder Kit (Through-Hole) — for builders who want to solder.
 export const solderKitProducts: Product[] = [
   {
+    id: 'qtune-solder-1590b',
     name: '1590B',
     variant: '1590B Kit',
     price: 129,
@@ -28,6 +31,7 @@ export const solderKitProducts: Product[] = [
     status: 'available',
   },
   {
+    id: 'qtune-solder-125b',
     name: '125B',
     variant: '125B Kit',
     price: 129,
@@ -36,6 +40,7 @@ export const solderKitProducts: Product[] = [
     status: 'available',
   },
   {
+    id: 'qtune-solder-no-enclosure',
     name: 'No Enclosure',
     variant: 'NO Enclosure Kit',
     price: 117,
