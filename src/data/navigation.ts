@@ -11,12 +11,13 @@ export const navigation: NavItem[] = [
   { label: 'Blog', href: '/blog/' },
   { label: 'About', href: '/about/' },
   {
-    label: 'Owners',
+    label: 'Docs',
     children: [
       { label: 'Assembly Guide', href: '/assembly/' },
       { label: 'Solder Kit Build', href: '/build/' },
       { label: 'Firmware Install', href: '/install/' },
       { label: 'User Manual', href: '/user-manual/' },
+      { label: 'Troubleshooting', href: '/troubleshooting/' },
       { label: 'Image Tools', href: '/image-tools/' },
     ],
   },
